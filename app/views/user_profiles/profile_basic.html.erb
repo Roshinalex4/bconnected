@@ -1,0 +1,32 @@
+<h2>Sign up</h2>
+<div class="form">
+<%= form_for @user_profile do |f| %>
+  <div class="label">
+		* I live in 
+	</div>
+	<div class="field">
+		<%= f.select("country_id",  [], {:include_blank => 'Select a Country'}) %>
+	</div><br clear="all" />
+	<div class="label">  
+		<%= f.label :postal_code %>
+	</div>
+	<div class="field">
+		<%= f.text_field :postal_code %>
+	</div><br clear="all" />
+	<div class="label">  
+	  I am currently 
+	</div>
+	<div class="field">
+		<%= f.radio_button :employment_status, 0 %>Employed
+	</div><br clear="all" />
+	<div class="label">&nbsp;</div>
+	<div class="field">
+		<%= f.radio_button :employment_status, 1 %>Job Seeker
+	</div>
+	<div class="label">&nbsp;</div>
+	<div class="field">
+		<%= f.radio_button :employment_status, 2 %>Student
+	</div>
+<% end %>
+</div>
+
