@@ -1,0 +1,9 @@
+rails --version 3.2.6
+mysql2
+sass-rails --version   '~> 3.2.3'
+coffee-rails --version '~> 3.2.1'
+uglifier --version '>= 1.0.3'
+jquery-rails
+execjs
+therubyracer
+devise
