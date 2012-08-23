@@ -1,0 +1,19 @@
+// Place all the styles related to the user_profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form {
+	align: center;
+	width: 100%;
+}
+.label {
+	text-align: right;
+	float: left;
+	width: 50%;
+	padding-right: 2px;
+}
+.field {
+	text-align: left;
+	float: left;
+	width: 48%;
+}
