@@ -2,7 +2,15 @@ Bconnected::Application.routes.draw do
   devise_for :users
 
   get "home/index"
-
+  
+  resources :user_profiles do
+    member do
+      get 'profile_basic'
+      get 'email_add_form'
+      put 'email_add'
+      get 'connect_with_form'
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -28,11 +36,7 @@ Bconnected::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-  resources :user_profiles do
-    member do
-      get 'profile_basic'
-    end
-  end
+  
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

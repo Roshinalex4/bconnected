@@ -4,8 +4,7 @@ gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-#gem 'mysql2'
+# gem 'mysql2'
 
 
 # Gems used only for assets and not required
@@ -41,3 +40,4 @@ gem 'therubyracer'
 gem 'devise'
 gem 'activerecord-postgresql-adapter'
 gem 'pg'
+gem "countries"

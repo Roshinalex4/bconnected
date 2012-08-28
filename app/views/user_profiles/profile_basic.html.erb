@@ -5,7 +5,7 @@
 		* I live in 
 	</div>
 	<div class="field">
-		<%= f.select("country_id",  [], {:include_blank => 'Select a Country'}) %>
+		<%= f.country_select :country_id %>
 	</div><br clear="all" />
 	<div class="label">  
 		<%= f.label :postal_code %>
@@ -26,6 +26,26 @@
 	<div class="label">&nbsp;</div>
 	<div class="field">
 		<%= f.radio_button :employment_status, 2 %>Student
+	</div>
+	<div class="label">Job Title</div>
+	<div class="field">
+		<%= f.text_field :job_title %>
+	</div>
+	<div class="label">&nbsp;</div>
+	<div class="field">
+		<%= f.check_box :self_employed %>
+	</div>
+	<div class="label">Company</div>
+	<div class="field">
+		<%= f.text_field :company %>
+	</div>
+	<div class="label">Industry</div>
+	<div class="field">
+		<%= f.select :industry, [] %>
+	</div>
+	<div class="label">&nbsp;</div>
+	<div class="field">
+		<%= f.submit "Create My Profile" %>
 	</div>
 <% end %>
 </div>
