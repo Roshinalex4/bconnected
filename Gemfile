@@ -43,3 +43,4 @@ gem 'pg'
 gem "countries"
 gem 'contacts'
 gem 'hpricot'
+gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
