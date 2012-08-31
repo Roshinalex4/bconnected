@@ -39,4 +39,19 @@ class UserProfilesController < ApplicationController
   def connect_with_form
     @user_profile = UserProfile.find(params[:id])
   end
+
+  def enter_password
+		@user_profile = UserProfile.find(params[:id])
+  end
+  
+  def show_bconnected_contacts
+    @contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+		@contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
+		@query = "SELECT `user_profiles`.email_assoc as email FROM `user_profiles` WHERE `user_profiles`.`email_assoc` IN ("+@contacts.join(',')+") UNION SELECT `users`.email FROM `users` WHERE `users`.`email` IN ("+@contacts.join(',')+")"
+		@bconnected_contacts = UserProfile.find_by_sql(@query)
+  end
+
+  def show
+
+  end
 end

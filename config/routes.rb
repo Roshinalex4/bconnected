@@ -9,8 +9,12 @@ Bconnected::Application.routes.draw do
       get 'email_add_form'
       put 'email_add'
       get 'connect_with_form'
+			post 'show_bconnected_contacts'
+			post 'enter_password'
     end
   end
+  
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
