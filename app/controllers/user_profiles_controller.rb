@@ -40,16 +40,31 @@ class UserProfilesController < ApplicationController
     @user_profile = UserProfile.find(params[:id])
   end
 
-  def enter_password
+  def enter_password_to_connect
 		@user_profile = UserProfile.find(params[:id])
   end
   
   def show_bconnected_contacts
+puts params[:email][:password]
+puts '..............................'
     @contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		@contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
 		@query = "SELECT `user_profiles`.email_assoc as email FROM `user_profiles` WHERE `user_profiles`.`email_assoc` IN ("+@contacts.join(',')+") UNION SELECT `users`.email FROM `users` WHERE `users`.`email` IN ("+@contacts.join(',')+")"
 		@bconnected_contacts = UserProfile.find_by_sql(@query)
   end
+
+	def invite_contacts_form
+		@user_profile = UserProfile.find(params[:id])
+	end
+
+	def show_email_contacts
+		@user_profile = UserProfile.find(params[:id])
+		@contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+	end
+
+	def enter_password_to_invite
+		@user_profile = UserProfile.find(params[:id])
+	end
 
   def show
 

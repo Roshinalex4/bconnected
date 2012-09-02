@@ -7,10 +7,13 @@ Bconnected::Application.routes.draw do
     member do
       get 'profile_basic'
       get 'email_add_form'
-      put 'email_add'
       get 'connect_with_form'
+			get 'invite_contacts_form'
 			post 'show_bconnected_contacts'
-			post 'enter_password'
+			post 'enter_password_to_connect'
+			post 'enter_password_to_invite'
+			post 'show_email_contacts'
+			put 'email_add'
     end
   end
   

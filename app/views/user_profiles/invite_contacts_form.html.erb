@@ -1,0 +1,5 @@
+Why not invite some people
+<%= form_for @user_profile, :url => enter_password_to_invite_user_profile_path(@user_profile), :html => {:method => :post} do |f| %>
+	<%= f.text_field :email_assoc, :value => @user_profile.email_assoc %>
+	<%= f.submit "Yes" %>
+<% end %>
