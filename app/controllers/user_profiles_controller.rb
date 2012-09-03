@@ -19,14 +19,14 @@ class UserProfilesController < ApplicationController
   end
   
   def email_add_form
-    @user_profile = UserProfile.find(params[:id])
+    @user_profile = UserProfile.where(:user_id => params[:user_id]).first
   end
   
   def email_add
-    @user_profile = UserProfile.find(params[:id])
+    @user_profile = UserProfile.where(:user_id => params[:user_id]).first
     respond_to do |format|
       if @user_profile.update_attribute(:email_assoc, params[:user_profile][:email_assoc])
-        format.html { redirect_to connect_with_form_user_profile_path, notice: 'Email was successfully added.' }
+        format.html { redirect_to "/user_profiles/connect_with_form/"+ @user_profile.user_id.to_s, notice: 'Email was successfully added.' }
         format.json { head :no_content }
       else
         format.html { render action: "email_ad_form" }
@@ -37,31 +37,39 @@ class UserProfilesController < ApplicationController
   
   #Show the form 'Connect with people you know on Bconnected'
   def connect_with_form
-    @user_profile = UserProfile.find(params[:id])
+    @user_profile = UserProfile.where(:user_id => params[:user_id]).first
   end
 
   def enter_password_to_connect
-		@user_profile = UserProfile.find(params[:id])
+		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
   end
   
   def show_bconnected_contacts
-    @contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
-		@contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
+		if params[:user_profile][:email_assoc].split("@").last.include?("yahoo") 
+			@contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+		elsif params[:user_profile][:email_assoc].split("@").last.include?("gmail") 
+			@contacts = Contacts::Gmail.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+		end
+    @contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
 		@query = "SELECT `user_profiles`.email_assoc as email FROM `user_profiles` WHERE `user_profiles`.`email_assoc` IN ("+@contacts.join(',')+") UNION SELECT `users`.email FROM `users` WHERE `users`.`email` IN ("+@contacts.join(',')+")"
 		@bconnected_contacts = UserProfile.find_by_sql(@query)
   end
 
 	def invite_contacts_form
-		@user_profile = UserProfile.find(params[:id])
+		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
 
 	def show_email_contacts
-		@user_profile = UserProfile.find(params[:id])
-		@contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
+		if params[:user_profile][:email_assoc].split("@").last.include?("yahoo") 
+			@contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+		elsif params[:user_profile][:email_assoc].split("@").last.include?("gmail") 
+			@contacts = Contacts::Gmail.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+		end
 	end
 
 	def enter_password_to_invite
-		@user_profile = UserProfile.find(params[:id])
+		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
 
   def show

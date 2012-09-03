@@ -4,16 +4,16 @@ Bconnected::Application.routes.draw do
   get "home/index"
   
   resources :user_profiles do
-    member do
-      get 'profile_basic'
-      get 'email_add_form'
-      get 'connect_with_form'
-			get 'invite_contacts_form'
-			post 'show_bconnected_contacts'
-			post 'enter_password_to_connect'
-			post 'enter_password_to_invite'
-			post 'show_email_contacts'
-			put 'email_add'
+    collection do
+      get 'profile_basic/:user_id', :action => 'profile_basic'
+      get 'email_add_form/:user_id', :action => 'email_add_form'
+      get 'connect_with_form/:user_id', :action => 'connect_with_form'
+			get 'invite_contacts_form/:user_id', :action => 'invite_contacts_form'
+			post 'show_bconnected_contacts/:user_id', :action => 'show_bconnected_contacts'
+			post 'enter_password_to_connect/:user_id', :action => 'enter_password_to_connect'
+			post 'enter_password_to_invite/:user_id', :action => 'enter_password_to_invite'
+			post 'show_email_contacts/:user_id', :action => 'show_email_contacts'
+			put 'email_add/:user_id', :action => 'email_add'
     end
   end
   
