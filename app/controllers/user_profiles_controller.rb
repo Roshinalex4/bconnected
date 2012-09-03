@@ -9,7 +9,7 @@ class UserProfilesController < ApplicationController
       if @user_profile.save
         #format.html { redirect_to @user_profile, notice: 'User profile was successfully created.' }
         #format.json { render json: @user_profile, status: :created, location: @user_profile }
-        format.html { redirect_to email_add_form_user_profile_path(@user_profile), notice: 'User profile was successfully created.' }
+        format.html { redirect_to "/user_profiles/email_add_form/"+@user_profile.user_id.to_s, notice: 'User profile was successfully created.' }
         format.json { render json: email_add_form_user_profile_path(@user_profile), status: :created, location: @user_profile }
       else
         format.html { render action: "new" }
