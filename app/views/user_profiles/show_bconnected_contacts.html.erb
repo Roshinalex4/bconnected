@@ -2,3 +2,4 @@
 <% @bconnected_contacts.each do |contact| %>
 	Email: <%= contact.email	 %> <br clear="all" />
 <% end %>
+<a href="/user_profiles/invite_contacts_form/<%= current_user.id %>">Next>></a>
