@@ -51,7 +51,7 @@ class UserProfilesController < ApplicationController
 			@contacts = Contacts::Gmail.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		end
     @contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
-		@query = "SELECT `user_profiles`.email_assoc as email FROM `user_profiles` WHERE `user_profiles`.`email_assoc` IN ("+@contacts.join(',')+") UNION SELECT `users`.email FROM `users` WHERE `users`.`email` IN ("+@contacts.join(',')+")"
+		@query = "SELECT user_profiles.email_assoc as email FROM user_profiles WHERE user_profiles.email_assoc IN ("+@contacts.join(',')+") UNION SELECT users.email FROM users WHERE users.email IN ("+@contacts.join(',')+")"
 		@bconnected_contacts = UserProfile.find_by_sql(@query)
   end
 
