@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag @group.logo.url %>
+<p>
+  <b>Group name:</b>
+  <%= @group.group_name %>
+</p>
+
+<p>
+  <b>Creator:</b>
+  <%= @group.creator %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @group.description %>
+</p>
+
+<p>
+  <b>Group type:</b>
+  <%= @group.group_type %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @group.summary %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @group.website %>
+</p>
+
+<p>
+  <b>Group owner email:</b>
+  <%= @group.group_owner_email %>
+</p>
+
+<p>
+  <b>Access:</b>
+  <%= @group.access %>
+</p>
+
+<p>
+  <b>Display in directory:</b>
+  <%= @group.display_in_directory %>
+</p>
+
+<p>
+  <b>Allow display logo:</b>
+  <%= @group.allow_display_logo %>
+</p>
+
+<p>
+  <b>Allo invite others:</b>
+  <%= @group.allo_invite_others %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @group.language %>
+</p>
+
+<p>
+  <b>Single location:</b>
+  <%= @group.single_location %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @group.country_id %>
+</p>
+
+<p>
+  <b>Check agreement:</b>
+  <%= @group.check_agreement %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

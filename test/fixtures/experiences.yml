@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_name: MyString
+  company_website: MyString
+  industry_id: 1
+  title: MyString
+  location: MyString
+  from_month: MyString
+  to_month: MyString
+  from_year: 1
+  to_year: 1
+  currently_work: false
+  description: MyText
+
+two:
+  company_name: MyString
+  company_website: MyString
+  industry_id: 1
+  title: MyString
+  location: MyString
+  from_month: MyString
+  to_month: MyString
+  from_year: 1
+  to_year: 1
+  currently_work: false
+  description: MyText

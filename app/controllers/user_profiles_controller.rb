@@ -45,15 +45,18 @@ class UserProfilesController < ApplicationController
   end
   
   def show_bconnected_contacts
+    #@user_profile = UserProfile.where(:user_id => params[:user_id]).first
+    #@bconnected_contacts = User.where(:email => "rashilafs@gmail.com").select("email") 
 		if params[:user_profile][:email_assoc].split("@").last.include?("yahoo") 
-			@contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
+			 @contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		elsif params[:user_profile][:email_assoc].split("@").last.include?("gmail") 
 			@contacts = Contacts::Gmail.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		end
     @contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
-		@query = "SELECT user_profiles.email_assoc as email FROM user_profiles WHERE user_profiles.email_assoc IN ("+@contacts.join(',')+") UNION SELECT users.email FROM users WHERE users.email IN ("+@contacts.join(',')+")"
+		@query = "SELECT user_profiles.email_assoc as email, user_id as user_id FROM user_profiles WHERE user_profiles.email_assoc IN ("+@contacts.join(',')+") UNION SELECT users.email, users.id as user_id FROM users WHERE users.email IN ("+@contacts.join(',')+")"
 		@bconnected_contacts = UserProfile.find_by_sql(@query)
-  end
+		@connection = Connection.new
+	end
 
 	def invite_contacts_form
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
@@ -71,8 +74,37 @@ class UserProfilesController < ApplicationController
 	def enter_password_to_invite
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
-
-  def show
-
-  end
+	
+	def select_skills
+	  @user_profile = UserProfile.where(:user_id => params[:user_id]).first
+	  @skills = Skill.all
+	end
+	
+	def save_skills
+	  #Save the user's skills to DB
+	end
+	
+	def educational_qualification_form
+	  #Show the form to add/edit Educational Qualification
+	end
+	
+	def create_educational_qualification
+	  #Add a new Qualification Record
+	end
+	
+	def update_educational_qualification
+	  #Edit an existing Educational Qualification
+	end
+	
+	def experiences_form
+	  #Form to add/edit Work Experience
+	end
+	
+	def create_experience
+	  #Create a new Work Experience Record
+	end
+	
+	def update_experience
+	  #Edit an existing Work Experience
+	end
 end

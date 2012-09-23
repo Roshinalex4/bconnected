@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  group_name: MyString
+  creator: 1
+  description: MyText
+  group_type: MyString
+  summary: MyText
+  website: MyString
+  group_owner_email: MyString
+  access: 1
+  display_in_directory: false
+  allow_display_logo: false
+  allo_invite_others: false
+  language: MyString
+  single_location: false
+  country_id: 1
+  check_agreement: false
+
+two:
+  group_name: MyString
+  creator: 1
+  description: MyText
+  group_type: MyString
+  summary: MyText
+  website: MyString
+  group_owner_email: MyString
+  access: 1
+  display_in_directory: false
+  allow_display_logo: false
+  allo_invite_others: false
+  language: MyString
+  single_location: false
+  country_id: 1
+  check_agreement: false

@@ -20,6 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "paperclip"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,11 +37,11 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 gem 'execjs'
-gem 'therubyracer'
+#gem 'therubyracer'
 gem 'devise'
-gem 'activerecord-postgresql-adapter'
-gem 'pg'
+#gem 'activerecord-postgresql-adapter'
+#gem 'pg'
 gem "countries"
 gem 'contacts'
 gem 'hpricot'
-gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
+#gem 'gdata', git:'https://github.com/agentrock/gdata.git'

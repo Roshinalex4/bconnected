@@ -10,4 +10,10 @@ class User < ActiveRecord::Base
                   :first_name, :last_name
   # attr_accessible :title, :body
   has_one :user_profile
+  has_many :connections
+  has_many :friends, :through => :connections
+  has_and_belongs_to_many :skills
+  has_and_belongs_to_many :languages
+  has_many :qualifications
+  has_many :experiences
 end

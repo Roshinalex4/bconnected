@@ -1,0 +1,114 @@
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% @group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="label">
+  	<%= f.label :logo %>
+  </div>
+  <div class="field">
+  	Your logo will appear in the Groups Directory and on your group pages.<br />
+  	<%= f.file_field :logo %>
+  </div>
+  <div class="label">
+    <%= f.label :group_name %>
+  </div>
+  <div class="field">
+    <%= f.text_field :group_name %>
+  </div>
+  <div class="label">
+    <%= f.label :group_type %>
+  </div>
+  <div class="field">
+    <%= f.select :group_type, ["Alumni Group", "Corporate Group", "Conference Group", "Networking Group", "Non-profit Group", "Professional Group"] %>
+  </div>
+  <div class="label">
+    <%= f.label :summary %>
+  </div>
+  <div class="field">
+  	Enter a brief description about your group and its purpose. Your summary about this group will appear in the Groups Directory.<br clear="all" />
+    <%= f.text_area :summary %>
+  </div>
+  <div class="label">
+    <%= f.label :description %>
+  </div>
+  <div class="field">
+  	Your full description of this group will appear on your group pages. <br clear="all" />
+    <%= f.text_area :description %>
+  </div>
+  <div class="label">
+    <%= f.label :website %>
+  </div>
+  <div class="field">
+    <%= f.text_field :website %>
+  </div>
+  <div class="label">
+    <%= f.label :group_owner_email %>
+  </div>
+  <div class="field">
+    <%= f.text_field :group_owner_email, :value => @user_profile.email_assoc %>
+  </div>
+  <div class="label">
+    <%= f.label :access %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :access, 0 %>Auto-Join: Any LinkedIn member may join this group without requiring approval from a manager.<br>
+    <%= f.radio_button :access, 1 %>Request to Join: Users must request to join this group and be approved by a manager.
+  </div>
+  <div class="label">
+  	&nbsp;
+  </div>
+  <div class="field">
+    <%= f.check_box :display_in_directory %><%= f.label "Display this group in the Groups Directory" %><br />
+    <%= f.check_box :allow_display_logo %><%= f.label "Allow members to display the logo on their profiles. Also, send your connections a Network Update that you have created this group." %><br />
+  	<%= f.check_box :allo_invite_others %><%= f.label "Allow members to invite others to join this group." %>
+  </div>
+  <div class="label">
+    <%= f.label :language %>
+  </div>
+  <div class="field">
+    <%= f.select :language, ["English", "Dutch"] %>
+  </div>
+  <div class="label">
+  	Location
+  </div>
+  <div class="field">
+    <%= f.check_box :single_location %><%= f.label "This group is based in a single geographic location." %>
+  </div>
+  <div class="label">
+    &nbsp;
+  </div>
+  <div class="field">
+    <%= f.country_select :country_id %><br />
+    <%= f.text_field :postal_code %>
+  </div>
+  
+  <div class="label">
+    Agreement
+  </div>
+  <div class="field">
+    <%= f.check_box :check_agreement %><%= f.label "Check to confirm you have read and accept the Terms of Service." %>
+  </div>
+  <div class="label">
+  	&nbsp;
+  </div>
+  <div class="field">
+  	Discussions in LinkedIn groups can either be open to the world to see and share, or restricted to members only.
+  	<%= f.button "Learn about Open Groups" %>
+  </div>
+  <div class="label">
+  	&nbsp;
+  </div>
+  <div class="field">
+    <%= f.submit "Create an Open Group" %>
+    <%= f.submit "Create a Members-Only Group" %> or <%= link_to 'Cancel', groups_path %>
+  </div>
+<% end %>
+
