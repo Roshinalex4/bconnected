@@ -15692,3 +15692,3116 @@ Migrating to CreateExperiences (20120923172028)
   [1m[35m (148.0ms)[0m  CREATE TABLE `experiences` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `company_name` varchar(255), `company_website` varchar(255), `industry_id` int(11), `title` varchar(255), `location` varchar(255), `from_month` varchar(255), `to_month` varchar(255), `from_year` int(11), `to_year` int(11), `currently_work` tinyint(1), `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
   [1m[36m (42.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120923172028')[0m
   [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserSkills (20120924170013)
+  [1m[35m (90.0ms)[0m  CREATE TABLE `user_skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `skill_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (86.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120924170013')[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Mysql2::Error: Table 'bconnected_development.skills' doesn't exist: SHOW FULL FIELDS FROM `skills`
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+  [1m[35m (110.0ms)[0m  CREATE TABLE `skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120923170821')[0m
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserSkills (20120924170013)
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-24 22:42:17 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (114.0ms)
+Compiled skills.css  (128ms)  (pid 2264)
+Compiled application.css  (239ms)  (pid 2264)
+Compiled skills.js  (386ms)  (pid 2264)
+Compiled application.js  (446ms)  (pid 2264)
+Completed 200 OK in 2087ms (Views: 2086.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:19 +0530
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:19 +0530
+Served asset /skills.css - 200 OK (3ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:19 +0530
+Served asset /groups.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /connections.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /invitations.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /user_profiles.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /connections.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /groups.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /application.js - 304 Not Modified (87ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /skills.js - 200 OK (5ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /invitations.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:20 +0530
+Served asset /user_profiles.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-09-24 22:42:44 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (521.0ms)
+Completed 200 OK in 1417ms (Views: 561.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:46 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-09-24 22:42:53 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+k7Y/iTTqlW6is4lYtXOB1xQh12B8TGB+03gO9yyQM8=", "user"=>{"email"=>"rashilafs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'rashilafs@gmail.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (65.0ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2012-09-23 16:45:24', `current_sign_in_at` = '2012-09-24 17:12:54', `sign_in_count` = 7, `updated_at` = '2012-09-24 17:12:54' WHERE `users`.`id` = 1[0m
+  [1m[35m (61.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/user_profiles/email_add_form/1
+Completed 302 Found in 1018ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_profiles/email_add_form/1" for 127.0.0.1 at 2012-09-24 22:42:54 +0530
+Processing by UserProfilesController#email_add_form as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  Rendered user_profiles/email_add_form.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 59ms (Views: 30.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:54 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:54 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:54 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:54 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:54 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:54 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /user_profiles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /groups.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-24 22:42:55 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:43:31 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+Completed 500 Internal Server Error in 19ms
+
+ActionView::MissingTemplate (Missing template skills/select_skills, application/select_skills with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/ror/free/bconnected_git/bconnected/app/views"
+  * "C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+  actionpack (3.2.6) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.6) lib/action_view/lookup_context.rb:109:in `find'
+  C:in `find_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__1029334826__process_action__575753291__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.6) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__99190461__call__1060851934__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:43:52 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/select_skills.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<%= f.select :skills, @skills.collect {|s| [s.name, s.id]}, {}, :multiple => true %>
+    3: <% end %>
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb___919997388_44326032'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (88.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:44:32 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (0.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  Rendered skills/select_skills.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 122ms
+
+ActionView::Template::Error (undefined method `skills' for #<Skill id: nil, name: nil, created_at: nil, updated_at: nil>):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<%= f.select :skills, @skills.collect {|s| [s.name, s.id]}, {}, :multiple => true %>
+    3: <% end %>
+  app/views/skills/select_skills.html.erb:2:in `block in _app_views_skills_select_skills_html_erb___919997388_44326032'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb___919997388_44326032'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/select_skills.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /connections.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /skills.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /invitations.css - 200 OK (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /groups.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /user_profiles.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /connections.js - 200 OK (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:51 +0530
+Served asset /groups.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:52 +0530
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:52 +0530
+Served asset /invitations.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:52 +0530
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:52 +0530
+Served asset /skills.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-24 22:45:52 +0530
+Served asset /user_profiles.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `skills` (`created_at`, `name`, `updated_at`) VALUES ('2012-09-24 17:17:01', 'Ruby on Rails', '2012-09-24 17:17:01')[0m
+  [1m[35m (118.0ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `skills` (`created_at`, `name`, `updated_at`) VALUES ('2012-09-24 17:17:01', 'JAVA', '2012-09-24 17:17:01')
+  [1m[36m (40.0ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-24 22:48:39 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (99.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 1484ms (Views: 1479.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-24 22:48:41 +0530
+Served asset /skills.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-24 22:48:41 +0530
+Served asset /skills.js - 304 Not Modified (11ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:48:59 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/select_skills.html.erb within layouts/application (191.0ms)
+Completed 500 Internal Server Error in 257ms
+
+ActionView::Template::Error (undefined method `skills' for #<Skill id: nil, name: nil, created_at: nil, updated_at: nil>):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<% if !@skills.empty? %>
+    3: 		<%= f.select :skills, @skills.collect {|s| [s.name, s.id]}, {}, :multiple => true %>
+    4: 	<% end %>
+    5: <% end %>
+  app/views/skills/select_skills.html.erb:3:in `block in _app_views_skills_select_skills_html_erb__815845230_44305176'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb__815845230_44305176'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (55.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:51:40 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  Rendered skills/select_skills.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `[["Ruby on Rails", 1], ["JAVA", 2]]' for #<Array:0x5a59e20>):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<% if !@skills.empty? %>
+    3: 		<%= select :skills, @skills.collect {|s| [s.name, s.id]}, {}, :multiple => true %>
+    4: 	<% end %>
+    5: <% end %>
+  app/views/skills/select_skills.html.erb:3:in `block in _app_views_skills_select_skills_html_erb__815845230_47365416'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb__815845230_47365416'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:52:06 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  Rendered skills/select_skills.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `[["Ruby on Rails", 1], ["JAVA", 2]]' for #<Array:0x5487a68>):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<% if !@skills.empty? %>
+    3: 		<%= select :skills, Skill.all.collect {|s| [s.name, s.id]}, {}, :multiple => true %>
+    4: 	<% end %>
+    5: <% end %>
+  app/views/skills/select_skills.html.erb:3:in `block in _app_views_skills_select_skills_html_erb__815845230_44312796'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb__815845230_44312796'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (87.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/select_skills.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 51ms (Views: 43.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /connections.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /groups.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /skills.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /invitations.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /user_profiles.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /connections.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /groups.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /invitations.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:25 +0530
+Served asset /user_profiles.js - 304 Not Modified (3ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  Rendered skills/select_skills.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 90ms (Views: 82.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /connections.css - 200 OK (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /groups.css - 200 OK (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /skills.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /invitations.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /user_profiles.css - 200 OK (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /connections.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /groups.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /invitations.js - 200 OK (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /skills.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-24 22:53:45 +0530
+Served asset /user_profiles.js - 200 OK (0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/select_skills.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 151ms (Views: 143.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Served asset /connections.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Served asset /skills.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Served asset /invitations.css - 200 OK (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:01 +0530
+Served asset /user_profiles.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /connections.js - 200 OK (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /groups.css - 200 OK (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /groups.js - 200 OK (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /invitations.js - 200 OK (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /skills.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /user_profiles.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-24 22:54:02 +0530
+Served asset /application.js - 200 OK (3ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-24 22:54:08 +0530
+
+ActionController::RoutingError (No route matches [POST] "/skills/save_skills/1"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-24 22:55:55 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+k7Y/iTTqlW6is4lYtXOB1xQh12B8TGB+03gO9yyQM8=", "skills"=>["1", "2"], "commit"=>"Add Skills", "user_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 886ms
+
+NoMethodError (undefined method `save' for "1":String):
+  app/controllers/skills_controller.rb:11:in `block in save_skills'
+  app/controllers/skills_controller.rb:9:in `each'
+  app/controllers/skills_controller.rb:9:in `save_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (147.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-24 22:56:37 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+k7Y/iTTqlW6is4lYtXOB1xQh12B8TGB+03gO9yyQM8=", "skills"=>["1", "2"], "commit"=>"Add Skills", "user_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `user_skills` (`created_at`, `skill_id`, `updated_at`, `user_id`) VALUES ('2012-09-24 17:26:37', 1, '2012-09-24 17:26:37', 1)
+  [1m[36m (105.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `user_skills` (`created_at`, `skill_id`, `updated_at`, `user_id`) VALUES ('2012-09-24 17:26:38', 2, '2012-09-24 17:26:38', 1)[0m
+  [1m[35m (52.0ms)[0m  COMMIT
+Completed 500 Internal Server Error in 651ms
+
+ActionView::MissingTemplate (Missing template skills/save_skills, application/save_skills with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/ror/free/bconnected_git/bconnected/app/views"
+  * "C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+  actionpack (3.2.6) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.6) lib/action_view/lookup_context.rb:109:in `find'
+  C:in `find_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__1070053208__process_action__1023947862__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.6) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__735274389__call__973269844__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-24 22:59:06 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 207ms (Views: 202.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-24 22:59:07 +0530
+Served asset /skills.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-24 22:59:07 +0530
+Served asset /skills.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-25 22:41:30 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (119.0ms)
+Completed 200 OK in 1908ms (Views: 1907.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /connections.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /invitations.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /skills.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /groups.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /user_profiles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /connections.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /groups.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /home.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /invitations.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /skills.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /user_profiles.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:33 +0530
+Served asset /application.js - 304 Not Modified (23ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-09-25 22:41:35 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (722.0ms)
+Completed 200 OK in 2291ms (Views: 759.0ms | ActiveRecord: 323.0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:38 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-09-25 22:41:48 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"email"=>"rashilafs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (36.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'rashilafs@gmail.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (21.0ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2012-09-24 17:12:54', `current_sign_in_at` = '2012-09-25 17:11:49', `sign_in_count` = 8, `updated_at` = '2012-09-25 17:11:49' WHERE `users`.`id` = 1[0m
+  [1m[35m (67.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/user_profiles/email_add_form/1
+Completed 302 Found in 1058ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_profiles/email_add_form/1" for 127.0.0.1 at 2012-09-25 22:41:49 +0530
+Processing by UserProfilesController#email_add_form as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  Rendered user_profiles/email_add_form.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 126ms (Views: 36.0ms | ActiveRecord: 66.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /groups.css - 304 Not Modified (39ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 22:41:50 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/user_profiles/1/profile_basic" for 127.0.0.1 at 2012-09-25 22:42:08 +0530
+
+ActionController::RoutingError (No route matches [GET] "/user_profiles/1/profile_basic"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/user_profiles/profile_basic/1" for 127.0.0.1 at 2012-09-25 22:42:32 +0530
+Processing by UserProfilesController#profile_basic as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered user_profiles/profile_basic.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 191ms (Views: 189.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:32 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:32 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:32 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:32 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:32 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /groups.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /user_profiles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 22:42:33 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 22:44:22 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 390ms
+
+NoMethodError (undefined method `skills' for #<Class:0x5092bf0>):
+  app/controllers/skills_controller.rb:5:in `select_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (77.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 22:47:13 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 384ms
+
+NoMethodError (undefined method `skills' for #<Class:0x5080590>):
+  app/controllers/skills_controller.rb:5:in `select_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 22:54:18 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (2.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1
+Mysql2::Error: Table 'bconnected_development.skills_users' doesn't exist: SELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1
+Completed 500 Internal Server Error in 2773ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'bconnected_development.skills_users' doesn't exist: SELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1):
+  app/controllers/skills_controller.rb:6:in `-'
+  app/controllers/skills_controller.rb:6:in `select_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (219.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 22:56:53 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 516ms
+
+ActiveRecord::HasManyThroughAssociationNotFoundError (Could not find the association :users_skills in model User):
+  app/controllers/skills_controller.rb:5:in `select_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (77.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 22:58:33 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (0.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1
+  Rendered skills/select_skills.html.erb within layouts/application (200.0ms)
+Completed 500 Internal Server Error in 358ms
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<% if !@skills.empty? %>
+    3: 		<%= select_tag "skills", options_from_collection_for_select(@skills, 'id', 'name'), :multiple => true %>
+    4: 	<% end %>
+    5: 	<%= f.submit "Add Skills" %>
+  app/views/skills/select_skills.html.erb:2:in `block in _app_views_skills_select_skills_html_erb___47329275_22420776'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb___47329275_22420776'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (145.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (198.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:06:18 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1
+  Rendered skills/select_skills.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 200ms
+
+ActionView::Template::Error (undefined method `skills' for nil:NilClass):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<% for skill in @all_skills %>
+    3: 	<div>
+    4: 	  <%= check_box_tag "user[skill_ids][]", skill.id, @user.skills.include?(skill) %>
+    5: 	  <%= skill.name %>
+    6: 	</div>
+    7: 	<% end %>
+  app/views/skills/select_skills.html.erb:4:in `block (2 levels) in _app_views_skills_select_skills_html_erb___47329275_39874476'
+  app/views/skills/select_skills.html.erb:2:in `each'
+  app/views/skills/select_skills.html.erb:2:in `block in _app_views_skills_select_skills_html_erb___47329275_39874476'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb___47329275_39874476'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (59.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1
+  Rendered skills/select_skills.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 175ms (Views: 167.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /connections.css - 200 OK (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /application.css - 200 OK (23ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /skills.css - 200 OK (9ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /home.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /groups.css - 200 OK (3ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /user_profiles.css - 200 OK (4ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /invitations.css - 200 OK (40ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /jquery.js - 200 OK (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /jquery_ujs.js - 200 OK (8ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /connections.js - 200 OK (6ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /home.js - 200 OK (3ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /groups.js - 200 OK (56ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /invitations.js - 200 OK (4ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:50 +0530
+Served asset /skills.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:51 +0530
+Served asset /application.js - 200 OK (21ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:06:51 +0530
+Served asset /user_profiles.js - 200 OK (2ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:06:56 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000user_profiles/profile_basic/1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:06:56 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000user_profiles/profile_basic/1
+Completed 302 Found in 2ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:06:56 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000user_profiles/profile_basic/1
+Completed 302 Found in 2ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:06:56 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000user_profiles/profile_basic/1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:06:56 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000user_profiles/profile_basic/1
+Completed 302 Found in 1ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:06:56 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000user_profiles/profile_basic/1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:06:56 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000user_profiles/profile_basic/1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:07:49 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1[0m
+  Rendered skills/select_skills.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 184ms (Views: 30.0ms | ActiveRecord: 26.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:08:05 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+Redirected to http://localhost:3000skills/select_skills
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:08:05 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+Redirected to http://localhost:3000skills/select_skills
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:08:20 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1[0m
+  Rendered skills/select_skills.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 259ms (Views: 39.0ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:21 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+Redirected to http://localhost:3000/skills/select_skills
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1[0m
+  Rendered skills/select_skills.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 38.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /connections.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:08:24 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  [1m[36mSkill Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1 AND `skills`.`id` = 1 LIMIT 1[0m
+  [1m[35mSkill Exists (0.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `skills_users` ON `skills`.`id` = `skills_users`.`skill_id` WHERE `skills_users`.`user_id` = 1 AND `skills`.`id` = 2 LIMIT 1
+  Rendered skills/select_skills.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 206ms (Views: 39.0ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:29 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:30 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:30 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:30 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:30 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:30 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:30 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:17:30 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/skills/save_skills/1" for 127.0.0.1 at 2012-09-25 23:17:33 +0530
+Processing by SkillsController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user"=>{"skill_ids"=>["1"]}, "commit"=>"Save Skills", "user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 6ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: skill_ids):
+  app/controllers/skills_controller.rb:10:in `save_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:21:17 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/select_skills.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 257ms
+
+ActionView::Template::Error (uninitialized constant User::SkillsUser):
+    1: <%= form_for @skill, :url => '/skills/save_skills/'+ @user_profile.user_id.to_s, :html => {:method => :post} do |f| %>
+    2: 	<% for skill in @all_skills %>
+    3: 	<div>
+    4: 	  <%= check_box_tag "user[skill_ids][]", skill.id, current_user.skills.include?(skill) %>
+    5: 	  <%= skill.name %>
+    6: 	</div>
+    7: 	<% end %>
+  app/views/skills/select_skills.html.erb:4:in `block (2 levels) in _app_views_skills_select_skills_html_erb___47329275_21855972'
+  app/views/skills/select_skills.html.erb:2:in `each'
+  app/views/skills/select_skills.html.erb:2:in `block in _app_views_skills_select_skills_html_erb___47329275_21855972'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb___47329275_21855972'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (12.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (124.0ms)
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:24:48 +0530
+Processing by SkillsController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/select_skills.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (uninitialized constant User::SkillsUser):
+    3: 	  <%= skill.name %>
+    4: 	  <%= check_box_tag :skill_ids,
+    5: 	                    skill.id,
+    6: 	                    current_user.skills.include?(skill),
+    7: 	                    :name => 'user[skill_ids][]' %>
+    8: 	  <br/>
+    9: 	<% end %>
+  app/views/skills/select_skills.html.erb:6:in `block (2 levels) in _app_views_skills_select_skills_html_erb___47329275_45521304'
+  app/views/skills/select_skills.html.erb:2:in `each'
+  app/views/skills/select_skills.html.erb:2:in `block in _app_views_skills_select_skills_html_erb___47329275_45521304'
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb___47329275_45521304'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (81.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/skills/select_skills" for 127.0.0.1 at 2012-09-25 23:30:51 +0530
+Processing by SkillsController#select_skills as HTML
+  Rendered skills/select_skills.html.erb within layouts/application (309.0ms)
+Completed 500 Internal Server Error in 1359ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for @user_profile, :url => '/user_profiles/save_skills/', :html => {:method => :post} do |f| %>
+    2:   <% Skill.all.each do |skill| %>
+    3: 	  <%= skill.name %>
+    4: 	  <%= check_box_tag :skill_ids,
+  app/views/skills/select_skills.html.erb:1:in `_app_views_skills_select_skills_html_erb__1040209264_40322688'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (68.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:33:01 +0530
+Processing by UserProfilesController#select_skills as HTML
+Completed 500 Internal Server Error in 484ms
+
+ActionView::MissingTemplate (Missing template user_profiles/select_skills, application/select_skills with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/ror/free/bconnected_git/bconnected/app/views"
+  * "C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+  actionpack (3.2.6) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.6) lib/action_view/lookup_context.rb:109:in `find'
+  C:in `find_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__314718967__process_action__599088274__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.6) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__688631936__call__41744853__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (211.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:33:24 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 1046ms
+
+ActionView::MissingTemplate (Missing template user_profiles/select_skills, application/select_skills with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/ror/free/bconnected_git/bconnected/app/views"
+  * "C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+  actionpack (3.2.6) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.6) lib/action_view/lookup_context.rb:109:in `find'
+  C:in `find_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__314718967__process_action__599088274__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.6) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__688631936__call__41744853__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:33:52 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (0.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  Rendered user_profiles/select_skills.html.erb within layouts/application (84.0ms)
+Completed 500 Internal Server Error in 96ms
+
+ActionView::Template::Error (undefined method `skills' for #<User:0x5139e28>):
+    3: 	  <%= skill.name %>
+    4: 	  <%= check_box_tag :skill_ids,
+    5: 	                    skill.id,
+    6: 	                    current_user.skills.include?(skill),
+    7: 	                    :name => 'user[skill_ids][]' %>
+    8: 	  <br/>
+    9: 	<% end %>
+  app/views/user_profiles/select_skills.html.erb:6:in `block (2 levels) in _app_views_user_profiles_select_skills_html_erb___576079271_42594792'
+  app/views/user_profiles/select_skills.html.erb:2:in `each'
+  app/views/user_profiles/select_skills.html.erb:2:in `block in _app_views_user_profiles_select_skills_html_erb___576079271_42594792'
+  app/views/user_profiles/select_skills.html.erb:1:in `_app_views_user_profiles_select_skills_html_erb___576079271_42594792'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (64.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:34:38 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered user_profiles/select_skills.html.erb within layouts/application (551.0ms)
+Completed 500 Internal Server Error in 562ms
+
+ActionView::Template::Error (uninitialized constant UserProfile::SkillsUser):
+    3: 	  <%= skill.name %>
+    4: 	  <%= check_box_tag :skill_ids,
+    5: 	                    skill.id,
+    6: 	                    @user_profile.skills.include?(skill),
+    7: 	                    :name => 'user_profile[skill_ids][]' %>
+    8: 	  <br/>
+    9: 	<% end %>
+  app/views/user_profiles/select_skills.html.erb:6:in `block (2 levels) in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:2:in `each'
+  app/views/user_profiles/select_skills.html.erb:2:in `block in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:1:in `_app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (56.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:37:01 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  Rendered user_profiles/select_skills.html.erb within layouts/application (32.0ms)
+Completed 500 Internal Server Error in 208ms
+
+ActionView::Template::Error (Could not find the association :user_profile_skills in model UserProfile):
+    3: 	  <%= skill.name %>
+    4: 	  <%= check_box_tag :skill_ids,
+    5: 	                    skill.id,
+    6: 	                    @user_profile.skills.include?(skill),
+    7: 	                    :name => 'user_profile[skill_ids][]' %>
+    8: 	  <br/>
+    9: 	<% end %>
+  app/views/user_profiles/select_skills.html.erb:6:in `block (2 levels) in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:2:in `each'
+  app/views/user_profiles/select_skills.html.erb:2:in `block in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:1:in `_app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (54.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:38:23 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered user_profiles/select_skills.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (Could not find the association :user_profile_skills in model UserProfile):
+    3: 	  <%= skill.name %>
+    4: 	  <%= check_box_tag :skill_ids,
+    5: 	                    skill.id,
+    6: 	                    @user_profile.skills.include?(skill),
+    7: 	                    :name => 'user_profile[skill_ids][]' %>
+    8: 	  <br/>
+    9: 	<% end %>
+  app/views/user_profiles/select_skills.html.erb:6:in `block (2 levels) in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:2:in `each'
+  app/views/user_profiles/select_skills.html.erb:2:in `block in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:1:in `_app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:40:29 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Exists (0.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1
+Mysql2::Error: Unknown column 'user_profile_skills.user_profile_id' in 'where clause': SELECT  1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1
+  Rendered user_profiles/select_skills.html.erb within layouts/application (579.0ms)
+Completed 500 Internal Server Error in 700ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'user_profile_skills.user_profile_id' in 'where clause': SELECT  1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1):
+    3: 	  <%= skill.name %>
+    4: 	  <%= check_box_tag :skill_ids,
+    5: 	                    skill.id,
+    6: 	                    @user_profile.skills.include?(skill),
+    7: 	                    :name => 'user_profile[skill_ids][]' %>
+    8: 	  <br/>
+    9: 	<% end %>
+  app/views/user_profiles/select_skills.html.erb:6:in `block (2 levels) in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:2:in `each'
+  app/views/user_profiles/select_skills.html.erb:2:in `block in _app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+  app/views/user_profiles/select_skills.html.erb:1:in `_app_views_user_profiles_select_skills_html_erb___576079271_39347232'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (54.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserProfileSkills (20120924170013)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserProfileSkills (20120924170013)
+  [1m[35m (23.0ms)[0m  CREATE TABLE `user_profile_skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_profile_id` int(11), `skill_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: Table 'user_profile_skills' already exists: CREATE TABLE `user_profile_skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_profile_id` int(11), `skill_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserProfileSkills (20120924170013)
+  [1m[35m (260.0ms)[0m  CREATE TABLE `user_profile_skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_profile_id` int(11), `skill_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (71.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120924170013')[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:47:43 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (2.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Exists (1.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1
+  [1m[36mSkill Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 2 LIMIT 1[0m
+  Rendered user_profiles/select_skills.html.erb within layouts/application (1201.1ms)
+Completed 200 OK in 2601ms (Views: 1656.1ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /invitations.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /connections.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /groups.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /skills.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /user_profiles.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /connections.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /groups.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:46 +0530
+Served asset /home.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:47 +0530
+Served asset /invitations.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:47 +0530
+Served asset /skills.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:47 +0530
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:47 +0530
+Served asset /user_profiles.js - 304 Not Modified (2ms)
+
+
+Started POST "/user_profiles/save_skills/" for 127.0.0.1 at 2012-09-25 23:47:50 +0530
+Processing by UserProfilesController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user_profile"=>{"skill_ids"=>["1"]}, "commit"=>"Update User profile"}
+  [1m[35mUser Load (5.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (2.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 393ms
+
+ActionView::MissingTemplate (Missing template user_profiles/save_skills, application/save_skills with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/ror/free/bconnected_git/bconnected/app/views"
+  * "C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+  actionpack (3.2.6) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.6) lib/action_view/lookup_context.rb:109:in `find'
+  C:in `find_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__1070423242__process_action__584157855__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.6) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__27001179__call__730342380__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  [1m[36mSkill Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1[0m
+  [1m[35mSkill Exists (0.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 2 LIMIT 1
+  Rendered user_profiles/select_skills.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /skills.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /connections.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:47:59 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:48:35 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (0.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Exists (0.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1
+  [1m[36mSkill Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 2 LIMIT 1[0m
+  Rendered user_profiles/select_skills.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 262ms (Views: 158.0ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:48:36 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/user_profiles/save_skills/" for 127.0.0.1 at 2012-09-25 23:48:39 +0530
+Processing by UserProfilesController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user_profile"=>{"skill_ids"=>["1"]}, "commit"=>"Update User profile"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 8ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: skill_ids):
+  app/controllers/user_profiles_controller.rb:23:in `save_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (73.0ms)
+
+
+Started POST "/user_profiles/save_skills/" for 127.0.0.1 at 2012-09-25 23:49:22 +0530
+Processing by UserProfilesController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user_profile"=>{"skill_ids"=>["1"]}, "commit"=>"Update User profile"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 7ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: skill_ids):
+  app/controllers/user_profiles_controller.rb:23:in `save_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:50:00 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` 
+  [1m[36mSkill Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1[0m
+  [1m[35mSkill Exists (1.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 2 LIMIT 1
+  Rendered user_profiles/select_skills.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/user_profiles/save_skills/" for 127.0.0.1 at 2012-09-25 23:50:03 +0530
+Processing by UserProfilesController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user_profile"=>{"skills"=>["1"]}, "commit"=>"Update User profile"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 5ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: skills):
+  app/controllers/user_profiles_controller.rb:23:in `save_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.0ms)
+
+
+Started POST "/user_profiles/save_skills/" for 127.0.0.1 at 2012-09-25 23:50:33 +0530
+Processing by UserProfilesController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user_profile"=>{"skills"=>["1"]}, "commit"=>"Update User profile"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (0.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 119ms
+
+ActiveRecord::AssociationTypeMismatch (Skill(#28530432) expected, got String(#13956288)):
+  app/controllers/user_profiles_controller.rb:23:in `save_skills'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (57.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (243.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:51:14 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (0.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Exists (0.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1
+  [1m[36mSkill Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 2 LIMIT 1[0m
+  Rendered user_profiles/select_skills.html.erb within layouts/application (202.0ms)
+Completed 200 OK in 377ms (Views: 229.0ms | ActiveRecord: 37.0ms)
+
+
+Started POST "/user_profiles/save_skills/" for 127.0.0.1 at 2012-09-25 23:51:17 +0530
+Processing by UserProfilesController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user_profile"=>{"skill_ids"=>["1"]}, "commit"=>"Update User profile"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` WHERE `skills`.`id` = 1 LIMIT 1[0m
+  [1m[35mSkill Load (1.0ms)[0m  SELECT `skills`.* FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `user_profile_skills` (`created_at`, `skill_id`, `updated_at`, `user_profile_id`) VALUES ('2012-09-25 18:21:17', 1, '2012-09-25 18:21:17', 1)[0m
+  [1m[35m (46.0ms)[0m  COMMIT
+Completed 500 Internal Server Error in 537ms
+
+ActionView::MissingTemplate (Missing template user_profiles/save_skills, application/save_skills with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/ror/free/bconnected_git/bconnected/app/views"
+  * "C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+  actionpack (3.2.6) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.6) lib/action_view/lookup_context.rb:109:in `find'
+  C:in `find_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__1070423242__process_action__584157855__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.6) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__27001179__call__730342380__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.0ms)
+
+
+Started GET "/user_profiles/select_skills" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Processing by UserProfilesController#select_skills as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUserProfile Load (1.0ms)[0m  SELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1
+  [1m[36mSkill Load (1.0ms)[0m  [1mSELECT `skills`.* FROM `skills` [0m
+  [1m[35mSkill Exists (0.0ms)[0m  SELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 1 LIMIT 1
+  [1m[36mSkill Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `skills`.`id` = 2 LIMIT 1[0m
+  Rendered user_profiles/select_skills.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /skills.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-25 23:51:30 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started POST "/user_profiles/save_skills/" for 127.0.0.1 at 2012-09-25 23:51:35 +0530
+Processing by UserProfilesController#save_skills as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wienKoIsTQzjMdvTeujAxdohbKNq2x1uzycN5S67fU=", "user_profile"=>{"skill_ids"=>["2"]}, "commit"=>"Update User profile"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (1.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSkill Load (0.0ms)[0m  [1mSELECT `skills`.* FROM `skills` WHERE `skills`.`id` = 2 LIMIT 1[0m
+  [1m[35mSkill Load (0.0ms)[0m  SELECT `skills`.* FROM `skills` INNER JOIN `user_profile_skills` ON `skills`.`id` = `user_profile_skills`.`skill_id` WHERE `user_profile_skills`.`user_profile_id` = 1
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM `user_profile_skills` WHERE `user_profile_skills`.`user_profile_id` = 1 AND `user_profile_skills`.`skill_id` = 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `user_profile_skills` (`created_at`, `skill_id`, `updated_at`, `user_profile_id`) VALUES ('2012-09-25 18:21:35', 2, '2012-09-25 18:21:35', 1)
+  [1m[36m (51.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 74ms
+
+ActionView::MissingTemplate (Missing template user_profiles/save_skills, application/save_skills with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "D:/ror/free/bconnected_git/bconnected/app/views"
+  * "C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+  actionpack (3.2.6) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.6) lib/action_view/lookup_context.rb:109:in `find'
+  C:in `find_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__1070423242__process_action__584157855__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  activerecord (3.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.6) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__27001179__call__730342380__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)

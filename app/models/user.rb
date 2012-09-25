@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_one :user_profile
   has_many :connections
   has_many :friends, :through => :connections
-  has_and_belongs_to_many :skills
+  
   has_and_belongs_to_many :languages
   has_many :qualifications
   has_many :experiences

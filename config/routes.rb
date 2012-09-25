@@ -16,11 +16,13 @@ Bconnected::Application.routes.draw do
 			post 'enter_password_to_invite/:user_id', :action => 'enter_password_to_invite'
 			post 'show_email_contacts/:user_id', :action => 'show_email_contacts'
       put 'email_add/:user_id', :action => 'email_add'
+      post 'save_skills', :action => 'save_skills'
+      get 'select_skills', :action => 'select_skills'
     end
   end
   
   resources :connections
-   
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

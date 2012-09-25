@@ -18,6 +18,16 @@ class UserProfilesController < ApplicationController
     end
   end
   
+  def save_skills
+    params[:user_profile][:skill_ids] ||= []
+    @user_profile = UserProfile.find_by_user_id(current_user.id)
+    @user_profile.update_attributes(params[:user_profile])
+  end
+  
+  def select_skills
+    @user_profile = UserProfile.find_by_user_id(current_user.id)
+  end
+  
   def email_add_form
     @user_profile = UserProfile.where(:user_id => params[:user_id]).first
   end
@@ -75,14 +85,7 @@ class UserProfilesController < ApplicationController
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
 	
-	def select_skills
-	  @user_profile = UserProfile.where(:user_id => params[:user_id]).first
-	  @skills = Skill.all
-	end
 	
-	def save_skills
-	  #Save the user's skills to DB
-	end
 	
 	def educational_qualification_form
 	  #Show the form to add/edit Educational Qualification

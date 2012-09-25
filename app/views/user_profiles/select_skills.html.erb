@@ -1,0 +1,14 @@
+<%= form_for @user_profile, :url => '/user_profiles/save_skills/', :html => {:method => :post} do |f| %>
+  <% Skill.all.each do |skill| %>
+	  <%= skill.name %>
+	  <%= check_box_tag :skill_ids,
+	                    skill.id,
+	                    @user_profile.skills.include?(skill),
+	                    :name => 'user_profile[skill_ids][]' %>
+	  <br/>
+	<% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
