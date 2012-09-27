@@ -18805,3 +18805,1080 @@ ActionView::MissingTemplate (Missing template user_profiles/save_skills, applica
 
 
   Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserProfileSkills (20120924170013)
+Migrating to AddSummaryToUserProfiles (20120927152915)
+  [1m[35m (176.0ms)[0m  ALTER TABLE `user_profiles` ADD `summary` text
+  [1m[36m (40.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120927152915')[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-27 21:20:14 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (98.0ms)
+Completed 200 OK in 831ms (Views: 829.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /connections.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /invitations.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /groups.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /skills.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /user_profiles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /connections.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /groups.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /invitations.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:15 +0530
+Served asset /skills.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:16 +0530
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:16 +0530
+Served asset /user_profiles.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-09-27 21:20:19 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (180.0ms)
+Completed 200 OK in 869ms (Views: 212.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /invitations.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /groups.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:20 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:21 +0530
+Served asset /user_profiles.js - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-09-27 21:20:37 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4rkaIuccxXRGGxnNeG73fQnul2FZ2TmvwSIZFiytAPY=", "user"=>{"email"=>"rashilafs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'rashilafs@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2012-09-25 17:11:49', `current_sign_in_at` = '2012-09-27 15:50:37', `sign_in_count` = 9, `updated_at` = '2012-09-27 15:50:37' WHERE `users`.`id` = 1[0m
+  [1m[35m (68.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/user_profiles/email_add_form/1
+Completed 302 Found in 947ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_profiles/email_add_form/1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Processing by UserProfilesController#email_add_form as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  Rendered user_profiles/email_add_form.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 64ms (Views: 31.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /invitations.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 21:20:38 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/user_profiles/profile_basic/1" for 127.0.0.1 at 2012-09-27 21:20:48 +0530
+Processing by UserProfilesController#profile_basic as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered user_profiles/profile_basic.html.erb within layouts/application (127.0ms)
+Completed 500 Internal Server Error in 140ms
+
+ActionView::Template::Error (undefined method `description' for #<UserProfile:0x586ba50>):
+    49: 	</div>
+    50: 	<div class="label">Description</div>
+    51: 	<div class="field">
+    52: 		<%= f.text_area :description %>
+    53: 	</div>
+    54: 	<div class="label">Address Line 1</div>
+    55: 	<div class="field">
+  app/views/user_profiles/profile_basic.html.erb:52:in `block in _app_views_user_profiles_profile_basic_html_erb___661123198_46342080'
+  app/views/user_profiles/profile_basic.html.erb:3:in `_app_views_user_profiles_profile_basic_html_erb___661123198_46342080'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (69.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserProfileSkills (20120924170013)
+Migrating to AddSummaryToUserProfiles (20120927152915)
+Migrating to AddDescriptionToUserProfiles (20120927155441)
+  [1m[35m (313.0ms)[0m  ALTER TABLE `user_profiles` ADD `description` text
+  [1m[36m (45.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120927155441')[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/user_profiles/profile_basic/1" for 127.0.0.1 at 2012-09-27 21:32:44 +0530
+Processing by UserProfilesController#profile_basic as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered user_profiles/profile_basic.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 2)):
+    65: 	</div>
+    66: 	<div class="label">State</div>
+    67: 	<div class="field">
+    68: 		<%= f.select :state %>
+    69: 	</div>
+    70: 	<div class="label">Marital Status</div>
+    71: 	<div class="field">
+  app/views/user_profiles/profile_basic.html.erb:68:in `block in _app_views_user_profiles_profile_basic_html_erb___661123198_46342080'
+  app/views/user_profiles/profile_basic.html.erb:3:in `_app_views_user_profiles_profile_basic_html_erb___661123198_46342080'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (55.0ms)
+
+
+Started GET "/user_profiles/profile_basic/1" for 127.0.0.1 at 2012-09-27 21:33:04 +0530
+Processing by UserProfilesController#profile_basic as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered user_profiles/profile_basic.html.erb within layouts/application (110.0ms)
+Completed 500 Internal Server Error in 124ms
+
+ActionView::Template::Error (undefined method `text_ield' for #<ActionView::Helpers::FormBuilder:0x5c89e90>):
+    65: 	</div>
+    66: 	<div class="label">State</div>
+    67: 	<div class="field">
+    68: 		<%= f.text_ield :state %>
+    69: 	</div>
+    70: 	<div class="label">Marital Status</div>
+    71: 	<div class="field">
+  app/views/user_profiles/profile_basic.html.erb:68:in `block in _app_views_user_profiles_profile_basic_html_erb___661123198_48767040'
+  app/views/user_profiles/profile_basic.html.erb:3:in `_app_views_user_profiles_profile_basic_html_erb___661123198_48767040'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.0ms)
+
+
+Started GET "/user_profiles/profile_basic/1" for 127.0.0.1 at 2012-09-27 21:33:17 +0530
+Processing by UserProfilesController#profile_basic as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered user_profiles/profile_basic.html.erb within layouts/application (64.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 154ms (Views: 149.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /invitations.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /connections.css - 200 OK (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /groups.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /user_profiles.css - 200 OK (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /skills.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /connections.js - 200 OK (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /groups.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /user_profiles.js - 200 OK (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /invitations.js - 200 OK (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /skills.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 21:33:18 +0530
+Served asset /application.js - 200 OK (2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/experiences" for 127.0.0.1 at 2012-09-27 22:00:49 +0530
+Processing by ExperiencesController#index as HTML
+  [1m[36mExperience Load (0.0ms)[0m  [1mSELECT `experiences`.* FROM `experiences` [0m
+  Rendered experiences/index.html.erb within layouts/application (130.0ms)
+Compiled experiences.css  (188ms)  (pid 6596)
+Compiled qualifications.css  (4ms)  (pid 6596)
+Compiled application.css  (291ms)  (pid 6596)
+Compiled experiences.js  (380ms)  (pid 6596)
+Compiled qualifications.js  (221ms)  (pid 6596)
+Compiled application.js  (1128ms)  (pid 6596)
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 3573ms (Views: 2739.2ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:00:53 +0530
+Served asset /qualifications.css - 200 OK (83ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:00:53 +0530
+Served asset /experiences.css - 200 OK (9ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:00:53 +0530
+Served asset /experiences.js - 200 OK (4ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:00:53 +0530
+Served asset /qualifications.js - 200 OK (6ms)
+
+
+Started GET "/experiences/new" for 127.0.0.1 at 2012-09-27 22:01:42 +0530
+Processing by ExperiencesController#new as HTML
+  Rendered experiences/_form.html.erb (21.0ms)
+  Rendered experiences/new.html.erb within layouts/application (114.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 263ms (Views: 231.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:01:42 +0530
+Served asset /qualifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:01:42 +0530
+Served asset /qualifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/qualifications" for 127.0.0.1 at 2012-09-27 22:01:56 +0530
+Processing by QualificationsController#index as HTML
+Mysql2::Error: Table 'bconnected_development.qualifications' doesn't exist: SHOW FULL FIELDS FROM `qualifications`
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'bconnected_development.qualifications' doesn't exist: SHOW FULL FIELDS FROM `qualifications`):
+  app/controllers/qualifications_controller.rb:5:in `index'
+
+
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Users/user/.pik/rubies/Ruby-192-p290/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserProfileSkills (20120924170013)
+Migrating to AddSummaryToUserProfiles (20120927152915)
+Migrating to AddDescriptionToUserProfiles (20120927155441)
+Migrating to CreateQualifications (20120927161254)
+  [1m[35m (110.0ms)[0m  CREATE TABLE `qualifications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `specialisation` varchar(255), `from_year` int(11), `to_year` int(11), `institution` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (50.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120927161254')[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/qualifications" for 127.0.0.1 at 2012-09-27 22:04:30 +0530
+Processing by QualificationsController#index as HTML
+  [1m[35mQualification Load (1.0ms)[0m  SELECT `qualifications`.* FROM `qualifications` 
+  Rendered qualifications/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 99ms (Views: 84.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:04:30 +0530
+Served asset /experiences.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:04:30 +0530
+Served asset /qualifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:04:30 +0530
+Served asset /experiences.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:04:31 +0530
+Served asset /qualifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/qualifications/new" for 127.0.0.1 at 2012-09-27 22:04:35 +0530
+Processing by QualificationsController#new as HTML
+  Rendered qualifications/_form.html.erb (13.0ms)
+  Rendered qualifications/new.html.erb within layouts/application (18.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 112ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:04:35 +0530
+Served asset /experiences.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:04:35 +0530
+Served asset /qualifications.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:04:35 +0530
+Served asset /qualifications.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:04:35 +0530
+Served asset /experiences.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120822170808)
+Migrating to AddRegistrationFieldsToUser (20120822173232)
+Migrating to CreateUserProfiles (20120822174059)
+Migrating to AddUserIdToUserProfiles (20120827170830)
+Migrating to CreateInvitations (20120908135919)
+Migrating to CreateConnections (20120908140059)
+Migrating to CreateGroups (20120918170843)
+Migrating to AddPostalCodeToGroups (20120918173952)
+Migrating to CreateLanguages (20120919173618)
+Migrating to AddOpenStatusToGroups (20120922124021)
+Migrating to AddLogoToGroups (20120922153931)
+Migrating to AddFieldsToUserProfiles (20120923165935)
+Migrating to CreateSkills (20120923170821)
+Migrating to CreateExperiences (20120923172028)
+Migrating to CreateUserProfileSkills (20120924170013)
+Migrating to AddSummaryToUserProfiles (20120927152915)
+Migrating to AddDescriptionToUserProfiles (20120927155441)
+Migrating to CreateQualifications (20120927161254)
+Migrating to AddUserProfileIdToExperiences (20120927163737)
+  [1m[35m (338.0ms)[0m  ALTER TABLE `experiences` ADD `user_profile_id` int(11)
+  [1m[36m (41.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120927163737')[0m
+Migrating to AddUserProfileIdToQualifications (20120927164017)
+  [1m[35m (216.0ms)[0m  ALTER TABLE `qualifications` ADD `user_profile_id` int(11)
+  [1m[36m (49.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120927164017')[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/qualifications/new" for 127.0.0.1 at 2012-09-27 22:11:59 +0530
+Processing by QualificationsController#new as HTML
+  Rendered qualifications/_form.html.erb (6.0ms)
+  Rendered qualifications/new.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 158ms (Views: 135.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /connections.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /experiences.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /groups.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /home.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /invitations.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /qualifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /skills.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /user_profiles.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /connections.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /experiences.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /groups.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /home.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /qualifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /invitations.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /skills.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:00 +0530
+Served asset /user_profiles.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:01 +0530
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started POST "/qualifications" for 127.0.0.1 at 2012-09-27 22:12:32 +0530
+Processing by QualificationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4rkaIuccxXRGGxnNeG73fQnul2FZ2TmvwSIZFiytAPY=", "qualification"=>{"name"=>"a", "specialisation"=>"re", "from_year"=>"103", "to_year"=>"118", "institution"=>"jh"}, "commit"=>"Create Qualification"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `qualifications` (`created_at`, `from_year`, `institution`, `name`, `specialisation`, `to_year`, `updated_at`, `user_profile_id`) VALUES ('2012-09-27 16:42:32', 103, 'jh', 'a', 're', 118, '2012-09-27 16:42:32', 1)[0m
+  [1m[35m (57.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/qualifications/1
+Completed 302 Found in 781ms (ActiveRecord: 66.0ms)
+
+
+Started GET "/qualifications/1" for 127.0.0.1 at 2012-09-27 22:12:32 +0530
+Processing by QualificationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQualification Load (1.0ms)[0m  [1mSELECT `qualifications`.* FROM `qualifications` WHERE `qualifications`.`id` = 1 LIMIT 1[0m
+  Rendered qualifications/show.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /connections.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /experiences.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /qualifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /experiences.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /qualifications.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 22:12:33 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/experiences" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Processing by ExperiencesController#index as HTML
+  [1m[36mExperience Load (1.0ms)[0m  [1mSELECT `experiences`.* FROM `experiences` [0m
+  Rendered experiences/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 43ms (Views: 31.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /experiences.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /invitations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /qualifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /skills.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:00 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /experiences.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /qualifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:01 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/experiences/new" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Processing by ExperiencesController#new as HTML
+  Rendered experiences/_form.html.erb (19.0ms)
+  Rendered experiences/new.html.erb within layouts/application (23.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 138ms (Views: 112.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /invitations.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /experiences.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /qualifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /experiences.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /invitations.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /qualifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:03 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started POST "/experiences" for 127.0.0.1 at 2012-09-27 22:13:19 +0530
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4rkaIuccxXRGGxnNeG73fQnul2FZ2TmvwSIZFiytAPY=", "experience"=>{"company_name"=>"hg", "company_website"=>"hgh", "industry_id"=>"", "title"=>"hg", "location"=>"hg", "from_month"=>"hg", "to_month"=>"hg", "from_year"=>"2", "to_year"=>"4", "currently_work"=>"1", "description"=>"jhj"}, "commit"=>"Create Experience"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUserProfile Load (0.0ms)[0m  [1mSELECT `user_profiles`.* FROM `user_profiles` WHERE `user_profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO `experiences` (`company_name`, `company_website`, `created_at`, `currently_work`, `description`, `from_month`, `from_year`, `industry_id`, `location`, `title`, `to_month`, `to_year`, `updated_at`, `user_profile_id`) VALUES ('hg', 'hgh', '2012-09-27 16:43:19', 1, 'jhj', 'hg', 2, NULL, 'hg', 'hg', 'hg', 4, '2012-09-27 16:43:19', 1)[0m
+  [1m[35m (84.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/experiences/1
+Completed 302 Found in 118ms (ActiveRecord: 103.0ms)
+
+
+Started GET "/experiences/1" for 127.0.0.1 at 2012-09-27 22:13:19 +0530
+Processing by ExperiencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExperience Load (1.0ms)[0m  [1mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`id` = 1 LIMIT 1[0m
+  Rendered experiences/show.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:19 +0530
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/experiences.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:19 +0530
+Served asset /experiences.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:19 +0530
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /invitations.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/qualifications.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /qualifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /user_profiles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiences.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /experiences.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qualifications.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /qualifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /invitations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /user_profiles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-09-27 22:13:20 +0530
+Served asset /skills.js - 304 Not Modified (0ms)

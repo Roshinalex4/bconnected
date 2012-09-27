@@ -85,29 +85,4 @@ class UserProfilesController < ApplicationController
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
 	
-	
-	
-	def educational_qualification_form
-	  #Show the form to add/edit Educational Qualification
-	end
-	
-	def create_educational_qualification
-	  #Add a new Qualification Record
-	end
-	
-	def update_educational_qualification
-	  #Edit an existing Educational Qualification
-	end
-	
-	def experiences_form
-	  #Form to add/edit Work Experience
-	end
-	
-	def create_experience
-	  #Create a new Work Experience Record
-	end
-	
-	def update_experience
-	  #Edit an existing Work Experience
-	end
 end

@@ -22,6 +22,8 @@ Bconnected::Application.routes.draw do
   end
   
   resources :connections
+  resources :experiences
+  resources :qualifications
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

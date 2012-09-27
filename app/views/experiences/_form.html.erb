@@ -1,0 +1,61 @@
+<%= form_for(@experience) do |f| %>
+  <% if @experience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@experience.errors.count, "error") %> prohibited this experience from being saved:</h2>
+
+      <ul>
+      <% @experience.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_name %><br />
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :company_website %><br />
+    <%= f.text_field :company_website %>
+  </div>
+  <div class="field">
+    <%= f.label :industry_id %><br />
+    <%= f.number_field :industry_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :from_month %><br />
+    <%= f.text_field :from_month %>
+  </div>
+  <div class="field">
+    <%= f.label :to_month %><br />
+    <%= f.text_field :to_month %>
+  </div>
+  <div class="field">
+    <%= f.label :from_year %><br />
+    <%= f.number_field :from_year %>
+  </div>
+  <div class="field">
+    <%= f.label :to_year %><br />
+    <%= f.number_field :to_year %>
+  </div>
+  <div class="field">
+    <%= f.label :currently_work %><br />
+    <%= f.check_box :currently_work %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

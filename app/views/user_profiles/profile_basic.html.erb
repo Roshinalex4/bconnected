@@ -43,6 +43,38 @@
 	<div class="field">
 		<%= f.select :industry, [] %>
 	</div>
+	<div class="label">Summary</div>
+	<div class="field">
+		<%= f.text_area :summary %>
+	</div>
+	<div class="label">Description</div>
+	<div class="field">
+		<%= f.text_area :description %>
+	</div>
+	<div class="label">Address Line 1</div>
+	<div class="field">
+		<%= f.text_field :address_line_1 %>
+	</div>
+	<div class="label">Address Line 2</div>
+	<div class="field">
+		<%= f.text_field :address_line_2 %>
+	</div>
+	<div class="label">City</div>
+	<div class="field">
+		<%= f.text_field :city %>
+	</div>
+	<div class="label">State</div>
+	<div class="field">
+		<%= f.text_field :state %>
+	</div>
+	<div class="label">Marital Status</div>
+	<div class="field">
+		<%= f.text_field :marital_status %>
+	</div>
+	<div class="label">Birthday</div>
+	<div class="field">
+		<%= f.date_select :birthday %>
+	</div>
 	<div class="label">&nbsp;</div>
 	<div class="field">
 		<%= f.submit "Create My Profile" %>

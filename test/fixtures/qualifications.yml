@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  specialisation: MyString
+  from_year: 1
+  to_year: 1
+  institution: MyString
+
+two:
+  name: MyString
+  specialisation: MyString
+  from_year: 1
+  to_year: 1
+  institution: MyString

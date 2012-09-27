@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company name:</b>
+  <%= @experience.company_name %>
+</p>
+
+<p>
+  <b>Company website:</b>
+  <%= @experience.company_website %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= @experience.industry_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @experience.title %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @experience.location %>
+</p>
+
+<p>
+  <b>From month:</b>
+  <%= @experience.from_month %>
+</p>
+
+<p>
+  <b>To month:</b>
+  <%= @experience.to_month %>
+</p>
+
+<p>
+  <b>From year:</b>
+  <%= @experience.from_year %>
+</p>
+
+<p>
+  <b>To year:</b>
+  <%= @experience.to_year %>
+</p>
+
+<p>
+  <b>Currently work:</b>
+  <%= @experience.currently_work %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @experience.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_experience_path(@experience) %> |
+<%= link_to 'Back', experiences_path %>
