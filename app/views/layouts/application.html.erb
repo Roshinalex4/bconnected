@@ -1,24 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bconnected</title>
+  <title>Madison who's who</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="user_nav">
-    <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>.
-        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-    <% else %>
-        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
-    <% end %>
+	<div id="container">
+	<div id="social_net">
+		<a href="index.html" class="fr"></a>
+		<a href="index.html" class="face"></a>
+		<a href="index.html" class="twit"></a>
+		<a href="index.html" class="rss"></a></a>
+	</div>
+	<div class="clear"></div>
+	<div id="logo" class="f-left">
+		<%= link_to image_tag "logo.jpg", :alt => 'logo', :width => '231', :height => '89', :border => '0' %>
+	</div>
+	<div id="login" class="f-right">
+		<h1>Login</h1>
+		<form action="" method="get">
+			<label>
+				<input name="" type="text" class="textbox" value="Email" />
+				<!--<p class="text">
+					<input name="" type="checkbox" value="" />
+					<a href="#">Remember User ID?</a>
+				</p>-->
+			</label>
+			<label>
+				<input name="" type="text" class="textbox" value="Password" />
+				<!--<p class="text">
+					<a href="#">Forgot Password?</a>
+				</p>-->
+			</label>
+			<label>
+				<input type="button" class="btn" value="Login" />
+			</label>
+			<div class="clear"></div>
+		</form>
+	</div>
+	<div class="clear"></div>
+	<ul id="nav" class="f-right">
+		<li>
+			<a href="index.html">Home</a>
+		</li>
+		<li>
+			|
+		</li>
+		<li>
+			<a href="index.html">What is Madison?</a>
+		</li>
+		<li>
+			|
+		</li>
+		<li>
+			<a href="index.html">Join Now</a>
+		</li>
+		<li>
+			|
+		</li>
+		<li>
+			<a href="index.html">Sign In</a>
+		</li>
+	</ul>
+	<div class="clear"></div>
+	<div id="wraper">
+		<h1>Business to Business Networking  Directory....</h1>
+		<h2>for executive & professionals </h2>
+		<div id="left" class="f-left">
+			<div id="featured">
+				<h3>Featured Members</h3>
+				<img src="images/featured.jpg" />
+			</div>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+			</p>
+		</div>
+		<div id="right" class="f-right">
+			<div id="join">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 </div>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+<div class="clear"></div>
+<div class="footer">
+	<div class="content">
+		<div class="directory">
+			<span class="bold">Members Directory:</span><a href="index.html">a</a><a href="index.html">b</a><a href="index.html">c</a><a href="index.html">d</a><a href="index.html">e</a><a href="index.html">f</a><a href="index.html">g</a><a href="index.html">h</a><a href="index.html">i</a><a href="index.html">j</a><a href="index.html">k</a><a href="index.html">l</a><a href="index.html">m</a><a href="index.html">n</a><a href="index.html">o</a><a href="index.html">p</a><a href="index.html">q</a><a href="index.html">r</a><a href="index.html">s</a><a href="index.html">t</a><a href="index.html">u</a><a href="index.html">v</a><a href="index.html">x</a><a href="index.html">y</a><a href="index.html">z</a>
+		</div>
+		<div class="clear"></div>
+		<ul>
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a href="index.html">What is Madison?</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a href="index.html">Join Now</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a href="index.html">Sign In</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a href="index.html">About</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a href="index.html">Blog</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a href="index.html">Career</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a href="index.html">Privacy Policy</a>
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<div class="copy f-left">
+			Madison who's who &copy; www.madison.com
+		</div>
+		<div class="rating f-right">
+			<a href="index.html"><%= link_to image_tag("rating.jpg") %></a>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,458 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+/* CSS Document */
+@charset "utf-8";
+/*-------------global---------------*/
+.bold {
+	font-weight: bold;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right;
+}
+.italic {
+	font-style: italic;
+}
+.clear {
+	clear: both;
+}
+.spacer {
+	margin: 0;
+	padding: 0;
+}
+.line_big {
+	height: 2px;
+	background: url(<%= asset_path 'line.png' %>) repeat;
+	margin: 10px 0;
+	padding: 0
+}
+.line_dot {
+	height: 1px;
+	background: url(<%= asset_path 'dot.jpg' %>) repeat-x;
+	margin: 10px 0;
+	padding: 0
+}
+img a {
+	border: none
+}
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: url(<%= asset_path 'top_bg.jpg' %>) repeat-x;
+	font-family: Arial, Helvetica, sans-serif
+}
+/*-------------container---------------*/
+#container {
+	width: 980px;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+/*------social_net-------------*/
+#social_net {
+	width: 200px;
+	height: 45px;
+	float: right;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+#social_net .fr {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 34px;
+	float: left;
+	height: 35px;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat 0px 0px;
+	left: 0
+}
+#social_net .fr:hover {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 34px;
+	height: 35px;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat 0px 1px;
+	left: 0
+}
+#social_net .face {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 35px;
+	float: left;
+	height: 36px;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat -43px 0px;
+	left: 0
+}
+#social_net .face:hover {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 35px;
+	height: 36px;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat -43px 1px;
+	left: 0
+}
+#social_net .twit {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 35px;
+	height: 36px;
+	float: left;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat -85px 0px;
+	right: 0
+}
+#social_net .twit:hover {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 35px;
+	height: 36px;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat -85px 1px;
+	right: 0
+}
+#social_net .rss {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 35px;
+	height: 36px;
+	float: left;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat -126px 0px;
+	left: 0
+}
+#social_net .rss:hover {
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: 35px;
+	height: 36px;
+	background: url(<%= asset_path 'net_icons.jpg' %>) no-repeat -126px 1px;
+	right: 0
+}
+/*----------logo------------*/
+#logo {
+	margin: 0;
+	width: 218px;
+	height: 58px;
+	padding: 0;
+}
+/*----------login------------*/
+#login {
+	height: 60px;
+	width: 390px;
+	margin: 0;
+	padding: 5px 0 0 0;
+	font-size: 12px;
+}
+#login h1 {
+	margin: 0 0 5px 0;
+	padding: 0;
+	color: #993300;
+	font-size: 20px;
+	font-weight: bold;
+}
+#login form {
+	margin: 0;
+	padding: 0;
+}
+#login label {
+	margin: 4px 4px 0 0;
+	padding: 0;
+	float: left;
+}
+#login .text {
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+	width: 150px
+}
+#login .textbox {
+	height: 15px;
+	width: 150px;
+	background: #FFFFFF;
+	border: 1px solid #a95711;
+	margin: 0 0 4px 0;
+	padding: 0
+}
+#login .btn {
+	width: 50px;
+	height: 20px;
+	background: #7a3c07;
+	border: 1px solid #CCCCCC;
+	margin: 0 20px 0 0; /* 15px 20px 0 0;*/
+	padding: 0px;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px
+}
+#login a {
+	color: #993300;
+	text-decoration: none
+}
+/*----------join------------*/
+#join {
+	height: 320px;
+	width: 340px;
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #e17e29;
+	background: url(<%= asset_path 'join_topbg.jpg' %>) repeat-x top
+}
+#join form {
+	margin: 0 auto;
+	padding: 0;
+	width: 300px
+}
+#join label {
+	margin: 5px;
+	padding: 0;
+	float: left;
+}
+#join .text {
+	margin: 0;
+	padding: 8px 0 0 0;
+	color: #333333;
+	width: 120px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: right
+}
+#join .textbox {
+	height: 18px;
+	width: 150px;
+	background: #FFFFFF;
+	border: 1px solid #7f9db9;
+}
+#join .btn {
+	width: 96px;
+	height: 31px;
+	background: url(<%= asset_path 'btn_join.jpg' %>) no-repeat center;
+	border: 0px solid #CCCCCC;
+	margin: 0 0 0 100px;
+	padding: 2px;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+#join a {
+	color: #663300;
+	text-decoration: none
+}
+/*----------nav------------*/
+#nav {
+	margin: 35px 0 0 0;
+	padding: 10px 0 0 0;
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 45px;
+	width: 350px
+}
+#nav ul {
+	margin: 0;
+	padding: 0;
+}
+#nav li {
+	margin: 0;
+	padding: 0 5px;
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+}
+#nav li a {
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #7a3c07;
+}
+#nav li a:hover {
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+#nav li .active {
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+/*----------wraper------------*/
+#wraper {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#wraper h1 {
+	margin: 0 0 5px 0;
+	padding: 0;
+	color: #7a3c07;
+	font-size: 36px;
+	font-weight: normal;
+}
+#wraper h2 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #666666;
+	font-size: 25px;
+	font-weight: normal;
+}
+#wraper h3 {
+	margin: 0 0 5px 0;
+	padding: 0;
+	color: #660000;
+	font-size: 20px;
+	font-weight: normal;
+}
+#wraper p {
+	margin: 10px 0;
+	padding: 0;
+	color: #333333;
+	font-size: 14px;
+	font-weight: normal;
+}
+/*----------left------------*/
+#left {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 515px;
+	height: auto;
+}
+#featured {
+	margin: 0;
+	padding: 10px 0 0 0;
+	overflow: hidden;
+}
+/*----------right------------*/
+#right {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 380px;
+	height: auto;
+}
+#right h2 {
+	margin: 0 0 25px 0;
+	padding: 0;
+	color: #7a3c07;
+	font-size: 24px;
+	font-weight: normal;
+}
+/*----------footer------------*/
+.footer {
+	margin: 30px 0 0 0;
+	padding: 0px 0 0 0;
+	background: url(<%= asset_path 'footer_bg.jpg' %>) repeat-x;
+	overflow: hidden;
+	height: 179px
+}
+.footer .content {
+	margin: 0 auto;
+	width: 980px;
+	padding: 10px 0 0 5px;
+	font-size: 12px;
+	color: #999999;
+	height: auto;
+	overflow: hidden;
+}
+.footer .directory {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 12px;
+	color: #4c4c4c;
+	overflow: hidden;
+	height: 40px;
+	width: 500px;
+}
+.footer .directory a {
+	margin: 0 3px;
+	padding: 0;
+	font-size: 13px;
+	font-weight: 700;
+	color: #990000;
+	text-decoration: none;
+}
+.footer .directory a:hover {
+	margin: 0 3px;
+	padding: 0;
+	font-size: 13px;
+	font-weight: 700;
+	color: #006699;
+	text-decoration: underline;
+}
+.footer .rating {
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 5px;
+	height: 67px;
+	width: 173px
+}
+.footer .copy {
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 5px;
+	font-size: 12px;
+	color: #333333;
+	overflow: hidden;
+	height: 40px
+}
+.footer ul {
+	margin: 10px 0 0 0;
+	padding: 0;
+	text-transform: capitalize;
+}
+.footer li {
+	margin: 0;
+	padding: 0 5px;
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: normal;
+	color: #999999;
+}
+.footer li a {
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #333333;
+}
+.footer li a:hover {
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #666666;
+}
+.footer h1 {
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 0 10px 0
+}
+.footer p {
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: normal
+}

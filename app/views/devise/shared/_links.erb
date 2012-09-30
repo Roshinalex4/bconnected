@@ -1,5 +1,7 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Sign in", new_session_path(resource_name) %><br />
+  <p style="text-align:center;">
+	Already on Madison ? <%= link_to "Sign in", new_session_path(resource_name) %>
+  </p>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
