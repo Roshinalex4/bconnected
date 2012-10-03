@@ -1,7 +1,6 @@
 class ConnectionsController < ApplicationController
   def create                                  
     params[:send_invite].each do |email_contact| 
-      puts '...............'
       puts email_contact          
       user = User.find(email_contact)
 			@connection = Connection.new

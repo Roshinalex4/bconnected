@@ -7,7 +7,6 @@ Bconnected::Application.routes.draw do
   
   resources :user_profiles do
     collection do
-      get 'profile_basic/:user_id', :action => 'profile_basic'
       get 'email_add_form/:user_id', :action => 'email_add_form'
       get 'connect_with_form/:user_id', :action => 'connect_with_form'
 			get 'invite_contacts_form/:user_id', :action => 'invite_contacts_form'
@@ -17,8 +16,19 @@ Bconnected::Application.routes.draw do
 			post 'show_email_contacts/:user_id', :action => 'show_email_contacts'
       put 'email_add/:user_id', :action => 'email_add'
       post 'save_skills', :action => 'save_skills'
-      get 'select_skills', :action => 'select_skills'
+      get 'add_skills', :action => 'add_skills'
+      get 'add_qualification', :action => 'add_qualification'
+      get 'add_experience', :action => 'add_experience'
+      get 'add_additional_info', :action => 'add-additional_info'
+      get 'add_languages', :action => 'add_languages'
+      get 'add_personal_info', :action => 'add_personal_info'
+      get 'add_profile_photo', :action => 'add_profile_photo'
+      get 'add_summary', :action => 'add_summary'
+      get 'add_profile_basic', :action => 'add_profile_basic'
+      post 'create_profile_basic', :action => 'create_profile_basic'
+      get 'view_user_profile', :action => 'view_user_profile'
     end
+    
   end
   
   resources :connections

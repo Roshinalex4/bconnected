@@ -1,0 +1,16 @@
+Name<br />
+
+First Name<%= text_field :user, :first_name %><br />
+Last Name<%= text_field :user, :last_name %><br />
+Former/Maiden Name:<%= text_field :user_profile, :maiden_name %><br />
+Display Name:<!-- Radion btn in LI--><%= text_field :user_profile, :display_name %><br />
+
+Headline<br />
+
+Professional "Headline":<%= text_field :user_profile, :professional_headline %><br />
+Location and Industry <%= country_select :user_profile, :country_id %><br />
+Zip Code <%= text_field :user_profile, :postal_code %><br />
+<!-- Location name in LI-->
+Industry <%= select("user_profile", "industry", Industry.all.collect {|i| [ i.name, i.id ] }, {:include_blank => true}) %><br />
+
+

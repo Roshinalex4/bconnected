@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
         return '/user_profiles/profile_basic/' + resource_or_scope.id.to_s
       end
     else
-      return '/home/index'
+      return '/users/sign_up'
     end
   end
 

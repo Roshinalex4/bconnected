@@ -1,22 +1,5 @@
 class UserProfilesController < ApplicationController
-  def profile_basic
-    @user_profile = UserProfile.new
-  end
-  def create
-    @user_profile = UserProfile.new(params[:user_profile])
-    @user_profile.user_id = current_user.id
-    respond_to do |format|
-      if @user_profile.save
-        #format.html { redirect_to @user_profile, notice: 'User profile was successfully created.' }
-        #format.json { render json: @user_profile, status: :created, location: @user_profile }
-        format.html { redirect_to "/user_profiles/email_add_form/"+@user_profile.user_id.to_s, notice: 'User profile was successfully created.' }
-        format.json { render json: email_add_form_user_profile_path(@user_profile), status: :created, location: @user_profile }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @user_profile.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  
   
   def save_skills
     params[:user_profile][:skill_ids] ||= []
@@ -24,7 +7,7 @@ class UserProfilesController < ApplicationController
     @user_profile.update_attributes(params[:user_profile])
   end
   
-  def select_skills
+  def add_skills
     @user_profile = UserProfile.find_by_user_id(current_user.id)
   end
   
@@ -84,5 +67,31 @@ class UserProfilesController < ApplicationController
 	def enter_password_to_invite
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
+	
+	def add_profile_basic
+    @user_profile = UserProfile.find_by_user_id(current_user.id) || UserProfile.new
+  end
+  def create_profile_basic
+    @user_profile = UserProfile.new(params[:user_profile])
+    @user_profile.user_id = current_user.id
+    @user_profile.job_title = params[:user_profile][:professional_headline]
+    @user = User.find(current_user.id)
+    @user.update_attributes(params[:user])
+    respond_to do |format|
+      if @user_profile.save
+        #format.html { redirect_to @user_profile, notice: 'User profile was successfully created.' }
+        #format.json { render json: @user_profile, status: :created, location: @user_profile }
+        format.html { redirect_to "/user_profiles/view_user_profile/", notice: 'User profile was successfully created.' }
+        format.json { render json: email_add_form_user_profile_path(@user_profile), status: :created, location: @user_profile }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @user_profile.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
+  def view_user_profile
+    @user_profile = UserProfile.find_by_user_id(current_user.id)
+  end
 	
 end

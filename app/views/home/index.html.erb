@@ -1,0 +1,59 @@
+<h1>Business to Business Networking  Directory....</h1>
+<h2>for executive & professionals </h2>
+<div id="left" class="f-left">
+	<div id="featured">
+		<h3>Featured Members</h3>
+		<%= image_tag "featured.jpg" %>
+	</div>
+	<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+	</p>
+</div>
+<div id="right" class="f-right">
+	<% if user_signed_in? %>
+	
+	<% else %>
+		<div id="join">
+			<form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">
+				<div style="margin:0;padding:0;display:inline">
+					<input name="utf8" type="hidden" value="✓">
+					<input name="authenticity_token" type="hidden" value="WiAmySFhVj/YVbtdLEzofhivONolaK3YdQfo9QMiGDA=">
+				</div>
+				<label class="text" for="user_first_name">First name</label>
+				<label>
+					<input class="textbox" id="user_first_name" name="user[first_name]" size="30" type="text">
+				</label>
+				<label class="text" for="user_last_name">Last name</label>
+				<label>
+					<input class="textbox" id="user_last_name" name="user[last_name]" size="30" type="text">
+				</label>
+				<label class="text" for="user_email">Email</label>
+				<label>
+					<input class="textbox" id="user_email" name="user[email]" size="30" type="email" value="">
+				</label>
+				<label class="text" for="user_password">Password</label>
+				<label>
+					<input class="textbox" id="user_password" name="user[password]" size="30" type="password">
+				</label>
+				<label class="text" for="user_Confirm password">Confirm password</label>
+				<label>
+					<input class="textbox" id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password">
+				</label>
+				<div class="clear"></div>
+				<p style="text-align:center;">
+					6 or more characters
+				</p>
+				<label>
+					<input class="btn" name="commit" type="submit" value="">
+				</label>
+				<div class="clear"></div>
+				<p style="text-align:center;">
+					Already on Madison ? <a href="/users/sign_in">Sign In</a>
+				</p>
+				<p style="text-align: center;">
+					<a href="/users/password/new">Forgot your password?</a>
+				</p>
+			</form>
+		</div>
+	<% end %>
+</div>

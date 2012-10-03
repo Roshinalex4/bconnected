@@ -6,7 +6,7 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.integer :employment_status
       t.string :job_title, :null => false
       t.boolean :self_employed
-      t.string :company, :null => false
+      t.string :company
       t.integer :industry
       t.string :email_assoc
       t.integer :plan_id

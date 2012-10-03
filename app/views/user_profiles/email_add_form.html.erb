@@ -1,4 +1,12 @@
-<%= form_for @user_profile, :url => '/user_profiles/email_add/'+ @user_profile.user_id.to_s, :html => {:method => :put} do |f| %>
-	Your Email <%= f.email_field :email_assoc %>
-	<%= f.submit "Continue" %>
-<% end %>
+<h1>Business to Business Networking  Directory....</h1>
+<h2>for executive & professionals </h2>
+<div id="left" class="f-left">
+	<%= form_for @user_profile, :url => '/user_profiles/email_add/'+ @user_profile.user_id.to_s, :html => {:method => :put} do |f| %>
+		Your Email <%= f.email_field :email_assoc %>
+		<%= f.submit "Continue" %>
+	<% end %>
+	<br />
+	<div class="label"><%= @user_profile.user.first_name %> <%= @user_profile.user.last_name %></div>
+	<br />
+	<div class="label">Summary : <%= @user_profile.summary %></div>
+</div>

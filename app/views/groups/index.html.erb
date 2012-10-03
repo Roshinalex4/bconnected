@@ -1,5 +1,5 @@
 <h1>Listing groups</h1>
-
+<br />
 <table border="1">
   <tr>
   	<th>Logo</th>
@@ -10,14 +10,14 @@
     <th>Summary</th>
     <th>Website</th>
     <th>Group owner email</th>
-    <th>Access</th>
+    <!-- <th>Access</th>
     <th>Display in directory</th>
     <th>Allow display logo</th>
     <th>Allo invite others</th>
     <th>Language</th>
     <th>Single location</th>
     <th>Country</th>
-    <th>Check agreement</th>
+    <th>Check agreement</th> -->
     <th></th>
     <th></th>
     <th></th>
@@ -33,14 +33,7 @@
     <td><%= group.summary %></td>
     <td><%= group.website %></td>
     <td><%= group.group_owner_email %></td>
-    <td><%= group.access %></td>
-    <td><%= group.display_in_directory %></td>
-    <td><%= group.allow_display_logo %></td>
-    <td><%= group.allo_invite_others %></td>
-    <td><%= group.language %></td>
-    <td><%= group.single_location %></td>
-    <td><%= group.country_id %></td>
-    <td><%= group.check_agreement %></td>
+    
     <td><%= link_to 'Show', group %></td>
     <td><%= link_to 'Edit', edit_group_path(group) %></td>
     <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
