@@ -1,84 +1,8 @@
-<h2>Create your profile</h2>
+<h2>Basic Information</h2>
 <div class="form">
-<%= form_for @user_profile do |f| %>
-  <div class="label">
-		* I live in 
-	</div>
-	<div class="field">
-		<%= f.country_select :country_id %>
-	</div><br clear="all" />
-	<div class="label">  
-		<%= f.label :postal_code %>
-	</div>
-	<div class="field">
-		<%= f.text_field :postal_code %>
-	</div><br clear="all" />
-	<div class="label">  
-	  I am currently 
-	</div>
-	<div class="field">
-		<%= f.radio_button :employment_status, 0 %>Employed
-	</div><br clear="all" />
-	<div class="label">&nbsp;</div>
-	<div class="field">
-		<%= f.radio_button :employment_status, 1 %>Job Seeker
-	</div>
-	<div class="label">&nbsp;</div>
-	<div class="field">
-		<%= f.radio_button :employment_status, 2 %>Student
-	</div>
-	<div class="label">Job Title</div>
-	<div class="field">
-		<%= f.text_field :job_title %>
-	</div>
-	<div class="label">&nbsp;</div>
-	<div class="field">
-		<%= f.check_box :self_employed %>
-	</div>
-	<div class="label">Company</div>
-	<div class="field">
-		<%= f.text_field :company %>
-	</div>
-	<div class="label">Industry</div>
-	<div class="field">
-		<%= f.select :industry, [] %>
-	</div>
-	<div class="label">Summary</div>
-	<div class="field">
-		<%= f.text_area :summary %>
-	</div>
-	<div class="label">Description</div>
-	<div class="field">
-		<%= f.text_area :description %>
-	</div>
-	<div class="label">Address Line 1</div>
-	<div class="field">
-		<%= f.text_field :address_line_1 %>
-	</div>
-	<div class="label">Address Line 2</div>
-	<div class="field">
-		<%= f.text_field :address_line_2 %>
-	</div>
-	<div class="label">City</div>
-	<div class="field">
-		<%= f.text_field :city %>
-	</div>
-	<div class="label">State</div>
-	<div class="field">
-		<%= f.text_field :state %>
-	</div>
-	<div class="label">Marital Status</div>
-	<div class="field">
-		<%= f.text_field :marital_status %>
-	</div>
-	<div class="label">Birthday</div>
-	<div class="field">
-		<%= f.date_select :birthday %>
-	</div>
-	<div class="label">&nbsp;</div>
-	<div class="field">
-		<%= f.submit "Create My Profile" %>
-	</div>
+<%= form_for @user_profile, :url => '/user_profiles/create_profile_basic', :html => {:method => :post} do |f| %>
+  	<%= render 'form_profile_basic' %>
+  	<%= f.submit "Create My Profile" %>
 <% end %>
 </div>
 

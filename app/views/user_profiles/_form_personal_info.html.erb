@@ -1,0 +1,20 @@
+<ul>
+	<li>
+		<label>Phone Number</label> 
+		<%= text_field :user_profile, :phone_number %>
+		<%= select("user_profile", "phone_type", ["Home", "Work", "Mobile"]) %>
+	</li>
+	<li>
+		<label>IM</label>
+		<%= text_field :user_profile, :im %>
+		<%= select("user_profile", "im_service", ImService.all.collect {|i| [ i.name, i.id ] }) %>
+	</li>
+	<li>
+		<label>Address</label>
+		<%= text_area :user_profile, :address %>
+	</li>
+	<li>
+		<label>Marital Status</label>
+		<%= select("user_profile", "marital_status", ["Married", "Single"]) %>
+	</li>
+</ul>

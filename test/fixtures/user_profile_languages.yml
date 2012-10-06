@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_profile_id: MyString
+  language_id: MyString
+  migration: MyString
+
+two:
+  user_profile_id: MyString
+  language_id: MyString
+  migration: MyString

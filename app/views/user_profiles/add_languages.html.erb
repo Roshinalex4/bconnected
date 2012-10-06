@@ -1,0 +1,11 @@
+<%= form_for @language, :url => '/languages', :html => {:method => :post} do |f| %>
+  <ul>
+	<li>
+		<%= render 'form_languages' %>
+	</li>  	
+  </ul>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

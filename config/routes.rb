@@ -19,13 +19,16 @@ Bconnected::Application.routes.draw do
       get 'add_skills', :action => 'add_skills'
       get 'add_qualification', :action => 'add_qualification'
       get 'add_experience', :action => 'add_experience'
-      get 'add_additional_info', :action => 'add-additional_info'
+      get 'add_additional_info', :action => 'add_additional_info'
       get 'add_languages', :action => 'add_languages'
       get 'add_personal_info', :action => 'add_personal_info'
       get 'add_profile_photo', :action => 'add_profile_photo'
       get 'add_summary', :action => 'add_summary'
       get 'add_profile_basic', :action => 'add_profile_basic'
       post 'create_profile_basic', :action => 'create_profile_basic'
+      post 'create_personal_info', :action => 'create_personal_info'
+      post 'create_summary', :action => 'create_summary'
+      post 'create_additional_info', :action => 'create_additional_info'
       get 'view_user_profile', :action => 'view_user_profile'
     end
     
@@ -34,6 +37,7 @@ Bconnected::Application.routes.draw do
   resources :connections
   resources :experiences
   resources :qualifications
+  resources :languages
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

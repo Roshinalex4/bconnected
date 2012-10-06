@@ -53,7 +53,12 @@
   # { :code => "vi_VN", :name => "Vietnamese" }
 # ])
 
-skills = Skill.create([
-   { :name => "Ruby on Rails" },
-   { :name => "JAVA" }
+# skills = Skill.create([
+   # { :name => "Ruby on Rails" },
+   # { :name => "JAVA" }
+# ])
+
+im_services = ImService.create([
+   { :name => "Yahoo Messenger" },
+   { :name => "AIM" }
 ])

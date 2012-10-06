@@ -90,6 +90,34 @@ class UserProfilesController < ApplicationController
     end
   end
   
+  def add_personal_info
+    @user_profile = UserProfile.find_by_user_id(current_user.id) || UserProfile.new
+  end
+  
+  def create_personal_info
+    @user_profile = current_user.user_profile
+    respond_to do |format|
+      if @user_profile.update_attributes(params[:user_profile])
+        format.html { redirect_to "/user_profiles/view_user_profile/", notice: 'User profile was successfully created.' }
+        format.json { render json: "/user_profiles/view_user_profile/", status: :created, location: @user_profile }
+      else
+        format.html { render action: add_personal_info_user_profile_path(@user_profile) }
+        format.json { render json: @user_profile.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
+  def add_summary
+    @user_profile = UserProfile.find_by_user_id(current_user.id) || UserProfile.new
+  end 
+  def add_additional_info 
+    @user_profile = UserProfile.find_by_user_id(current_user.id) || UserProfile.new
+  end 
+  def add_languages
+    @user_profile = UserProfile.find_by_user_id(current_user.id) || UserProfile.new
+    @language = Language.new
+  end
+  
   def view_user_profile
     @user_profile = UserProfile.find_by_user_id(current_user.id)
   end

@@ -1,0 +1,7 @@
+<h2>Personal Information</h2>
+<div class="form">
+<%= form_for @user_profile, :url => '/user_profiles/create_personal_info', :html => {:method => :post} do |f| %>
+  	<%= render 'form_personal_info' %>
+  	<%= f.submit "Save" %>
+<% end %>
+</div>

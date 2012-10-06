@@ -1,0 +1,27 @@
+<ul>
+	<li>
+		<label>Websites</label>
+		<%= text_field :user_profile, :website_1 %>
+		<%= select("user_profile", "website_1", ["Personal Website"]) %>
+	</li>
+	<li>
+		<%= text_field :user_profile, :website_2 %>
+		<%= select("user_profile", "website_2", ["Personal Website"]) %>
+	</li>
+	<li>
+		<%= text_field :user_profile, :website_3 %>
+		<%= select("user_profile", "website_3", ["Personal Website"]) %>
+	</li>
+	<li>
+		<label>Interests</label>
+		<%= text_area :user_profile, :interests %>
+	</li>
+	<li>
+		<label>Groups and Associations</label>
+		<%= text_area :user_profile, :groups_associations %>
+	</li>
+	<li>
+		<label>Honours and Awards</label>
+		<%= text_area :user_profile, :honours_awards %>
+	</li>
+</ul>
