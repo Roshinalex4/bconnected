@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
       #if resource_or_scope.sign_in_count > 1
        # return '/user_profiles/email_add_form/'+ resource_or_scope.id.to_s
       #else
-        return '/user_profiles/add_profile_basic'
+        return '/user_profiles/view_user_profile'
       #end
     else
       return '/users/sign_up'

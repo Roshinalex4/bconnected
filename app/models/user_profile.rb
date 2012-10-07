@@ -11,4 +11,6 @@ class UserProfile < ActiveRecord::Base
   has_and_belongs_to_many :industries
   has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   has_many :languages
+  has_many :experiences
+  has_many :qualifications
 end

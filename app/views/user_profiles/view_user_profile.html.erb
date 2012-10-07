@@ -1,20 +1,92 @@
-<div id="profile_box">
+<div id="profile_box" class="section">
 	<div id="photo">
 		<%= image_tag @user_profile.picture.url(:thumb) %>
 	</div>
-	<div class="profile_right_section"></div>
+	<div class="profile_right_section">
+		<%= current_user.first_name %>&nbsp;
+		<%= current_user.last_name %>
+		<%= @user_profile.job_title %>
+		<%= @user_profile.city %> 
+		<%= @user_profile.state %>
+	</div>
+	<br clear="all" />
 </div>
-<div id="contact_box" class="small_section">
-	<div class="left_section"></div>
-	<div class="right_section"></div>
+<br clear="all" />
+<div id="contact_box" class="small_section section">
+	<div class="half_section">
+		<table>
+			<tr>
+				<td>
+					Websites
+				</td>
+				<td>
+					<%= @user_profile.website_1 %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;
+				</td>
+				<td><%= @user_profile.website_2 %></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><%= @user_profile.website_3 %></td>
+			</tr>
+		</table>
+		
+	</div>
+	<div class="half_section">
+		<table>
+			<tr><td>Email</td><td><%= current_user.email %></td></tr>
+			<tr><td>Phone Number</td><td><%= @user_profile.phone_number %></td></tr>
+			<tr><td>IM</td><td><%= @user_profile.im %></td></tr>
+			<tr><td>Address</td><td><%= @user_profile.address %></td></tr>
+		</table>
+	</div>
+	<br clear="all" />
 </div>
+<br clear="all" />
+
 <div id="summary_box" class="section">
-	
+	<h4>Summary</h4>
+	<%= @user_profile.summary %>
 </div>
+
 <div id="experience_box" class="section">
-	
+	<h4>Experience</h4>
+	<% @user_profile.experiences.each do |pos| %>
+		<%= pos.title %>
+	<% end %>
 </div>
-<div id="languages_box"></div>
-<div id="skills_box"></div>
-<div id="qualification_box"></div>
-<div id="additional_info_box"></div>
+
+<div id="languages_box" class="section">
+	<h4>Languages</h4>
+	<% @user_profile.languages.each do |lg| %>
+		<%= lg.name %>
+	<% end %>
+</div>
+
+<div id="skills_box" class="section">
+	<h4>Skills</h4>
+	<% @user_profile.skills.each do |sk| %>
+		<%= sk.name %>
+	<% end %>
+</div>
+
+<div id="qualification_box" class="section">
+	<h4>Education</h4>
+	<% @user_profile.qualifications.each do |deg| %>
+		<%= deg.name %>
+	<% end %>
+</div>
+
+<div id="additional_info_box" class="section">
+	<h4>Additional Information</h4>
+	<%= @user_profile.website_1 %>
+	<%= @user_profile.website_2 %>
+	<%= @user_profile.website_3 %>
+	<%= @user_profile.interests %>
+	<%= @user_profile.groups_associations %>
+	<%= @user_profile.honours_awards %>
+</div>
