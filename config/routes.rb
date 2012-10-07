@@ -29,6 +29,7 @@ Bconnected::Application.routes.draw do
       post 'create_personal_info', :action => 'create_personal_info'
       post 'create_summary', :action => 'create_summary'
       post 'create_additional_info', :action => 'create_additional_info'
+      post 'create_profile_photo', :action => 'create_profile_photo'
       get 'view_user_profile', :action => 'view_user_profile'
     end
     
