@@ -39,9 +39,9 @@ gem "paperclip"
 gem 'execjs'
 gem 'therubyracer'
 gem 'devise'
-#gem 'activerecord-postgresql-adapter'
+gem 'activerecord-postgresql-adapter'
 gem 'pg'
 gem "countries"
 gem 'contacts'
 gem 'hpricot'
-#gem 'gdata', git:'https://github.com/agentrock/gdata.git'
+gem 'gdata', git:'https://github.com/agentrock/gdata.git'
