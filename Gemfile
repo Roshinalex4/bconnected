@@ -37,10 +37,10 @@ gem "paperclip"
 # To use debugger
 # gem 'debugger'
 gem 'execjs'
-#gem 'therubyracer'
+gem 'therubyracer'
 gem 'devise'
 #gem 'activerecord-postgresql-adapter'
-#gem 'pg'
+gem 'pg'
 gem "countries"
 gem 'contacts'
 gem 'hpricot'
