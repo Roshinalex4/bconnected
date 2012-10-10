@@ -11,5 +11,5 @@ class ApplicationController < ActionController::Base
       return '/users/sign_up'
     end
   end
-
+  
 end
