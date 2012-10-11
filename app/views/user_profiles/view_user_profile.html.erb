@@ -53,13 +53,13 @@
 
 <div id="summary_box" class="section">
 	
-	<div class="section_head">Summary<span class="right"><%= link_to "Edit", "add_summary" %></span></div>
+	<div class="section_head">Summary<span class="right"><%= link_to "Edit", "add_summary" %></span></div><br clear="all"/>
 	<%= @user_profile.summary %>
 </div>
 
 <div id="experience_box" class="section">
 	
-	<div class="section_head">Experience<span class="right"><%= link_to "Edit", "experiences/new" %></span></div>
+	<div class="section_head">Experience<span class="right"><%= link_to "Edit", "/experiences/new" %></span></div><br clear="all"/>
 	<% @user_profile.experiences.each do |pos| %>
 		<%= pos.title %>
 	<% end %>
@@ -67,7 +67,7 @@
 
 <div id="languages_box" class="section">
 	
-	<div class="section_head">Languages<span class="right"><%= link_to "Edit", "add_languages" %></span></div>
+	<div class="section_head">Languages<span class="right"><%= link_to "Edit", "add_languages" %></span></div><br clear="all"/>
 	<% @user_profile.languages.each do |lg| %>
 		<%= lg.name %>
 	<% end %>
@@ -75,14 +75,14 @@
 
 <div id="skills_box" class="section">
 	
-	<div class="section_head">Skills<span class="right"><%= link_to "Edit", "add_skills" %></span></div>
+	<div class="section_head">Skills<span class="right"><%= link_to "Edit", "add_skills" %></span></div><br clear="all"/>
 	<% @user_profile.skills.each do |sk| %>
 		<%= sk.name %>
 	<% end %>
 </div>
 
 <div id="qualification_box" class="section">
-	<div class="section_head">Education<span class="right"><%= link_to "Edit", "qualifications/new" %></span></div>
+	<div class="section_head">Education<span class="right"><%= link_to "Edit", "/qualifications/new" %></span></div><br clear="all"/>
 	<% @user_profile.qualifications.each do |deg| %>
 		<%= deg.name %>
 	<% end %>
@@ -93,11 +93,12 @@
 		Additional Information
 		<span class="right"><%= link_to "Edit", "add_additional_info" %></span>
 	</div>
-	
-	<%= @user_profile.website_1 %>
-	<%= @user_profile.website_2 %>
-	<%= @user_profile.website_3 %>
-	<%= @user_profile.interests %>
-	<%= @user_profile.groups_associations %>
-	<%= @user_profile.honours_awards %>
+	<br clear="all"/>
+	Websites:
+	<%= @user_profile.website_1 %><br />
+	<%= @user_profile.website_2 %><br />
+	<%= @user_profile.website_3 %><br />
+	Interests: <%= @user_profile.interests %><br />
+	Groups and Associations: <%= @user_profile.groups_associations %><br />
+	Honours and Awards: <%= @user_profile.honours_awards %>
 </div>

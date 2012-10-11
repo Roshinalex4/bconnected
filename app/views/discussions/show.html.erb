@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Summary:</b>
+  <%= @discussion.summary %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @discussion.description %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @discussion.link %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @discussion.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_discussion_path(@discussion) %> |
+<%= link_to 'Back', discussions_path %>

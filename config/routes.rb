@@ -1,4 +1,6 @@
 Bconnected::Application.routes.draw do
+  resources :discussions
+
   resources :groups
 
   devise_for :users, :controllers => { :registrations => "registrations" }

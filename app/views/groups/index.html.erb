@@ -1,46 +1,23 @@
 <h1>Listing groups</h1>
-<br />
-<table border="1">
-  <tr>
-  	<th>Logo</th>
-    <th>Group name</th>
-    <th>Creator</th>
-    <th>Description</th>
-    <th>Group type</th>
-    <th>Summary</th>
-    <th>Website</th>
-    <th>Group owner email</th>
-    <!-- <th>Access</th>
-    <th>Display in directory</th>
-    <th>Allow display logo</th>
-    <th>Allo invite others</th>
-    <th>Language</th>
-    <th>Single location</th>
-    <th>Country</th>
-    <th>Check agreement</th> -->
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<span class="right"><%= link_to 'Create a Group', new_group_path %></span>
+<br clear="all" />
+<ul>
 <% @groups.each do |group| %>
-  <tr>
-  	<td><%= image_tag group.logo.url(:thumb) %></td>
-    <td><%= group.group_name %></td>
-    <td><%= group.creator %></td>
-    <td><%= group.description %></td>
-    <td><%= group.group_type %></td>
-    <td><%= group.summary %></td>
-    <td><%= group.website %></td>
-    <td><%= group.group_owner_email %></td>
-    
-    <td><%= link_to 'Show', group %></td>
-    <td><%= link_to 'Edit', edit_group_path(group) %></td>
-    <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+	<li>
+		<div class="group_logo">
+			<%= image_tag group.logo.url(:thumb) %>
+		</div>
+		<div class="group_summary">
+			<%= link_to group.group_name, group %><br />
+			<%= group.summary %><br />
+			Very Active: 111190 discussions this month. 76767 members.<br />
+			12 in your network<br />
+			<a href="#">Join to view all 89 people</a>
+		</div>
+		<div class="group_action">
+			<%= link_to 'View', group %>
+		</div>
+	</li>
 <% end %>
-</table>
+</ul>
 
-<br />
-
-<%= link_to 'New Group', new_group_path %>

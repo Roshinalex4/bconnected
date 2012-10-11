@@ -25,7 +25,7 @@ class GroupsController < ApplicationController
   # GET /groups/new.json
   def new
     @group = Group.new
-    @user_profile = UserProfile.find_by_user_id(current_user.id)
+    @user_profile = current_user.user_profile
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @group }

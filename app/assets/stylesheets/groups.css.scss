@@ -1,3 +1,20 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.group_logo {
+  float: left;
+  width: 15%;
+}
+.group_summary{
+  float: left;
+  width: 50%;
+}
+.group_action {
+  float: left;
+  width: 10%;
+}
+.group_menu {
+  padding-left: 15%;
+  margin-top: -10px;
+  border-bottom: 1px solid #cccccc;
+}
