@@ -4,7 +4,7 @@ class UserProfile < ActiveRecord::Base
                   :plan_id, :description, :summary, :address, :city, :state, :birthday, :marital_status,
                   :phone_number, :phone_type, :im, :im_service, :address, :birth_day, :birth_month,
                   :birth_year, :website_1, :website_1_type, :website_2, :website_2_type, :website_3, :website_3_type,
-                  :interests, :groups_associations, :honours_awards, :language_ids, :specialties, :picture
+                  :interests, :groups_associations, :honours_awards, :language_ids, :specialties, :picture, :user_id
   belongs_to :user
   has_many :user_profile_skills
   has_many :skills, :through => :user_profile_skills

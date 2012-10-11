@@ -45,7 +45,11 @@
   width: 60%;
   padding: 2%;
 }
-h4 {
+.section_head {
   width: 60%;
+  float: left;
   border-bottom: 1px solid #cccccc;
+}
+span.right {
+  float: right;
 }
