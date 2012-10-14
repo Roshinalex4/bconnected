@@ -1,6 +1,7 @@
 <div id="profile_box" class="section">
 	<div id="photo">
-		No Photo..
+		<%= link_to "Edit", "add_profile_photo"%>
+		<%= image_tag @user_profile.picture.url(:thumb)%>
 	</div>
 	<div class="profile_right_section">
 		<span class="right"><%= link_to "Edit", "add_profile_basic" %></span>

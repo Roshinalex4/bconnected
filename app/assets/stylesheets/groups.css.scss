@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .group_logo {
   float: left;
-  width: 15%;
+  width: 25%;
 }
 .group_summary{
   float: left;
@@ -17,4 +17,11 @@
   padding-left: 15%;
   margin-top: -10px;
   border-bottom: 1px solid #cccccc;
+}
+.list_item {
+  list-style: none;
+	width: 100%
+}
+.list {
+	width: 50%;
 }

@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @group = Group.find(params[:id])
-
+    @discussion = Discussion.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @group }
@@ -90,5 +90,15 @@ class GroupsController < ApplicationController
       format.html { redirect_to groups_url }
       format.json { head :no_content }
     end
+  end
+  
+  def join
+    @group = Group.find(params[:id])
+    @group.users.push(current_user) 
+    redirect_to group_path(@group)
+  end
+  
+  def profile
+    @group = Group.find(params[:id])
   end
 end

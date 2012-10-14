@@ -5,4 +5,6 @@ class Group < ActiveRecord::Base
                   :group_type, :language, :single_location, :summary, :website, 
                   :postal_code, :open_status, :logo
   has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_many :discussions
+  has_and_belongs_to_many :users
 end

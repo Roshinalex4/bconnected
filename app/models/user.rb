@@ -16,4 +16,5 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :languages
   has_many :qualifications
   has_many :experiences
+  has_and_belongs_to_many :groups
 end

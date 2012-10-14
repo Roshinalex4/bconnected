@@ -1,7 +1,13 @@
 Bconnected::Application.routes.draw do
-  resources :discussions
+  
 
-  resources :groups
+  resources :groups do
+    resources :discussions
+    member do
+      post 'join', :action => 'join'
+      get 'profile', :action => 'profile'
+    end
+  end
 
   devise_for :users, :controllers => { :registrations => "registrations" }
 

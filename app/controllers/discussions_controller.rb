@@ -3,7 +3,7 @@ class DiscussionsController < ApplicationController
   # GET /discussions.json
   def index
     @discussions = Discussion.all
-
+    @group = Group.find(params[:group_id])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @discussions }
@@ -25,7 +25,7 @@ class DiscussionsController < ApplicationController
   # GET /discussions/new.json
   def new
     @discussion = Discussion.new
-
+    @group = Group.find(params[:group_id])
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @discussion }
@@ -41,10 +41,12 @@ class DiscussionsController < ApplicationController
   # POST /discussions.json
   def create
     @discussion = Discussion.new(params[:discussion])
-
+    @discussion.group_id = params[:group_id]
+    @discussion.user_id = current_user.id
+    @group = Group.find(@discussion.group_id)
     respond_to do |format|
       if @discussion.save
-        format.html { redirect_to @discussion, notice: 'Discussion was successfully created.' }
+        format.html { redirect_to [@group, @discussion], notice: 'Discussion was successfully created.' }
         format.json { render json: @discussion, status: :created, location: @discussion }
       else
         format.html { render action: "new" }
