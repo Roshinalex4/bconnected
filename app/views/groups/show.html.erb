@@ -21,27 +21,56 @@
 	<%= link_to "More..", "#" %>
 </div>
 <br clear="all" />
-<%= link_to "Start Discussion", new_group_discussion_path(@group) %>
+<%= link_to "Start Discussion", "#", :onclick => "$(\"#start_discussion_form\").show();" %>
+<div id="start_discussion_form" style="display: none;">
+	<%= form_for([@group, @discussion], :remote => true) do |f| %> 
+		<% if @discussion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@discussion.errors.count, "error") %> prohibited this discussion from being saved:</h2>
 
+      <ul>
+      <% @discussion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+	<% end %>
+</div>
 <h3>Most Popular Discussions</h3>
-<ul class="list">
+<br/>
+
+<div id="discussions">
+	<ul class="list">
 	<% @group.discussions.each do |discussion| %>
-	<br clear='all' />
-	<li class="list_item">
-		<div class="group_logo">
-			<%= image_tag current_user.user_profile.picture.url(:thumb) %>
-		</div>
-		<div class="group_summary">
-			<%= link_to "Discussion", group_discussion_path(@group) %><br />
-			<%= discussion.summary %><br />
-			<%= discussion.created_at %>
-			<div class="comment">
-				Comment about discussion
-			</div>
-		</div>
-	</li>
+		<%= div_for discussion do %>
+		  <span class="dateandoptions">
+		    Posted <%=time_ago_in_words(discussion.created_at)%> ago<br />
+		  </span>
+	  		<%= content_tag(:p, discussion.summary, :class => "discussion-body") %>
+		<% end %>
 	<% end %>
 </ul>
+
+
+</div>
+
 <br clear='all' />
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

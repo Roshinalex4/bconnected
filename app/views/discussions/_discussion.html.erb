@@ -1,0 +1,6 @@
+<%= div_for @discussion do %>
+  <span class="dateandoptions">
+    Posted <%=time_ago_in_words(@discussion.created_at)%> ago<br />
+  </span>
+	<%= content_tag(:p, @discussion.summary, :class => "discussion-body") %>
+<% end %>

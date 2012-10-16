@@ -101,4 +101,6 @@ class GroupsController < ApplicationController
   def profile
     @group = Group.find(params[:id])
   end
+  
+  
 end

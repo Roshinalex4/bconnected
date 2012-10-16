@@ -1,21 +1,24 @@
 <h1>Listing groups</h1>
 <span class="right"><%= link_to 'Create a Group', new_group_path %></span>
 <br clear="all" />
-<ul>
+<ul class="list">
 <% @groups.each do |group| %>
-	<li>
-		<div class="group_logo">
-			<%= image_tag group.logo.url(:thumb) %>
-		</div>
-		<div class="group_summary">
-			<%= link_to group.group_name, group %><br />
-			<%= group.summary %><br />
-			Very Active: 111190 discussions this month. 76767 members.<br />
-			12 in your network<br />
-			<a href="#">Join to view all 89 people</a>
-		</div>
-		<div class="group_action">
-			<%= link_to 'View', group %>
+	<br clear='all' />
+	<li class="list_item">
+		<div class="list_item_content">
+			<div class="group_logo">
+				<%= image_tag group.logo.url(:thumb) %>
+			</div>
+			<div class="group_summary">
+				<%= link_to group.group_name, group %><br />
+				<%= group.summary %><br />
+				Very Active: 111190 discussions this month. 76767 members.<br />
+				12 in your network<br />
+				<a href="#">Join to view all 89 people</a>
+			</div>
+			<div class="group_action">
+				<%= link_to 'View', group %>
+			</div>
 		</div>
 	</li>
 <% end %>

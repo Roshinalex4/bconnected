@@ -40,17 +40,21 @@ class DiscussionsController < ApplicationController
   # POST /discussions
   # POST /discussions.json
   def create
-    @discussion = Discussion.new(params[:discussion])
-    @discussion.group_id = params[:group_id]
-    @discussion.user_id = current_user.id
-    @group = Group.find(@discussion.group_id)
+    # @discussion = Discussion.new(params[:discussion])
+    # @discussion.group_id = params[:group_id]
+    params[:discussion][:user_id] = current_user.id
+    @group = Group.find(params[:group_id])
+    
+    @discussion = @group.discussions.build(params[:discussion])
     respond_to do |format|
       if @discussion.save
-        format.html { redirect_to [@group, @discussion], notice: 'Discussion was successfully created.' }
-        format.json { render json: @discussion, status: :created, location: @discussion }
+         format.html { redirect_to group_path(@discussion.group), :notice => 'Thank you for your post.' }
+        #format.json { render json: @discussion, status: :created, location: @discussion }
+        format.js   
       else
-        format.html { render action: "new" }
-        format.json { render json: @discussion.errors, status: :unprocessable_entity }
+         format.html { render action: "new" }
+        # format.json { render json: @discussion.errors, status: :unprocessable_entity }
+        format.js 
       end
     end
   end
