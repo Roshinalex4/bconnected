@@ -95,7 +95,9 @@ class GroupsController < ApplicationController
   def join
     @group = Group.find(params[:id])
     @group.users.push(current_user) 
-    redirect_to group_path(@group)
+    respond_to do |format|
+      format.html {redirect_to @group, notice: 'You have successfully joined the group.' }
+    end
   end
   
   def profile

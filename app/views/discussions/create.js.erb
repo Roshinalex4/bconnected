@@ -1,6 +1,8 @@
 $("#discussions").prepend("<%= escape_javascript(render(@discussion)) %>");
 
 /* Reset the comment form */
-$("#start_discussion_form").hide();
+$('#new_discussion').each(function(){
+	this.reset();
+});
 /* Highlight the new comment */
 $("#discussion_<%= @discussion.id %>").effect("highlight", {}, 3000);

@@ -1,76 +1,86 @@
-<p id="notice"><%= notice %></p>
-<ul class="list">
-	<li class="list_item">
-		<div class="group_logo">
-			<%= image_tag @group.logo.url(:thumb) %>
-		</div>
-		<div class="group_summary">
-			<%= link_to @group.group_name, @group %><br />
-			<%= button_to "Join Group", "/groups/"+@group.id.to_s+"/join" %>
-		</div>
-		<div class="group_action">
-			<%= link_to 'Group Profile', "/groups/"+@group.id.to_s+"/profile" %>
-		</div>
-	</li>
-</ul>
-<br clear="all" />
-<div class="group_menu">
-	<%= link_to "Discussions", "#" %>
-	<%= link_to "Promotions", "#" %>
-	<%= link_to "Search", "#" %>
-	<%= link_to "More..", "#" %>
-</div>
-<br clear="all" />
-<%= link_to "Start Discussion", "#", :onclick => "$(\"#start_discussion_form\").show();" %>
-<div id="start_discussion_form" style="display: none;">
-	<%= form_for([@group, @discussion], :remote => true) do |f| %> 
-		<% if @discussion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@discussion.errors.count, "error") %> prohibited this discussion from being saved:</h2>
-
-      <ul>
-      <% @discussion.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :summary %><br />
-    <%= f.text_area :summary %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :link %><br />
-    <%= f.text_field :link %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-	<% end %>
-</div>
-<h3>Most Popular Discussions</h3>
-<br/>
-
-<div id="discussions">
+<div class="f-left">
+	<p id="notice">
+		<%= notice %>
+	</p>
 	<ul class="list">
-	<% @group.discussions.each do |discussion| %>
-		<%= div_for discussion do %>
-		  <span class="dateandoptions">
-		    Posted <%=time_ago_in_words(discussion.created_at)%> ago<br />
-		  </span>
-	  		<%= content_tag(:p, discussion.summary, :class => "discussion-body") %>
+		<li class="list_item">
+			<div class="group_logo">
+				<%= image_tag @group.logo.url(:thumb) %>
+			</div>
+			<div class="group_summary">
+				<%= link_to @group.group_name, @group %>
+				<br />
+				<% if !@group.users.include? current_user %>
+				<%= button_to "Join Group", "/groups/"+@group.id.to_s+"/join" %>
+				<% end %>
+			</div>
+			<div class="group_action">
+				<!-- #link_to 'Group Profile', "/groups/"+@group.id.to_s+"/profile" -->
+			</div>
+		</li>
+	</ul>
+	<br clear="all" />
+	<div class="group_menu">
+		<%= link_to "Discussions", "#" %>
+		<!-- %= link_to "Members", "#" % -->
+		<!-- %= link_to "Promotions", "#" % -->
+		<!-- %= link_to "Jobs", "#" % -->
+		<!-- %= link_to "Search", "#" % -->
+		<!-- %= link_to "More..", "#" % -->
+	</div>
+	<br clear="all" />
+	<% if @group.users.include? current_user %>
+	<%= link_to "Start Discussion", "#" %>
+	<div id="start_discussion_form">
+		<%= form_for([@group, @discussion], :remote => true, :html => {:class => "new_discussion"}) do |f| %>
+		<% if @discussion.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@discussion.errors.count, "error") %> prohibited this discussion from being saved:</h2>
+			<ul>
+				<% @discussion.errors.full_messages.each do |msg| %>
+				<li>
+					<%= msg %>
+				</li>
+				<% end %>
+			</ul>
+		</div>
 		<% end %>
+		<div class="field">
+			<%= f.text_area :summary, :rows => 1, :cols => 70, :value => "Start a discussion or share something with the group..." %>
+		</div>
+		<div class="field">
+			<%= f.text_area :description, :rows => 2, :cols => 70, :value => "Add more details..." %>
+		</div>
+		<div class="field">
+			<%= f.label "Add a link" %>
+			<br />
+			<%= f.text_field :link %>
+		</div>
+		<br clear="all" />
+		<div class="actions right-align">
+			<%= f.submit "Share" %>
+		</div>
+		<% end %>
+	</div>
 	<% end %>
-</ul>
-
-
+	<br clear="all" />
+	<div id="discussions">
+		<h3>Most Popular Discussions</h3>
+		<ul class="list">
+			<% @group.discussions.each do |discussion| %>
+			<%= div_for discussion do %>
+			<%= image_tag discussion_user_picture_url(discussion) %>
+			<%= link_to discussion.summary, "/groups/"+@group.id.to_s+"/discussions/"+discussion.id.to_s %>
+			<%= discussion.description %>
+			<br clear="all" />
+			<span class="dateandoptions"> posted <%= time_ago_in_words(discussion.created_at)%> ago
+				<br />
+			</span>
+			<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<br clear='all' />
+	<%= link_to 'Edit', edit_group_path(@group) %> |
+	<%= link_to 'Back', groups_path %>
 </div>
-
-<br clear='all' />
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
