@@ -42,11 +42,24 @@ Bconnected::Application.routes.draw do
     end
     
   end
+
+	resources :messages do
+		member do
+			get :show
+			post :send
+		end 
+		collection do
+			get 'inbox_messages', :action => 'inbox_messages'
+			get 'compose', :action => 'compose'
+		end
+		
+	end
   
   resources :connections
   resources :experiences
   resources :qualifications
   resources :languages
+	
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
