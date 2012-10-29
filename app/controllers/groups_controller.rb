@@ -95,6 +95,9 @@ class GroupsController < ApplicationController
   def join
     @group = Group.find(params[:id])
     @group.users.push(current_user) 
+		gu = GroupUser.where('user_id = ? and group_id = ?',current_user.id, @group.id) 
+		gu[0].update_attributes(:status => 0)
+		GroupMailer.join_notification_email(current_user, @group).deliver
     respond_to do |format|
       format.html {redirect_to @group, notice: 'You have successfully joined the group.' }
     end
@@ -104,5 +107,11 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
   
+	def approve
+
+	end
   
+	def reject
+
+	end
 end

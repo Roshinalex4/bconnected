@@ -45,3 +45,4 @@ gem "countries"
 gem 'contacts'
 gem 'hpricot'
 gem 'gdata', git:'https://github.com/agentrock/gdata.git'
+gem 'rails3-jquery-autocomplete'

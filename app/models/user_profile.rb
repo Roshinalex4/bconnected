@@ -13,4 +13,5 @@ class UserProfile < ActiveRecord::Base
   has_many :languages
   has_many :experiences
   has_many :qualifications
+	has_many :messages
 end

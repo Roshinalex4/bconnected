@@ -6,6 +6,8 @@ Bconnected::Application.routes.draw do
     member do
       post 'join', :action => 'join'
       get 'profile', :action => 'profile'
+			get 'approve', :action => 'approve'
+			get 'reject', :action => 'reject'
     end
   end
 
@@ -44,16 +46,8 @@ Bconnected::Application.routes.draw do
   end
 
 	resources :messages do
-		member do
-			get :show
-			post :send
-		end 
-		collection do
-			get 'inbox_messages', :action => 'inbox_messages'
-			get 'compose', :action => 'compose'
-		end
-		
-	end
+		get :autocomplete_message_users, :on => :collection
+	end 
   
   resources :connections
   resources :experiences

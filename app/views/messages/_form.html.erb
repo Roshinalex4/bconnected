@@ -1,0 +1,57 @@
+<script type="text/javascript">
+$(document).ready(function() {
+    var data = <%= @autocomplete_users %>;
+    $("#users").autocomplete( { source: data } );
+});
+</script>
+
+<%= form_for @message do |f| %>
+	<% if @message.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+			<%= pluralize(@message.errors.count, "error") %> prohibited this message from being composed.
+			</h2>
+			<ul>
+				<%= @message.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="label">
+		To
+	</div>
+	<div class="field">
+		<input type="text" name="users" id="users" />
+	</div>
+	<div class="label">
+		Subject
+	</div>
+	<div class="field">
+		<%= f.text_field :subject %>
+	</div>
+	<div class="label">
+		Body
+	</div>
+	<div class="field">
+		<%= f.text_area :body %>
+	</div>
+	<div class="label">
+		&nbsp;
+	</div>
+	<div class="field">
+		<%= f.check_box :recipients_view_status %>Allow recipients to view
+	</div>
+	<div class="label">
+		&nbsp;
+	</div>
+	<div class="field">
+		<%= f.check_box :copy_to_author %>Send me a copy of this message
+	</div>
+	<div class="label">
+		&nbsp;
+	</div>
+	<div class="field">
+		<%= f.submit "Send" %>
+	</div>
+<% end %>

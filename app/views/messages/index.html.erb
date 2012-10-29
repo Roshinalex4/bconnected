@@ -1,0 +1,20 @@
+<table border="0">
+	<% @messages.each do |message| %>
+		<% sender = UserProfile.find(message.from_user) %>
+		<tr>
+			<td width="5%">
+				<%= image_tag sender.picture.url(:thumb) %>		
+			</td>
+			<td width="10%">
+				<%= link_to sender.display_name, "#" %>
+			</td>
+			<td width="20%">
+				<%= link_to message.subject, "#" %>		
+			</td>
+			<td width="5%">
+				<%= message.created_at.strftime("%b %d") %>		
+			</td>
+		</tr>		
+		
+	<% end %>
+</table>

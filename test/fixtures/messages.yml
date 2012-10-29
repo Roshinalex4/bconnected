@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subject: MyText
+  body: MyText
+  from_user: 1
+  to_user: 1
+  recipients_view_status: 1
+  copy_to_author: 1
+
+two:
+  subject: MyText
+  body: MyText
+  from_user: 1
+  to_user: 1
+  recipients_view_status: 1
+  copy_to_author: 1
