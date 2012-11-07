@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+	before_filter :authenticate_user!
   # GET /groups
   # GET /groups.json
   def index
@@ -97,7 +98,7 @@ class GroupsController < ApplicationController
     @group.users.push(current_user) 
 		gu = GroupUser.where('user_id = ? and group_id = ?',current_user.id, @group.id) 
 		gu[0].update_attributes(:status => 0)
-		GroupMailer.join_notification_email(current_user, @group).deliver
+		GroupMailer.join_notification_email(current_user, @group, request.host_with_port).deliver
     respond_to do |format|
       format.html {redirect_to @group, notice: 'You have successfully joined the group.' }
     end
@@ -108,10 +109,12 @@ class GroupsController < ApplicationController
   end
   
 	def approve
-
+		gu = GroupUser.where('user_id = ? and group_id = ?',params[:user], params[:id]) 
+		gu[0].update_attributes(:status => 1)
 	end
   
 	def reject
-
+		gu = GroupUser.where('user_id = ? and group_id = ?',params[:user], params[:id]) 
+		gu[0].update_attributes(:status => 2)
 	end
 end

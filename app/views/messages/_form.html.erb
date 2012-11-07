@@ -1,8 +1,8 @@
 <script type="text/javascript">
-$(document).ready(function() {
+/*$(document).ready(function() {
     var data = <%= @autocomplete_users %>;
     $("#users").autocomplete( { source: data } );
-});
+});/
 </script>
 
 <%= form_for @message do |f| %>
@@ -21,8 +21,11 @@ $(document).ready(function() {
 	<div class="label">
 		To
 	</div>
+
+
 	<div class="field">
-		<input type="text" name="users" id="users" />
+		<!--<input type="text" name="users" id="users" value="" />-->
+		<%= select_tag "to_user", options_for_select(User.all.map {|u| [u.email, u.id]}, @to_users),:multiple => true  %>
 	</div>
 	<div class="label">
 		Subject

@@ -9,30 +9,30 @@ class MessagesController < ApplicationController
 
 	#Show a list of messages in inbox
 	def index
-		@messages = Message.where(:to_user => current_user.id)
+		@messages = Message.find_by_sql("select * from messages where find_in_set('"+current_user.id.to_s+"', to_user);")
 		respond_with(@messages) 
 	end
 
 	#Compose a message
 	def new
-		@message = Message.new
+		
+		if params[:reply]==	"on"
+			@message = Message.find(params[:message_id])
+			@to_users = @message.to_user.split(",")
+		else
+			@message = Message.new
+		end
 		@users = User.find(:all)
 		@users = @users.map { |x| x.email }
 		@autocomplete_users = @users.to_json.html_safe
 		respond_with(@message)
 	end
 
-	#Send a message
+	#Send a message 
 	def create
 		@message = Message.new(params[:message])
-		@users = Array.new
-		@users = params[:users].split(",")
-		@user_list = User.where(:email => @users )
-		to_user = ""
-		@user_list.each do |usr|
-			to_user = to_user+","+usr.id.to_s
-		end
-		@message.to_user = to_user
+		
+		@message.to_user = params[:to_user].join(",")
 		sender = UserProfile.where(:user_id => current_user.id)[0]
 		@message.from_user = sender.id
 		respond_to do |format|
@@ -53,8 +53,13 @@ class MessagesController < ApplicationController
 	end
 
 	#Delete a message
-	#def delete
-		
-	#end
+	def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
 
+    respond_to do |format|
+      format.html { redirect_to messages_url }
+      format.json { head :no_content }
+    end
+  end
 end

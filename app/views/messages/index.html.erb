@@ -1,3 +1,4 @@
+<%= link_to "Compose", new_message_path %>
 <table border="0">
 	<% @messages.each do |message| %>
 		<% sender = UserProfile.find(message.from_user) %>
@@ -12,7 +13,9 @@
 				<%= link_to message.subject, "#" %>		
 			</td>
 			<td width="5%">
-				<%= message.created_at.strftime("%b %d") %>		
+				<%= message.created_at.strftime("%b %d") %><br />
+				<%= link_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+				<%= link_to "Reply", "messages/new?reply=on&message_id="+message.id.to_s%>
 			</td>
 		</tr>		
 		

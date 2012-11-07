@@ -8,7 +8,7 @@
     <p>
       <%= @user.email %> has requested your approval to join your group.<br/>
     </p>
-		<p>Click corresponding link to <a href="#">Approve</a> / <a href="#">Reject</a>
+		<p>Click corresponding link to <a href="<%= @approve_url%>">Approve</a> / <a href="<%= @reject_url%>">Reject</a>
     <p>
       To login to the site, just follow this link: <%= @url %>.
     </p>
