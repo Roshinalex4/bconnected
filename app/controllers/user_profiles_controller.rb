@@ -41,6 +41,7 @@ class UserProfilesController < ApplicationController
 		if params[:user_profile][:email_assoc].split("@").last.include?("yahoo") 
 			 @contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		elsif params[:user_profile][:email_assoc].split("@").last.include?("gmail") 
+puts '..................'
 			@contacts = Contacts::Gmail.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		end
     @contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
@@ -159,5 +160,20 @@ class UserProfilesController < ApplicationController
   def view_user_profile
     @user_profile = UserProfile.find_by_user_id(current_user.id)
   end
-	
+  def search
+    @users = User.where("first_name like ? or last_name like ?", "%#{params[:user][:first_name]}%", "%#{params[:user][:last_name]}%")
+  end
+
+	def show
+		@user_profile = UserProfile.find(params[:id])
+	end
+
+	def connect
+		user = User.find(params[:contact])
+		@connection = Connection.new
+		@connection.user_id = current_user.id
+		@connection.friend_id = params[:contact]
+		@connection.save
+	end
+  
 end

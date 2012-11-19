@@ -1,7 +1,8 @@
 class ConnectionsController < ApplicationController
-  def create                                  
-    params[:send_invite].each do |email_contact| 
-      puts email_contact          
+  def create       
+		contacts_array = Array.new
+		params[:send_invite][:email_contact].each {|k,v| contacts_array << v if v.length > 0 }
+    contacts_array.each do |email_contact| 
       user = User.find(email_contact)
 			@connection = Connection.new
 			@connection.user_id = current_user.id
@@ -11,7 +12,7 @@ class ConnectionsController < ApplicationController
       @invitation = Invitation.new
       @invitation.from_user_id = @connection.user_id
       @invitation.to_user_id = @connection.friend_id
-			redirect_to create_invitation_path(:invitation => @invitation)                              
+			redirect_to "/user_profiles/invite_contacts_form/"+current_user.id.to_s
     end                                            
     #Loop through all email ids                    
       #Send Invitation Email through bconnected    

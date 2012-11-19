@@ -1,7 +1,7 @@
 <%= form_for @connection do |f| %>
 	<%= check_box("send_invite_all", "select_all", {}, "select_all", "") %> Select All <br clear="all" />
 	<% @bconnected_contacts.each_with_index do |contact, i| %>
-		<%= check_box("send_invite["+i.to_s+"]", "email_contact", {}, contact.user_id, "") %> <%= contact.email	 %> <br clear="all" />
+		<%= check_box("send_invite", "email_contact["+i.to_s+"]", {}, contact.user_id, "") %> <%= contact.email	 %> <br clear="all" />
 	<% end %>
 	<%= f.submit "Add Connection" %>
 <% end %>
