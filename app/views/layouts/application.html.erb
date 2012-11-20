@@ -1,173 +1,187 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Madison who's who</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-
-  <%= csrf_meta_tags %>
-  <script type="text/javascript" src="/assets/jquery-ui-1.9.0.custom.min.js"></script>
-</head>
-<body>
-	<div id="container">
-	<div id="social_net">
-		<a href="index.html" class="fr"></a>
-		<a href="index.html" class="face"></a>
-		<a href="index.html" class="twit"></a>
-		<a href="index.html" class="rss"></a></a>
-	</div>
-	<div class="clear"></div>
-	<div id="logo" class="f-left">
-		<%= link_to image_tag "logo.jpg", :alt => 'logo', :width => '231', :height => '89', :border => '0' %>
-	</div>
-	<div id="login" class="f-right">
-		
-			<% if user_signed_in? %>
-				<%= current_user.first_name %> <%= current_user.last_name %>
-				<%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "btn" %>
-			<% else %>
-			<h1>Login</h1>
-				<form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post">
-					<input name="utf8" type="hidden" value="✓">
-					<input name="authenticity_token" type="hidden" value="iusZXac/U/RCv8UlR0vavUo1UwZhu46/zqSgCwrWhKE=">
-					<div style="float:left; width: 82%;">
-						<label>
-							<input id="user_email" name="user[email]" size="30" type="email" class="textbox" value="Email">
-						</label>
-						<label>
-							<input id="user_password" name="user[password]" size="30" type="password" class="textbox" value="Password">
-						</label>
-						<br clear='all' />
-						<label>
-							<input name="user[remember_me]" type="hidden" value="0">
-							<input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1">
-							<span style="vertical-align: top;">Remember me</span> 
-							<span style="margin-left: 40px; ">
-								<a href="/users/password/new">Forgot your password?</a>
-							</span>
-						</label>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Madison</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= stylesheet_link_tag    "AvantGardeMd/avantgardstylesheet" %>
+		<%= stylesheet_link_tag    "goodfoot/goodfoot_stylesheet" %>
+		<%= javascript_include_tag "application" %>
+		<script type="text/javascript" src="/assets/jquery-ui-1.9.0.custom.min.js"></script>
+		<%= csrf_meta_tags %> 
+	</head>
+	<body>
+		<section>
+			<div id="top">
+				<div id="top_inner">
+					<div class="top_colmn">
+						<div id="logo">
+							<a href="#">logo</a>
+						</div>
 					</div>
-					
-						
-					<div style="float:left; width: 15%;">
-						<label>
-							<input name="commit" type="submit" value="Login" class="btn">
-						</label>
+					<div class="top_colmn">
+						<div id="socialicons">
+							<a href="#"><%= image_tag "facebook.png" %></a>
+							<a href="#"><%= image_tag "twitter.png" %></a>
+							<a href="#"><%= image_tag "in.png" %></a>
+						</div>
 					</div>
-				</form>
-			<% end %>
-			<div class="clear"></div>
-	</div>
-	<div class="clear"></div>
-	<ul id="nav" class="f-right">
-		<li>
-			<a href="/">Home</a>
-		</li>
-		<li>
-			|
-		</li>
-		<li>
-			<a href="/">What is Madison?</a>
-		</li>
-		<li>
-			|
-		</li>
-		<% if user_signed_in? %>
-		<li>
-			<a href="/groups">Groups</a>
-		</li>	
-		<li>
-			|
-		</li>
-		<li>
-			<a href="/messages">Inbox</a>
-		</li>
-		<% else %>
-		<li>
-			<a href="/users/sign_up">Join Now</a>
-		</li>
-		<li>
-			|
-		</li>
-		<li>
-			<a href="/users/sign_in">Sign In</a>
-		</li>
-		<% end %>
-	</ul>
-	<div class="clear"></div>
-	<div id="wraper">
-		<%= yield %>
-	</div>
-</div>
-<div class="clear"></div>
-<div class="footer">
-	<div class="content">
-		<div class="directory">
-			<span class="bold">Members Directory:</span><a href="index.html">a</a><a href="index.html">b</a><a href="index.html">c</a><a href="index.html">d</a><a href="index.html">e</a><a href="index.html">f</a><a href="index.html">g</a><a href="index.html">h</a><a href="index.html">i</a><a href="index.html">j</a><a href="index.html">k</a><a href="index.html">l</a><a href="index.html">m</a><a href="index.html">n</a><a href="index.html">o</a><a href="index.html">p</a><a href="index.html">q</a><a href="index.html">r</a><a href="index.html">s</a><a href="index.html">t</a><a href="index.html">u</a><a href="index.html">v</a><a href="index.html">x</a><a href="index.html">y</a><a href="index.html">z</a>
-		</div>
-		<div class="clear"></div>
-		<ul>
-			<li>
-				<a href="/">Home</a>
-			</li>
-			<li>
-				|
-			</li>
-			<li>
-				<a href="/">What is Madison?</a>
-			</li>
-			<li>
-				|
-			</li>
-			<% if user_signed_in? %>
-			<li>
-				<a href="/groups">Groups</a>
-			</li>	
-			<% else %>
-			<li>
-				<a href="/users/sign_up">Join Now</a>
-			</li>
-			<li>
-				|
-			</li>
-			<li>
-				<a href="/users/sign_in">Sign In</a>
-			</li>
-			<% end %>
-			<li>
-				|
-			</li>
-			<li>
-				<a href="/">About</a>
-			</li>
-			<li>
-				|
-			</li>
-			<li>
-				<a href="/">Blog</a>
-			</li>
-			<li>
-				|
-			</li>
-			<li>
-				<a href="/">Career</a>
-			</li>
-			<li>
-				|
-			</li>
-			<li>
-				<a href="/">Privacy Policy</a>
-			</li>
-		</ul>
-		<div class="clear"></div>
-		<div class="copy f-left">
-			Madison who's who &copy; www.madison.com
-		</div>
-		<div class="rating f-right">
-			<a href="index.html"><%= link_to image_tag("rating.jpg") %></a>
-		</div>
-	</div>
-</div>
-
-</body>
+				</div>
+			</div>
+			<div id="navigation">
+				<div id="navigation_inner">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">What is Madison?</a>
+						</li>
+						<li>
+							<a href="#">Join Today</a>
+						</li>
+					</ul>
+					<div id="signinbox">
+						<% if !user_signed_in? %>
+						<%= form_for User.new, :url => new_user_session_path do |f| %>
+						<div class="signinrow">
+							<h6>Email</h6>
+							<%= f.email_field :email, :class => 'signin_field_bg' %>
+						</div>
+						<div class="signinrow">
+							<h6>Password</h6>
+							<%= f.password_field :password, :class => 'signin_field_bg' %>
+						</div>
+						<input type="submit" class="signin_btn" value="" />
+						<% end %>
+						<% else %> <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+			<div id="wrapper">
+				<%= yield %>
+			</div>
+			<div id="footer">
+				<div id="footer_inner">
+					<div id="footer_inner_cont">
+						<div class="footer_links">
+							<ul>
+								<li>
+									<a href="#">Help Center</a>
+								</li>
+								<li>
+									<a href="#">About</a>
+								</li>
+								<li>
+									<a href="#">Blog</a>
+								</li>
+								<li>
+									<a href="#">Careers</a>
+								</li>
+								<li>
+									<a href="#">Advertising</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_links">
+							<ul>
+								<li>
+									<a href="#">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_links">
+							<ul>
+								<li>
+									<a href="#">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_links">
+							<ul>
+								<li>
+									<a href="#">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_links">
+							<ul>
+								<li>
+									<a href="#">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_links">
+							<ul>
+								<li>
+									<a href="#">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+								<li>
+									<a href="#">Lorem ipsum dolo</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>

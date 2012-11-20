@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+	<%= div_for(user) do %>
+		 <%= user.first_name %>&nbsp;<%= user.last_name %>
+		 <%= link_to "View Profile", user.user_profile %>
+	<% end %>
+<% end %>

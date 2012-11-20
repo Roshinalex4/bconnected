@@ -1,0 +1,6 @@
+<%= div_for(@user_profile) do %>
+	 <%= @user_profile.user.first_name %>&nbsp;<%= @user_profile.user.last_name %>
+	 <% if user_signed_in? %>
+			<%= link_to "Connect", "connect?contact=#{@user_profile.id}" %>
+	 <% end %>
+<% end %>
