@@ -41,7 +41,6 @@ class UserProfilesController < ApplicationController
 		if params[:user_profile][:email_assoc].split("@").last.include?("yahoo") 
 			 @contacts = Contacts::Yahoo.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		elsif params[:user_profile][:email_assoc].split("@").last.include?("gmail") 
-puts '..................'
 			@contacts = Contacts::Gmail.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		end
     @contacts = @contacts.map{|contact| "'"+contact[1]+"'"}
@@ -174,6 +173,9 @@ puts '..................'
 		@connection.user_id = current_user.id
 		@connection.friend_id = params[:contact]
 		@connection.save
+		respond_to do |format|
+        format.js { render :layout=>false }
+    end
 	end
   
 end
