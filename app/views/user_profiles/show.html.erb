@@ -1,6 +1,17 @@
 <%= div_for(@user_profile) do %>
 	 <%= @user_profile.user.first_name %>&nbsp;<%= @user_profile.user.last_name %>
 	 <% if user_signed_in? %>
-			<span id="connect_link"><%= link_to "Connect", "" %></span>
+			<span id="connect_link">
+			<% if user_connected(@user_profile.user.id) %>
+				..Connected
+			<% else %>
+				<%= link_to "Connect",
+					url_for(:controller => 'user_profiles',
+								  :action  => "connect",
+									:id => @user_profile.user.id),
+								{:method => :get,
+								 :remote  => true}
+				%>
+			<% end %>
 	 <% end %>
 <% end %>

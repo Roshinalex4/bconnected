@@ -1,6 +1,12 @@
 Bconnected::Application.routes.draw do
   
 
+  resources :companies do
+		collection do
+			post 'search', :action => 'search'
+		end
+	end
+
   resources :groups do
     resources :discussions
     member do
@@ -42,6 +48,7 @@ Bconnected::Application.routes.draw do
       post 'create_profile_photo', :action => 'create_profile_photo'
       get 'view_user_profile', :action => 'view_user_profile'
       post 'search', :action => 'search'
+			get 'connect', :action => 'connect'
     end
     
   end

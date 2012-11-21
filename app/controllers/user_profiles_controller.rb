@@ -1,4 +1,5 @@
 class UserProfilesController < ApplicationController
+	respond_to :js
   def save_skills
     params[:user_profile][:skill_ids] ||= []
     @user_profile = UserProfile.find_by_user_id(current_user.id)
@@ -168,14 +169,10 @@ class UserProfilesController < ApplicationController
 	end
 
 	def connect
-		user = User.find(params[:contact])
 		@connection = Connection.new
 		@connection.user_id = current_user.id
-		@connection.friend_id = params[:contact]
+		@connection.friend_id = params[:id]
 		@connection.save
-		respond_to do |format|
-        format.js { render :layout=>false }
-    end
 	end
   
 end
