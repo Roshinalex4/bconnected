@@ -62,6 +62,7 @@ Bconnected::Application.routes.draw do
   resources :qualifications
   resources :languages
 	
+	match 'contacts' => 'connections#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

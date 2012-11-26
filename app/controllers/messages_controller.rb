@@ -17,8 +17,9 @@ class MessagesController < ApplicationController
 	def new
 		
 		if params[:reply]==	"on"
-			@message = Message.find(params[:message_id])
-			@to_users = @message.to_user.split(",")
+			@msg = Message.find(params[:message_id])
+			@to_users = @msg.to_user.split(",")
+			@message = Message.new
 		else
 			@message = Message.new
 		end
@@ -33,6 +34,9 @@ class MessagesController < ApplicationController
 		@message = Message.new(params[:message])
 		
 		@message.to_user = params[:to_user].join(",")
+		if params[:message][:copy_to_author] == 1 
+			@message.to_user = @message.to_user + "," + current_user.id.to_s			
+		end
 		sender = UserProfile.where(:user_id => current_user.id)[0]
 		@message.from_user = sender.id
 		respond_to do |format|

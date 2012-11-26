@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sender:</b>
+  <%= UserProfile.find(@message.from_user).display_name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @message.body %>
+</p>
+<%= link_to "Reply", "new?reply=on&message_id="+@message.id.to_s%>
+<%= link_to 'Back', messages_path %>

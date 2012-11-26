@@ -4,6 +4,15 @@ class UserProfilesController < ApplicationController
     params[:user_profile][:skill_ids] ||= []
     @user_profile = UserProfile.find_by_user_id(current_user.id)
     @user_profile.update_attributes(params[:user_profile])
+		respond_to do |format|
+      if @user_profile.update_attributes(params[:user_profile])
+        format.html { redirect_to "/user_profiles/view_user_profile/", notice: 'User profile was successfully created.' }
+        format.json { render json: "/user_profiles/view_user_profile/", status: :created, location: @user_profile }
+      else
+        format.html { render action: add_summary_user_profile_path(@user_profile) }
+        format.json { render json: @user_profile.errors, status: :unprocessable_entity }
+      end
+    end
   end
   
   def add_skills

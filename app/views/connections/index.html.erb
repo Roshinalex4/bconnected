@@ -1,0 +1,4 @@
+<h2>Contacts List</h2>
+<% @contacts.each do |contact|%>
+    <%= User.find(contact.friend_id).user_profile.display_name %>
+<% end %>

@@ -19,5 +19,9 @@ class ConnectionsController < ApplicationController
       #[Create Email Model]                        
       #[Create EmailTemplate Model]                
     #End Loop                                      
-  end                                              
+  end    
+  
+  def index
+    @contacts = Connection.all
+  end                                          
 end

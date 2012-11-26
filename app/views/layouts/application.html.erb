@@ -34,6 +34,11 @@
 						<li>
 							<a href="#">Home</a>
 						</li>
+						<% if user_signed_in? %>
+						<li>
+							<a href="/contacts">Contacts</a>
+						</li>
+						<% end %>
 						<li>
 							<a href="#">What is Madison?</a>
 						</li>
