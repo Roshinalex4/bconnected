@@ -22,6 +22,6 @@ class ConnectionsController < ApplicationController
   end    
   
   def index
-    @contacts = Connection.all
+    @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id')
   end                                          
 end
