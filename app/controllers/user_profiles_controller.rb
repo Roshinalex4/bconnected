@@ -70,6 +70,7 @@ class UserProfilesController < ApplicationController
 		elsif params[:user_profile][:email_assoc].split("@").last.include?("gmail") 
 			@contacts = Contacts::Gmail.new(params[:user_profile][:email_assoc], params[:email][:password]).contacts
 		end
+		@connection = Connection.new
 	end
 
 	def enter_password_to_invite
@@ -158,10 +159,10 @@ class UserProfilesController < ApplicationController
     @user_profile = current_user.user_profile
     respond_to do |format|
       if @user_profile.update_attributes(params[:user_profile])
-        format.html { redirect_to "/user_profiles/view_user_profile/", notice: 'User profile was successfully created.' }
-        format.json { render json: "/user_profiles/view_user_profile/", status: :created, location: @user_profile }
+        format.html { redirect_to view_user_profile_user_profiles_path, notice: 'User profile was successfully created.' }
+        format.json { render json: view_user_profile_user_profiles_path, status: :created, location: @user_profile }
       else
-        format.html { render action: add_additional_info_user_profile_path(@user_profile) }
+        format.html { render action: "add_profile_photo" }
         format.json { render json: @user_profile.errors, status: :unprocessable_entity }
       end
     end

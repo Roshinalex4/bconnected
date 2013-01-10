@@ -1,3 +1,8 @@
-<% @contacts.each do |contact| %>
-	Email: <%= contact[1] %><br clear="all" />
+<%= form_for @connection do |f| %>
+	<%= check_box("send_invite_all", "select_all", {}, "select_all", "") %> Select All <br clear="all" />
+	<% @contacts.each_with_index do |contact, i| %>
+		<%= check_box_tag "email_contacts[]", contact[1] %> <%= contact[1]	 %> <br clear="all" />
+	<% end %>
+	<%= f.submit "Invite to Join" %>
 <% end %>
+

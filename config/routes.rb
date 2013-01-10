@@ -4,6 +4,7 @@ Bconnected::Application.routes.draw do
   resources :companies do
 		collection do
 			post 'search', :action => 'search'
+			
 		end
 	end
 
@@ -49,6 +50,7 @@ Bconnected::Application.routes.draw do
       get 'view_user_profile', :action => 'view_user_profile'
       post 'search', :action => 'search'
 			get 'connect', :action => 'connect'
+			post 'filter', :action => 'filter'
     end
     
   end
