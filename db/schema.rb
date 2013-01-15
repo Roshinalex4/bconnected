@@ -11,13 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120927164017) do
+ActiveRecord::Schema.define(:version => 20130110171340) do
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "connections", :force => true do |t|
     t.integer  "user_id"
     t.integer  "friend_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "discussions", :force => true do |t|
+    t.text     "summary"
+    t.text     "description"
+    t.string   "link"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "group_id"
   end
 
   create_table "experiences", :force => true do |t|
@@ -63,6 +79,24 @@ ActiveRecord::Schema.define(:version => 20120927164017) do
     t.datetime "logo_updated_at"
   end
 
+  create_table "groups_users", :force => true do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+    t.integer "status"
+  end
+
+  create_table "im_services", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "industries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "invitations", :force => true do |t|
     t.integer  "from_user_id"
     t.integer  "to_user_id"
@@ -74,8 +108,26 @@ ActiveRecord::Schema.define(:version => 20120927164017) do
   create_table "languages", :force => true do |t|
     t.string   "code"
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "user_profile_id"
+    t.integer  "proficiency"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.text     "subject"
+    t.text     "body"
+    t.integer  "from_user"
+    t.string   "to_user"
+    t.integer  "recipients_view_status"
+    t.integer  "copy_to_author"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
+  create_table "profile_view_logs", :force => true do |t|
+    t.integer "viewed_profile_of"
+    t.integer "viewed_by"
   end
 
   create_table "qualifications", :force => true do |t|
@@ -95,6 +147,13 @@ ActiveRecord::Schema.define(:version => 20120927164017) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "user_profile_languages", :force => true do |t|
+    t.integer  "user_profile_id"
+    t.integer  "language_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "user_profile_skills", :force => true do |t|
     t.integer  "user_profile_id"
     t.integer  "skill_id"
@@ -103,24 +162,53 @@ ActiveRecord::Schema.define(:version => 20120927164017) do
   end
 
   create_table "user_profiles", :force => true do |t|
-    t.integer "country_id",        :null => false
-    t.string  "postal_code",       :null => false
-    t.integer "employment_status"
-    t.string  "job_title",         :null => false
-    t.boolean "self_employed"
-    t.string  "company",           :null => false
-    t.integer "industry"
-    t.string  "email_assoc"
-    t.integer "plan_id"
-    t.integer "user_id",           :null => false
-    t.string  "address_line_1"
-    t.string  "address_line_2"
-    t.string  "state"
-    t.string  "city"
-    t.date    "birthday"
-    t.string  "marital_status"
-    t.text    "summary"
-    t.text    "description"
+    t.integer  "country_id",            :null => false
+    t.string   "postal_code",           :null => false
+    t.integer  "employment_status"
+    t.string   "job_title",             :null => false
+    t.boolean  "self_employed"
+    t.string   "company"
+    t.integer  "industry"
+    t.string   "email_assoc"
+    t.integer  "plan_id"
+    t.integer  "user_id",               :null => false
+    t.string   "state"
+    t.string   "city"
+    t.string   "marital_status"
+    t.text     "summary"
+    t.text     "description"
+    t.string   "maiden_name"
+    t.string   "display_name"
+    t.string   "professional_headline"
+    t.string   "phone_number"
+    t.string   "phone_type"
+    t.string   "im"
+    t.string   "im_service"
+    t.text     "address"
+    t.integer  "birth_day"
+    t.integer  "birth_month"
+    t.integer  "birth_year"
+    t.string   "website_1"
+    t.string   "website_1_type"
+    t.string   "website_2"
+    t.string   "website_2_type"
+    t.string   "website_3"
+    t.string   "website_3_type"
+    t.text     "interests"
+    t.text     "groups_associations"
+    t.text     "honours_awards"
+    t.text     "specialties"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+  end
+
+  create_table "user_profiles_industries", :force => true do |t|
+    t.integer  "user_profile_id"
+    t.integer  "industry_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|

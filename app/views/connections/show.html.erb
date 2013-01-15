@@ -1,0 +1,105 @@
+<div id="profile_box" class="section">
+	<div id="photo">
+		<%= link_to "Edit", "add_profile_photo"%>
+		<%= image_tag @user_profile.picture.url(:thumb)%>
+	</div>
+	<div class="profile_right_section">
+		<span class="right"><%= link_to "Edit", "add_profile_basic" %></span>
+		<%= current_user.first_name %>&nbsp;
+		<%= current_user.last_name %>
+		<%= @user_profile.job_title %>
+		<%= @user_profile.city %> 
+		<%= @user_profile.state %>
+	</div>
+	<br clear="all" />
+</div>
+<br clear="all" />
+<div id="contact_box" class="small_section section">
+	<div class="half_section">
+		<span class="right"><%= link_to "Edit", add_additional_info_user_profiles_path %></span>
+		<table>
+			<tr>
+				<td>
+					Websites
+				</td>
+				<td>
+					<%= @user_profile.website_1 %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;
+				</td>
+				<td><%= @user_profile.website_2 %></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><%= @user_profile.website_3 %></td>
+			</tr>
+		</table>
+		
+	</div>
+	<div class="half_section">
+		<span class="right"><%= link_to "Edit", "add_personal_info" %></span>
+		<table>
+			<tr><td>Email</td><td><%= current_user.email %></td></tr>
+			<tr><td>Phone Number</td><td><%= @user_profile.phone_number %></td></tr>
+			<tr><td>IM</td><td><%= @user_profile.im %></td></tr>
+			<tr><td>Address</td><td><%= @user_profile.address %></td></tr>
+		</table>
+	</div>
+	<br clear="all" />
+</div>
+<br clear="all" />
+
+<div id="summary_box" class="section">
+	
+	<div class="section_head">Summary<span class="right"><%= link_to "Edit", "add_summary" %></span></div><br clear="all"/>
+	<%= @user_profile.summary %>
+</div>
+
+<div id="experience_box" class="section">
+	
+	<div class="section_head">Experience<span class="right"><%= link_to "Edit", "/experiences/new" %></span></div><br clear="all"/>
+	<% @user_profile.experiences.each do |pos| %>
+		<%= pos.title %>
+	<% end %>
+</div>
+
+<div id="languages_box" class="section">
+	
+	<div class="section_head">Languages<span class="right"><%= link_to "Edit", "add_languages" %></span></div><br clear="all"/>
+	<% @user_profile.languages.each do |lg| %>
+		<%= lg.name %>
+	<% end %>
+</div>
+
+<div id="skills_box" class="section">
+	
+	<div class="section_head">Skills<span class="right"><%= link_to "Edit", "add_skills" %></span></div><br clear="all"/>
+	<% @user_profile.skills.each do |sk| %>
+		<%= sk.name %>
+	<% end %>
+</div>
+
+<div id="qualification_box" class="section">
+	<div class="section_head">Education<span class="right"><%= link_to "Edit", "/qualifications/new" %></span></div><br clear="all"/>
+	<% @user_profile.qualifications.each do |deg| %>
+		<%= deg.name %>
+	<% end %>
+</div>
+
+<div id="additional_info_box" class="section">
+	<div class="section_head">
+		Additional Information
+		<span class="right"><%= link_to "Edit", "add_additional_info" %></span>
+	</div>
+	<br clear="all"/>
+	Websites:
+	<%= @user_profile.website_1 %><br />
+	<%= @user_profile.website_2 %><br />
+	<%= @user_profile.website_3 %><br />
+	Interests: <%= @user_profile.interests %><br />
+	Groups and Associations: <%= @user_profile.groups_associations %><br />
+	Honours and Awards: <%= @user_profile.honours_awards %>
+</div>

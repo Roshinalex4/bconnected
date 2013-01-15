@@ -63,6 +63,7 @@ Bconnected::Application.routes.draw do
   resources :experiences
   resources :qualifications
   resources :languages
+  resources :profile_view_logs
 	
 	match 'contacts' => 'connections#index'
   

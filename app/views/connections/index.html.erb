@@ -27,7 +27,7 @@
 </style>
 <h2>Contacts List</h2>
 <% @contacts.each do |contact|%>
-    <%= contact.user_profile.display_name %><br />
+    <%= link_to contact.user_profile.display_name, connection_path(contact.id) %><br />
 <% end %><br />
 --------------------------------------------------------------------
 <h2>Fiter Contacts</h2>

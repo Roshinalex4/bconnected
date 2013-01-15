@@ -1,4 +1,6 @@
 class ConnectionsController < ApplicationController
+  
+  
   def create 
 		contacts_array = Array.new
 		if params[:commit] == "Add Connection"      
@@ -13,7 +15,7 @@ class ConnectionsController < ApplicationController
 		    @invitation = Invitation.new
 		    @invitation.from_user_id = @connection.user_id
 		    @invitation.to_user_id = @connection.friend_id
-				redirect_to "/user_profiles/invite_contacts_form/"+current_user.id.to_s
+		    @action = "/user_profiles/invite_contacts_form/"+current_user.id.to_s
 		  end
 		else
 			params[:email_contacts].each  do |contact|
@@ -21,13 +23,14 @@ class ConnectionsController < ApplicationController
 					send_invitation_email(contact)
 				end
 			end
-			redirect_to "/user_profiles/view_user_profile"
+			@action = "/user_profiles/view_user_profile"
 		end                                         
     #Loop through all email ids                    
       #Send Invitation Email through bconnected    
       #[Create Email Model]                        
       #[Create EmailTemplate Model]                
-    #End Loop                                      
+    #End Loop    
+    redirect_to @action                                  
   end    
   
   def index
@@ -36,5 +39,15 @@ class ConnectionsController < ApplicationController
 
 	def send_invitation_email(contact)
 		 UserMailer.invitation(contact, "http://"+request.host_with_port).deliver 
-	end                                        
+	end    
+	
+	def show
+	  enter_profile_log(params[:id])
+	  @user_profile = UserProfile.find_by_user_id(params[:id])
+	end   
+	
+	def enter_profile_log(user_id)
+	  @profile_view_log = ProfileViewLog.new(:viewed_profile_of => user_id, :viewed_by => current_user.id)
+	  @profile_view_log.save
+	end                                 
 end
