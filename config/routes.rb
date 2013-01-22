@@ -51,6 +51,7 @@ Bconnected::Application.routes.draw do
       post 'search', :action => 'search'
 			get 'connect', :action => 'connect'
 			post 'filter', :action => 'filter'
+			get 'settings', :action => 'settings'
     end
     
   end
@@ -66,6 +67,7 @@ Bconnected::Application.routes.draw do
   resources :profile_view_logs
 	
 	match 'contacts' => 'connections#index'
+	
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -190,5 +190,9 @@ class UserProfilesController < ApplicationController
 		@connection.friend_id = params[:id]
 		@connection.save
 	end
+	
+	def settings
+	  
+	end
   
 end

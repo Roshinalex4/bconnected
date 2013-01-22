@@ -1,0 +1,243 @@
+<%= current_user.first_name %>&nbsp;<%= current_user.last_name %>
+<p>
+	Member since <%= current_user.created_at.strftime("%B %d, %Y") %>
+</p>
+<p>
+	Primary Email
+	<%= current_user.email %><%= link_to "Change/Add" %>
+</p>
+<p>
+	Password <%= link_to "Change" %>
+</p>
+<h3>Account Type: <span class="acct-name"> Basic </span></h3>
+<ul>
+	<li>
+		<a href="">Compare account types</a>
+	</li>
+</ul>
+<h3>Payment</h3>
+<ul class="options">
+	<li>
+		<a href="#">View purchase history</a>
+	</li>
+</ul>
+<div class="upgrade-renew basic">
+	<h3>Get More When You Upgrade!</h3>
+	<ul class="options">
+		<li>
+			More communication options
+		</li>
+		<li>
+			Enhanced search tools
+		</li>
+	</ul>
+	<a class="" href=""><span>Upgrade</span></a>
+</div>
+<div id="settings-container" class="profile">
+	<div id="settings-nav">
+		<nav>
+			<ul>
+				<li class="profile">
+					<a href="/settings/?goback=%2Enas_*1_*1_*1" data-li-tocontext="profile"><span>Profile</span></a>
+				</li>
+				<li class="email">
+					<a href="/settings/?tab=email&amp;goback=%2Enas_*1_*1_*1" data-li-tocontext="email"><span>Email Preferences</span></a>
+				</li>
+				<li class="groups">
+					<a href="/settings/?tab=groups&amp;goback=%2Enas_*1_*1_*1" data-li-tocontext="groups"><span>Groups, Companies &amp; Applications</span></a>
+				</li>
+				<li class="account">
+					<a href="/settings/?tab=account&amp;goback=%2Enas_*1_*1_*1" data-li-tocontext="account"><span>Account</span></a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<ul id="settings">
+		<li id="profile-prefs">
+			<h2>Profile</h2>
+			<div class="tab-content">
+				<div class="links-main">
+					<h3>Privacy Controls</h3>
+					<ul>
+						<li>
+							<a href="/settings/activity-broadcasts?goback=%2Enas_*1_*1_*1" data-li-pagekey="nsettings-activity-broadcasts" class="modal" title="Activity broadcasts">Turn on/off your activity broadcasts</a>
+						</li>
+						<li>
+							<a href="/settings/activity-visibility?goback=%2Enas_*1_*1_*1" data-li-pagekey="nsettings-activity-visibility" class="modal" title="Who can see your activity feed">Select who can see your activity feed</a>
+						</li>
+						<li>
+							<a href="/settings/wvmp-visibility?goback=%2Enas_*1_*1_*1" data-li-pagekey="nsettings-wvmp-visibility" class="modal" title="What others see when you've viewed their profile">Select what others see when you've viewed their profile</a>
+						</li>
+						<li>
+							<a href="/settings/connection-visibility?goback=%2Enas_*1_*1_*1" data-li-pagekey="nsettings-connection-visibility" class="modal" title="Who can see your connections">Select who can see your connections</a>
+						</li>
+						<li>
+							<a href="http://www.linkedin.com/profile/edit-picture-info?goback=%2Enas_*1_*1_*1&amp;trk=nprofile-edit-picture-info">Change your profile photo &amp; visibility<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="/settings/browse-map?goback=%2Enas_*1_*1_*1" data-li-pagekey="nsettings-browse-map" class="modal" title="Viewers of this profile also viewed...">Show/hide "Viewers of this profile also viewed" box</a>
+						</li>
+					</ul>
+				</div>
+				<div class="links-secondary">
+					<h3>Settings</h3>
+					<ul>
+						<li>
+							<a href="/settings/twitter-accounts?goback=%2Enas_*1_*1_*1" title="Manage your Twitter settings" data-li-pagekey="nsettings-twitter-accounts" class="modal">Manage your Twitter settings</a>
+						</li>
+					</ul>
+					<h3>Helpful Links</h3>
+					<ul>
+						<li>
+							<a href="http://www.linkedin.com/profile/edit-basic-info?locale=en_US&amp;goback=%2Enas_*1_*1_*1">Edit your name, location &amp; industry<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="http://www.linkedin.com/profile/edit?goback=%2Enas_*1_*1_*1">Edit your profile<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="http://www.linkedin.com/profile/public-profile-settings?goback=%2Enas_*1_*1_*1">Edit your public profile<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="http://www.linkedin.com/references?mrs=&amp;goback=%2Enas_*1_*1_*1">Manage your recommendations<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		<li id="email-prefs">
+			<h2>Email Preferences</h2>
+			<div class="tab-content">
+				<div class="links-main">
+					<h3>Emails</h3>
+					<ul>
+						<li>
+							<a href="/settings/email-accept?goback=%2Enas_*1_*1_*1" title="Types of messages you're willing to receive" data-li-pagekey="nsettings-email-accept" class="modal">Select the types of messages you're willing to receive</a>
+						</li>
+						<li>
+							<a href="/settings/email-frequency?goback=%2Enas_*1_*1_*1" title="Frequency of emails" data-li-pagekey="nsettings-email-frequency" data-li-dialog-options="className:email-frequency-dialog" class="modal">Set the frequency of emails</a>
+						</li>
+						<li>
+							<a href="/settings/invite-receive?goback=%2Enas_*1_*1_*1" title="Who can send you invitations" data-li-pagekey="nsettings-invite-receive" class="modal">Select who can send you invitations</a>
+						</li>
+						<li>
+							<a href="/settings/digest-frequency?goback=%2Enas_*1_*1_*1" title="Frequency of group digest emails" data-li-pagekey="nsettings-digest-frequency" class="modal">Set the frequency of group digest emails</a>
+						</li>
+					</ul>
+				</div>
+				<div class="links-secondary">
+					<h3>LinkedIn Communications</h3>
+					<ul>
+						<li>
+							<a href="/settings/li-announcements?goback=%2Enas_*1_*1_*1" title="LinkedIn announcements" data-li-pagekey="nsettings-li-announcements" class="modal">Turn on/off LinkedIn announcements</a>
+						</li>
+						<li>
+							<a href="/settings/research-invitations?goback=%2Enas_*1_*1_*1" title="Invitations to participate in research" data-li-pagekey="nsettings-research-invitations" class="modal">Turn on/off invitations to participate in research</a>
+						</li>
+						<li>
+							<a href="/settings/partner-inmail?goback=%2Enas_*1_*1_*1" title="Partner InMail" data-li-pagekey="nsettings-partner-inmail" class="modal">Turn on/off partner InMail</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		<li id="groups-prefs">
+			<h2>Groups, Companies &amp; Applications</h2>
+			<div class="tab-content">
+				<div class="links-main">
+					<h3>Groups</h3>
+					<ul>
+						<li>
+							<a href="http://www.linkedin.com/anet?dispSortAnets=&amp;goback=%2Enas_*1_*1_*1">Select your group display order<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="http://www.linkedin.com/myGroups?goback=%2Enas_*1_*1_*1">View your groups<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="/settings/digest-frequency?goback=%2Enas_*1_*1_*1" title="Frequency of group digest emails" data-li-pagekey="nsettings-digest-frequency" class="modal">Set the frequency of group digest emails</a>
+						</li>
+						<li>
+							<a href="/settings/group-invitations?goback=%2Enas_*1_*1_*1" title="Group invitations" data-li-pagekey="nsettings-group-invitations" class="modal">Turn on/off group invitations</a>
+						</li>
+						<li>
+							<a href="/settings/group-join-notifications?goback=%2Enas_*1_*1_*1" title="Notifications when joining groups" data-li-pagekey="nsettings-group-join-notifications" class="modal">Turn on/off notifications when joining groups</a>
+						</li>
+					</ul>
+					<h3>Companies</h3>
+					<ul>
+						<li>
+							<a href="http://www.linkedin.com/companies?dspFllwed=&amp;goback=%2Enas_*1_*1_*1">View companies you're following<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+					</ul>
+				</div>
+				<div class="links-secondary">
+					<h3>Applications</h3>
+					<ul>
+						<li>
+							<a href="/secure/settings?userAgree=&amp;goback=%2Enas_*1_*1_*1" title="View your applications">View your applications<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="http://www.linkedin.com/static?key=application_directory&amp;goback=%2Enas_*1_*1_*1">Add applications<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+					</ul>
+					<h3>Privacy Controls</h3>
+					<ul>
+						<li>
+							<a href="/settings/data-sharing?goback=%2Enas_*1_*1_*1" title="Data sharing with third-party applications" data-li-pagekey="nsettings-data-sharing" class="modal">Turn on/off data sharing with 3rd party applications</a>
+						</li>
+						<li>
+							<a href="/settings/offsite-privacy-management?goback=%2Enas_*1_*1_*1" title="Manage settings for LinkedIn plugins on third-party sites" data-li-pagekey="nsettings-offsite-privacy-management" class="modal">Manage settings for LinkedIn plugins on third-party sites</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		<li id="account-prefs">
+			<h2>Account</h2>
+			<div class="tab-content">
+				<div class="links-main">
+					<h3>Privacy Controls</h3>
+					<ul>
+						<li>
+							<a href="" title="Manage Advertising Preferences" data-li-pagekey="nsettings-enhanced-advertising" class="modal">Manage Advertising Preferences</a>
+						</li>
+					</ul>
+					<h3>Settings</h3>
+					<ul>
+						<li>
+							<a href="">Change your profile photo &amp; visibility<abbr title="Link to another page">&nbsp;»</abbr></a>
+						</li>
+						<li>
+							<a href="" title="Profile photos of other members" data-li-pagekey="nsettings-profile-photo-visibility" class="modal">Show/hide profile photos of other members</a>
+						</li>
+						<li>
+							<a href="" title="The updates you see on your home page" data-li-pagekey="nsettings-customize-stream" class="modal">Customize the updates you see on your home page</a>
+						</li>
+						<li>
+							<a href="" title="Select your language" data-li-pagekey="nsettings-select-language" class="modal">Select your language</a>
+						</li>
+						<li>
+							<a href="#" title="Security settings" data-li-pagekey="nsettings-security" class="modal"> Manage security settings </a>
+						</li>
+					</ul>
+				</div>
+				<div class="links-secondary">
+					<h3>Email &amp; Password</h3>
+					<ul>
+						<li>
+							<a href="#" title="Add &amp; change email addresses">Add &amp; change email addresses</a>
+						</li>
+						<li>
+							<a href="#" title="Change your password" data-li-pagekey="uas-change-password" class="modal">Change password</a>
+						</li>
+					</ul>
+					<h3>Helpful Links</h3>
+					<ul>
+						<li>
+							<a href="#" title="Close your account"><strong>Close your account</strong></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
