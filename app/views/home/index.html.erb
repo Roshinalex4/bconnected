@@ -33,57 +33,54 @@
 				</div>
 			</div>
 			<div id="searchdiv">
-				
-					<h6>Search for someone by name: </h6>
-					<div id="searchdiv_outter">
-						<%= form_tag "/user_profiles/search" do %>
-						<div id="searchdiv_col">
-							<div class="searchcol2">
-								<p>
-									First Name:
-								</p>
-								<%= text_field :user, :first_name, :class => "searchcol2_textfield" %>
-							</div>
-							<div class="searchcol2">
-								<p>
-									Last Name:
-								</p>
-								<%= text_field :user, :last_name, :class => "searchcol2_textfield" %>
-							</div>
-							<%= submit_tag "", :class => "searchdiv_col_btn" %>
+				<%= form_tag "/user_profiles/search" do %> <h6>Search for someone by name: </h6>
+				<div id="searchdiv_outter">
+					<div id="searchdiv_col">
+						<div class="searchcol2">
+							<p>
+								First Name:
+							</p>
+							<%= text_field :user, :first_name, :class => "searchcol2_textfield" %>
 						</div>
-						<% end %>
-						<p class="paginationp">
-							<a href="#">a</a>
-							<a href="#">b</a>
-							<a href="#">c</a>
-							<a href="#">d</a>
-							<a href="#">e</a>
-							<a href="#">f</a>
-							<a href="#">g</a>
-							<a href="#">h</a>
-							<a href="#">i</a>
-							<a href="#">j</a>
-							<a href="#">k</a>
-							<a href="#">l</a>
-							<a href="#">m</a>
-							<a href="#">n</a>
-							<a href="#">o</a>
-							<a href="#">p</a>
-							<a href="#">q</a>
-							<a href="#">r</a>
-							<a href="#">s</a>
-							<a href="#">t</a>
-							<a href="#">u</a>
-							<a href="#">v</a>
-							<a href="#">w</a>
-							<a href="#">x</a>
-							<a href="#">y</a>
-							<a href="#">z</a>
-							<a href="#">More</a>
-						</p>
+						<div class="searchcol2">
+							<p>
+								Last Name:
+							</p>
+							<%= text_field :user, :last_name, :class => "searchcol2_textfield" %>
+						</div>
+						<%= submit_tag "", :class => "searchdiv_col_btn" %>
 					</div>
-				</form>
+					<% end %>
+					<p class="paginationp">
+						<a href="#">a</a>
+						<a href="#">b</a>
+						<a href="#">c</a>
+						<a href="#">d</a>
+						<a href="#">e</a>
+						<a href="#">f</a>
+						<a href="#">g</a>
+						<a href="#">h</a>
+						<a href="#">i</a>
+						<a href="#">j</a>
+						<a href="#">k</a>
+						<a href="#">l</a>
+						<a href="#">m</a>
+						<a href="#">n</a>
+						<a href="#">o</a>
+						<a href="#">p</a>
+						<a href="#">q</a>
+						<a href="#">r</a>
+						<a href="#">s</a>
+						<a href="#">t</a>
+						<a href="#">u</a>
+						<a href="#">v</a>
+						<a href="#">w</a>
+						<a href="#">x</a>
+						<a href="#">y</a>
+						<a href="#">z</a>
+						<a href="#">More</a>
+					</p>
+				</div>
 			</div>
 			<p class="contentbody_leftp">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare, dolor
@@ -136,7 +133,7 @@
 						</div>
 						<div class="signupbox_content_row">
 							<div id="already">
-								<h6>Already on Madison? <span><%= link_to 'Sign in', new_user_session_path %></span></h6>
+								<h6>Already on Go global? <span><%= link_to 'Sign in.', new_user_session_path %></span></h6>
 							</div>
 						</div>
 					</div>
@@ -155,13 +152,6 @@
 							cursus, ante odio
 						</p>
 						<h6><a href="#">Read More >></a></h6>
-					</div>
-				</div>
-			</div>
-			<div id="testmonial">
-				<h4>See who has viewed my profile</h4>
-				<div id="testmonial_cont">
-					<div id="testmonial_text">
 						<h6><%= link_to "Click here >>", profile_view_logs_path %></h6>
 					</div>
 				</div>
@@ -169,7 +159,7 @@
 		</div>
 	</div>
 	<div id="contentbody_bottom">
-		<h6>* By clicking Join Now or using Madison, you are indicating that you have read, understood, and agree to Madison's User Agreement and Privacy Policy. </h6>
+		<h6>* By clicking Join Now or using Go global, you are indicating that you have read, understood, and agree to Go global's User Agreement and Privacy Policy. </h6>
 	</div>
 	<div id="bottom"></div>
 </div>
