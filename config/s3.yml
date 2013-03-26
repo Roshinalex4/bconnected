@@ -1,0 +1,9 @@
+staging:
+ access_key_id: AKIAI7Y4FQ7NOY65I75A
+ secret_access_key: GED81iYGao4sJm0HuhbLlK4R6zoGRlxozYHBNclA
+ bucket: [Your bucket name]
+ 
+production:
+ access_key_id: AKIAI7Y4FQ7NOY65I75A
+ secret_access_key: GED81iYGao4sJm0HuhbLlK4R6zoGRlxozYHBNclA
+ bucket: [Your bucket name]

@@ -2,112 +2,139 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Go global</title>
+		<title>Go global | Login</title>
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<%= stylesheet_link_tag    "AvantGardeMd/avantgardstylesheet" %>
-		<%= stylesheet_link_tag    "goodfoot/goodfoot_stylesheet" %>
-		<%= javascript_include_tag "application" %> <script type="text/javascript" src="/assets/jquery-ui-1.9.0.custom.min.js"></script>
+		<link href="/assets/css/main_style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="/assets/AvantGardeMd/avantgardstylesheet.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" href="/assets/goodfoot/goodfoot_stylesheet.css" type="text/css" charset="utf-8" />
 		<%= csrf_meta_tags %>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: 'avantgarde_md_btmedium';
+				letter-spacing: 1px;
+				margin: 0px;
+				background: #FFF;
+			}
+		</style>
+		<!--[if lte IE 7]>
+		<style>
+		ul#footer_menu{
+		width:610px;
+		}
+
+		#already h6 {
+
+		font-size: 8px;
+		color: #817d7d;
+		margin-top: 7px;
+		margin-bottom: 0px;
+		margin-left:-5px;
+		}
+		</style>
+		<![endif]-->
+		<!--[if lte IE 8]>
+		<style>
+		ul#footer_menu{
+		width:610px;
+		}
+		#already h6 {
+
+		font-size: 8px;
+		color: #817d7d;
+		margin-top: 7px;
+		margin-bottom: 0px;
+		margin-left:-5px;
+		}
+		</style>
+		<![endif]-->
 	</head>
 	<body>
-		<section>
-			<div id="top">
-				<div id="top_inner">
-					<div class="top_colmn">
-						<div id="mainlogo">
-							<a href="#"><%= image_tag "logo1.png" %></a>
-						</div>
-						<div id="logo">
-							<a href="#">logo</a>
-						</div>
+		<div id="top">
+			<div id="top_inner">
+				<div class="top_colmn">
+					<div id="logo_wrapper">
+						<a href="index.html">Home</a>
 					</div>
-					<div class="top_colmn">
-						<div id="socialicons">
-							<a href="#"><%= image_tag "facebook.png" %></a>
-							<a href="#"><%= image_tag "twitter.png" %></a>
-							<a href="#"><%= image_tag "in.png" %></a>
-						</div>
+				</div>
+				<div class="top_colmn">
+					<div id="socialicons">
+						<a href="#"><%= image_tag "facebook.png" %></a>
+						<a href="#"><%= image_tag "twitter.png" %></a>
+						<a href="#"><%= image_tag "in.png" %></a>
 					</div>
 				</div>
 			</div>
-			<div id="navigation">
-				<div id="navigation_inner">
-					<div id="menu">
-						<ul>
-							<li>
-								<a href="#">Home</a>
-							</li>
-							<% if user_signed_in? %>
-							<li>
-								<a href="/contacts">Contacts</a>
-							</li>
-							<% end %>
-							<li>
-								<a href="#">What is Go global?</a>
-							</li>
-							<li>
-								<a href="#" >Join Today</a>
-							</li>
-							<div id="rightli">
-								<%= image_tag "li.png" %>
-							</div>
-						</ul>
-						<div id="signinbox">
-							<% if !user_signed_in? %>
+		</div>
+		<div id="navigation">
+			<div id="navigation_inner">
+				<div id="menu">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">What is Go global?</a>
+						</li>
+						<li>
+							<a href="#" >Join Today</a>
+						</li>
+						<div id="rightli">
+							<%= image_tag "li.png" %>
+						</div>
+					</ul>
+					<div id="signinbox">
+						<% if !user_signed_in? %>
 							<%= form_for User.new, :url => new_user_session_path do |f| %>
-							<div class="signinrow">
-								<h6>Email</h6>
-								<%= f.email_field :email, :class => 'signin_field_bg' %>
-							</div>
-							<div class="signinrow">
-								<h6>Password</h6>
-								<%= f.password_field :password, :class => 'signin_field_bg' %>
-							</div>
-							<input type="submit" class="signin_btn" value="" />
+								<div class="signinrow">
+									<h6>Email</h6>
+									<%= f.email_field :email, :class => 'signin_field_bg' %>
+								</div>
+								<div class="signinrow">
+									<h6>Password</h6>
+									<%= f.password_field :password, :class => 'signin_field_bg' %>
+								</div>
+								<input type="submit" class="signin_btn" value="" />
 							<% end %>
-							<% else %>
-							<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-							<% end %>
-						</div>
+						<% end %>
 					</div>
 				</div>
-				<div id="wrapper">
-					<%= yield %>
+			</div>
+		</div>
+		<%= yield %> <!--footer_wrapper-->
+		<div id="footer">
+			<div id="footer_inner">
+				<ul id="footer_menu">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Profile</a>
+					</li>
+					<li>
+						<a href="#">Contacts</a>
+					</li>
+					<li>
+						<a href="#">Jobs</a>
+					</li>
+					<li>
+						<a href="#">Companies</a>
+					</li>
+					<li>
+						<a href="#">News</a>
+					</li>
+					<li>
+						<a href="#">Help Center</a>
+					</li>
+					<li>
+						<a href="#">Contact Us</a>
+					</li>
+				</ul>
+				<div id="copyright">
+					<a href="#" target="_new">Go global &copy;2013</a>
 				</div>
-				<div id="footer">
-					<div id="footer_inner">
-						<ul id="footer_menu">
-							<li>
-								<a href="#">Home</a>
-							</li>
-							<li>
-								<a href="#">Profile</a>
-							</li>
-							<li>
-								<a href="#">Contacts</a>
-							</li>
-							<li>
-								<a href="#">Jobs</a>
-							</li>
-							<li>
-								<a href="#">Companies</a>
-							</li>
-							<li>
-								<a href="#">News</a>
-							</li>
-							<li>
-								<a href="#">Help Center</a>
-							</li>
-							<li>
-								<a href="#">Contact Us</a>
-							</li>
-						</ul>
-						<div id="copyright">
-							<a href="#" target="_new">Go global &copy;2013</a>
-						</div>
-					</div>
-				</div>
-		</section>
+			</div>
+		</div>
+		<!--footer_wrapper ends-->
 	</body>
 </html>

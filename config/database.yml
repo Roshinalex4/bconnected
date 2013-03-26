@@ -8,24 +8,32 @@
 #	
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: bconnected_development
+  pool: 5
+  username: root
+  password: 
 # development:
   # adapter: mysql2
   # encoding: utf8
   # reconnect: false
   # database: bconnected_development
   # pool: 5
-  # username: root
-  # password:
+  # username: umadison
+  # password: tH6FRu6epafRUW
   #socket: /var/run/mysqld/mysqld.sock
 
-development:
-  adapter: postgresql
-  encoding: unicode
-  reconnect: false
-  database: bconnected_development
-  pool: 5
-  username: root
-  password:
+# development:
+  # adapter: postgresql
+  # encoding: unicode
+  # reconnect: false
+  # database: bconnected_development
+  # pool: 5
+  # username: root
+  # password:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
@@ -35,8 +43,8 @@ development:
   # reconnect: false
   # database: bconnected_test
   # pool: 5
-  # username: root
-  # password:
+  # username: umadison
+  # password: tH6FRu6epafRUW
   # #socket: /var/run/mysqld/mysqld.sock
 # 
 # production:
@@ -45,6 +53,6 @@ development:
   # reconnect: false
   # database: bconnected_production
   # pool: 5
-  # username: root
-  # password:
-  #socket: /var/run/mysqld/mysqld.sock
+  # username: umadison
+  # password: tH6FRu6epafRUW
+  # #socket: /var/run/mysqld/mysqld.sock

@@ -1,0 +1,26 @@
+<ul class="list">
+	<% @group.discussions.each do |discussion| %>
+	<br clear='all' />
+	<li class="list_item">
+		<div class="group_logo">
+			<%= image_tag current_user.user_profile.picture.url(:thumb) %>
+		</div>
+		<div class="group_summary">
+			<%= link_to "Discussion", "" %><br />
+			<%= discussion.summary %><br />
+			<%= discussion.created_at %>
+			<div class="comment">
+				Comment about discussion
+			</div>
+		</div>
+	</li>
+	<% end %>
+</ul>
+
+<%= div_for discussion do %>
+  <span class="dateandoptions">
+    Posted <%=time_ago_in_words(discussion.created_at)%> ago<br />
+    <%= link_to 'Delete', discussion_path(discussion), :method => :delete, :class => "delete", :remote => true  %>
+  </span>
+  <%= content_tag(:p, discussion.summary, :class => "discussion-body") %>
+<% end %>

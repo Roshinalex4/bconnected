@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Go global | Home</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<link href="/assets/css/main_style.css" rel="stylesheet" type="text/css" />
+		<link href="/assets/css/styleselect.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="/assets/stylish-select.css"/>
+		<script src="/assets/jquery.min.js"></script>
+		<script type="text/javascript" src="/assets/jquery.stylish-select.js"></script>
+		<link rel="stylesheet" href="/assets/slidorion.css" />
+		<script src="/assets/jquery.easing.js"></script>
+		<script src="/assets/jquery.slidorion.min.js"></script>
+		<%= csrf_meta_tags %>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".account").click(function() {
+					var X = $(this).attr('id');
+					if(X == 1) {
+						$(".submenudropdown").hide();
+						$(this).attr('id', '0');
+					} else {
+						$(".bttnsubmenu").hide();
+						$(".ddChild").hide();
+						$(".submenudropdown").show();
+						$(this).attr('id', '1');
+					}
+				});
+				//Mouseup textarea false
+				$(".submenudropdown").mouseup(function() {
+					return false
+				});
+				$(".account").mouseup(function() {
+					return false
+				});
+				//Textarea without editing.
+				$(document).mouseup(function() {
+					$(".submenudropdown").hide();
+					$(".account").attr('id', '');
+				});
+			});
+
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".bttnaccount").click(function() {
+					var X = $(this).attr('id');
+					if(X == 1) {
+						$(".bttnsubmenu").hide();
+						$(this).attr('id', '0');
+					} else {
+						$(".submenudropdown").hide();
+						$(".bttnsubmenu").show();
+						$(this).attr('id', '1');
+					}
+				});
+				//Mouseup textarea false
+				$(".bttnsubmenu").mouseup(function() {
+					return false
+				});
+				$(".bttnaccount").mouseup(function() {
+					return false
+				});
+				//Textarea without editing.
+				$(document).mouseup(function() {
+					$(".bttnsubmenu").hide();
+					$(".bttnaccount").attr('id', '');
+				});
+			});
+
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".bttnallupdate").click(function() {
+					var X = $(this).attr('id');
+					if(X == 1) {
+						$(".allupdatessubmenu").hide();
+						$(this).attr('id', '0');
+					} else {
+						$(".allupdatessubmenu").show();
+						$(this).attr('id', '1');
+					}
+				});
+				//Mouseup textarea false
+				$(".allupdatessubmenu").mouseup(function() {
+					return false
+				});
+				$(".bttnallupdate").mouseup(function() {
+					return false
+				});
+				//Textarea without editing.
+				$(document).mouseup(function() {
+					$(".allupdatessubmenu").hide();
+					$(".bttnallupdate").attr('id', '');
+				});
+			});
+
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				$('.comments_wrapper_box').hover(function() {
+					$(this).find('.bttnhide').fadeIn();
+				}, function() {
+					$(this).find('.bttnhide').fadeOut();
+				});
+
+				$('.bttnhide').click(function(e) {
+					if($(this).attr('rel') == 0) {
+						$(this).parent().parent().find('.comments_content_main').slideUp();
+						$(this).text('Show');
+						$(this).attr('rel', 1);
+					} else {
+						$(this).parent().parent().find('.comments_content_main').slideDown();
+						$(this).text('Hide');
+						$(this).attr('rel', 0);
+					}
+				});
+			});
+
+		</script>
+		<!--[if lte IE 7]>
+		<style>
+		ul#footer_menu{
+		width:610px;
+		}
+		#right_dropdown_wrapper{
+		min-width:170px;
+		max-width:187px;
+		}
+		ul#top_menu li ul.submenu{
+		width:170px;
+		}
+		ul#top_menu li ul.submenu li{
+		width:100% !important;
+		}
+		ul#top_menu li ul.submenu li a{
+		width:100% !important;
+		}
+		</style>
+		<![endif]-->
+		
+		<script type="text/javascript">
+			$(function() {
+				$('#selShare').sSelect();
+				$('.message_icon').hover(function() {
+					$("#txtKeyword").blur();
+				});
+				$('.notification_icon').hover(function() {
+					$("#txtKeyword").blur();
+				});
+			});
+
+		</script>
+		<script type="text/javascript">
+			$().ready(function(e) {
+				$("ul#top_menu li").hover(function() {
+					$(this).find('ul:first').css({
+						visibility : "visible",
+						display : "none"
+					}).slideDown(400);
+				}, function() {
+					$(this).find('ul:first').css({
+						visibility : "hidden"
+					});
+				});
+			});
+
+		</script>
+		
+		<script>
+			$(function() {
+				$('#slidorion').slidorion({
+					interval : 5000,
+					effect : 'random'
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<%= yield %>
+		<!--footer_wrapper-->
+		<div id="footer">
+			<div id="footer_inner">
+				<ul id="footer_menu">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Profile</a>
+					</li>
+					<li>
+						<a href="#">Contacts</a>
+					</li>
+					<li>
+						<a href="#">Jobs</a>
+					</li>
+					<li>
+						<a href="#">Companies</a>
+					</li>
+					<li>
+						<a href="#">News</a>
+					</li>
+					<li>
+						<a href="#">Help Center</a>
+					</li>
+					<li>
+						<a href="#">Contact Us</a>
+					</li>
+				</ul>
+				<div id="copyright">
+					<a href="#" target="_new">Go global &copy;2013</a>
+				</div>
+			</div>
+		</div>
+		<!--footer_wrapper ends-->
+		<script src="js/script.js"></script>
+	</body>
+</html>

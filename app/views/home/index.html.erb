@@ -1,165 +1,150 @@
-<div id="container">
-	<div id="contentbody">
-		<div id="contentbody_left">
-			<h4>Business 2 Business Networking Directory </h4>
-			<h5>For Executives and Professionals </h5>
-			<div id="leftcol1">
-				<div class="leftcol1_rows">
-					<%= image_tag "01.jpg" %>
-					<div class="leftcol1_content">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Duis ornare, dolor a lacinia cursus, ante odio scelerisque
-						</p>
-					</div>
-				</div>
-				<div class="leftcol1_rows">
-					<%= image_tag "02.jpg" %>
-					<div class="leftcol1_content_mid">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Duis ornare, dolor a lacinia cursus, ante odio scelerisque
-						</p>
-					</div>
-				</div>
-				<div class="leftcol1_rows">
-					<%= image_tag "03.jpg" %>
-					<div class="leftcol1_content">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Duis ornare, dolor a lacinia cursus, ante odio scelerisque
-						</p>
-					</div>
-				</div>
-			</div>
-			<div id="searchdiv">
-				<%= form_tag "/user_profiles/search" do %> <h6>Search for someone by name: </h6>
-				<div id="searchdiv_outter">
-					<div id="searchdiv_col">
-						<div class="searchcol2">
-							<p>
-								First Name:
-							</p>
-							<%= text_field :user, :first_name, :class => "searchcol2_textfield" %>
-						</div>
-						<div class="searchcol2">
-							<p>
-								Last Name:
-							</p>
-							<%= text_field :user, :last_name, :class => "searchcol2_textfield" %>
-						</div>
-						<%= submit_tag "", :class => "searchdiv_col_btn" %>
-					</div>
-					<% end %>
-					<p class="paginationp">
-						<a href="#">a</a>
-						<a href="#">b</a>
-						<a href="#">c</a>
-						<a href="#">d</a>
-						<a href="#">e</a>
-						<a href="#">f</a>
-						<a href="#">g</a>
-						<a href="#">h</a>
-						<a href="#">i</a>
-						<a href="#">j</a>
-						<a href="#">k</a>
-						<a href="#">l</a>
-						<a href="#">m</a>
-						<a href="#">n</a>
-						<a href="#">o</a>
-						<a href="#">p</a>
-						<a href="#">q</a>
-						<a href="#">r</a>
-						<a href="#">s</a>
-						<a href="#">t</a>
-						<a href="#">u</a>
-						<a href="#">v</a>
-						<a href="#">w</a>
-						<a href="#">x</a>
-						<a href="#">y</a>
-						<a href="#">z</a>
-						<a href="#">More</a>
-					</p>
-				</div>
-			</div>
-			<p class="contentbody_leftp">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare, dolor
-				a lacinia cursus, ante odio scelerisque  odio scelerisque
-			</p>
-		</div>
-		<div id="contentbody_right">
-			<div id="signupbox">
-				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-					<div id="signupbox_content">
-						<div class="signupbox_content_row">
-							<div class="signupbox_content_row_left">
-								First Name :
-							</div>
-							<div class="signupbox_content_row_right">
-								<%= f.text_field :first_name, :class => "signup_field" %>
-							</div>
-						</div>
-						<div class="signupbox_content_row">
-							<div class="signupbox_content_row_left">
-								Last Name :
-							</div>
-							<div class="signupbox_content_row_right">
-								<%= f.text_field :last_name, :class => "signup_field" %>
-							</div>
-						</div>
-						<div class="signupbox_content_row">
-							<div class="signupbox_content_row_left">
-								Email :
-							</div>
-							<div class="signupbox_content_row_right">
-								<%= f.email_field :email, :class => "signup_field" %>
-							</div>
-						</div>
-						<div class="signupbox_content_row" style="margin-bottom:5px">
-							<div class="signupbox_content_row_left">
-								Password :
-							</div>
-							<div class="signupbox_content_row_right">
-								<%= f.password_field :password, :class => "signup_field" %>
-							</div>
-						</div>
-						<div class="signupbox_content_row" style="margin:0">
-							<div class="signupbox_content_row_left">
-								&nbsp;
-							</div>
-							<div class="signupbox_content_row_right2">
-								<%= f.submit "", :class => "signupbtn" %>
-							</div>
-						</div>
-						<div class="signupbox_content_row">
-							<div id="already">
-								<h6>Already on Go global? <span><%= link_to 'Sign in.', new_user_session_path %></span></h6>
-							</div>
-						</div>
-					</div>
-				<% end %>
-			</div>
-			<div id="testmonial">
-				<h4>Lorem ipsum dolor sit amet </h4>
-				<div id="testmonial_cont">
-					<%= image_tag "img01.jpg" %>
-					<div id="testmonial_text">
-						<p>
-							Lorem ipsum dolor sit
-							amet, consectetur
-							adipiscing elit. Duis
-							ornare, dolor a lacinia
-							cursus, ante odio
-						</p>
-						<h6><a href="#">Read More >></a></h6>
-						<h6><%= link_to "Click here >>", profile_view_logs_path %></h6>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="contentbody_bottom">
-		<h6>* By clicking Join Now or using Go global, you are indicating that you have read, understood, and agree to Go global's User Agreement and Privacy Policy. </h6>
-	</div>
-	<div id="bottom"></div>
+<div id="wrapper">
+  <div id="container">
+    <div id="contentbody">
+      <div id="contentbody_left">
+      	<h4>Business 2 Business Networking Directory </h4>
+        <h5>For Executives and Professionals </h5>
+        <div id="leftcol1">
+          <div class="leftcol1_rows">
+          	<%= image_tag "01.jpg" %>
+            <div class="leftcol1_content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Duis ornare, dolor a lacinia cursus, ante odio scelerisque 
+              </p>
+            </div>
+          </div>
+          <div class="leftcol1_rows">
+          	<%= image_tag "03.jpg" %>
+            <div class="leftcol1_content_mid">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Duis ornare, dolor a lacinia cursus, ante odio scelerisque 
+              </p>
+            </div>
+          </div>
+          <div class="leftcol1_rows">
+          	<%= image_tag "03.jpg" %>
+            <div class="leftcol1_content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Duis ornare, dolor a lacinia cursus, ante odio scelerisque 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="searchdiv">
+        	<form id="form2" name="form2" method="post" action="">
+        	<h6>Search for someone by name: </h6>
+            <div id="searchdiv_outter">
+              <div id="searchdiv_col">
+                <div class="searchcol2">
+                	<p>First Name: </p>
+                	  <input name="textfield2" type="text" class="searchcol2_textfield" id="textfield2" />
+                </div>
+                
+               <div class="searchcol2">
+                	<p>Last Name: </p>
+                	  <input name="textfield2" type="text" class="searchcol2_textfield" id="textfield2" />
+                </div>
+                <input type="submit" class="searchdiv_col_btn" value="" />
+              </div>
+              <p class="paginationp">
+              	<a href="#">a</a>
+                <a href="#">b</a>
+                <a href="#">c</a>
+                <a href="#">d</a>
+                <a href="#">e</a>
+                <a href="#">f</a>
+                <a href="#">g</a>
+                <a href="#">h</a>
+                <a href="#">i</a>
+                <a href="#">j</a>
+                <a href="#">k</a>
+                <a href="#">l</a>
+                <a href="#">m</a>
+                <a href="#">n</a>
+                <a href="#">o</a>
+                <a href="#">p</a>
+                <a href="#">q</a>
+                <a href="#">r</a>
+                <a href="#">s</a>
+                <a href="#">t</a>
+                <a href="#">u</a>
+                <a href="#">v</a>
+                <a href="#">w</a>
+                <a href="#">x</a>
+                <a href="#">y</a>
+                <a href="#">z</a>
+                <a href="#">More</a>
+               </p>
+            </div>
+            </form>
+        </div>
+        <p class="contentbody_leftp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare, dolor 
+          a lacinia cursus, ante odio scelerisque  odio scelerisque </p>
+      </div>
+      <div id="contentbody_right">
+        <div id="signupbox">
+        <form id="form3" name="form3" method="post" action="">
+          <div id="signupbox_content">
+            <div class="signupbox_content_row">
+              <div class="signupbox_content_row_left">First Name :</div>
+              <div class="signupbox_content_row_right">
+                  <input name="textfield3" type="text" class="signup_field" id="textfield3" />
+              </div>
+            </div>
+            <div class="signupbox_content_row">
+              <div class="signupbox_content_row_left">Last Name :</div>
+              <div class="signupbox_content_row_right">
+                  <input name="textfield3" type="text" class="signup_field" id="textfield3" />
+              </div>
+            </div>
+            <div class="signupbox_content_row">
+              <div class="signupbox_content_row_left">Email :</div>
+              <div class="signupbox_content_row_right">
+                  <input name="textfield3" type="text" class="signup_field" id="textfield3" />
+              </div>
+            </div>
+            <div class="signupbox_content_row" style="margin-bottom:5px">
+              <div class="signupbox_content_row_left">Password :</div>
+              <div class="signupbox_content_row_right">
+                  <input name="textfield3" type="password" class="signup_field" id="textfield3" />
+              </div>
+            </div>
+            <div class="signupbox_content_row" style="margin:0">
+              <div class="signupbox_content_row_left">&nbsp;</div>
+              <div class="signupbox_content_row_right2">
+                 <input type="submit" class="signupbtn" value="" />
+              </div>
+            </div>
+            <div class="signupbox_content_row">
+            	<div id="already">
+            	  <h6>Already on Go global? <span><a href="#">Sign in.</a></span> </h6>
+            	</div>
+            </div>
+          </div>
+           </form>
+        </div>
+        <div id="testmonial">
+        	<h4>Lorem ipsum dolor sit amet </h4>
+            <div id="testmonial_cont">
+            	<%= image_tag "img01.jpg" %>
+              <div id="testmonial_text">
+                <p>Lorem ipsum dolor sit 
+                  amet, consectetur 
+                  adipiscing elit. Duis 
+                  ornare, dolor a lacinia 
+                  cursus, ante odio
+                </p>
+                <h6><a href="#">Read More >></a></h6>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="contentbody_bottom">
+    	<h6>* By clicking Join Now or using Go global, you are indicating that you have read, understood, and agree to Go global's User Agreement and Privacy Policy. </h6>
+    </div>
+    <div id="bottom"></div>
+  </div>
 </div>
+
+

@@ -1,0 +1,49 @@
+<form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="aSwMqna4LErzw0bLoMNCWMQs3Sg5eMD/sxSkjid7QBk="></div>
+					<div id="signupbox_content">
+						<div class="signupbox_content_row">
+							<div class="signupbox_content_row_left">
+								First Name :
+							</div>
+							<div class="signupbox_content_row_right">
+								<input class="signup_field" id="user_first_name" name="user[first_name]" size="30" type="text">
+							</div>
+						</div>
+						<div class="signupbox_content_row">
+							<div class="signupbox_content_row_left">
+								Last Name :
+							</div>
+							<div class="signupbox_content_row_right">
+								<input class="signup_field" id="user_last_name" name="user[last_name]" size="30" type="text">
+							</div>
+						</div>
+						<div class="signupbox_content_row">
+							<div class="signupbox_content_row_left">
+								Email :
+							</div>
+							<div class="signupbox_content_row_right">
+								<input class="signup_field" id="user_email" name="user[email]" size="30" type="email" value="">
+							</div>
+						</div>
+						<div class="signupbox_content_row" style="margin-bottom:5px">
+							<div class="signupbox_content_row_left">
+								Password :
+							</div>
+							<div class="signupbox_content_row_right">
+								<input class="signup_field" id="user_password" name="user[password]" size="30" type="password">
+							</div>
+						</div>
+						<div class="signupbox_content_row" style="margin:0">
+							<div class="signupbox_content_row_left">
+								&nbsp;
+							</div>
+							<div class="signupbox_content_row_right2">
+								<input class="signupbtn" name="commit" type="submit" value="">
+							</div>
+						</div>
+						<div class="signupbox_content_row">
+							<div id="already">
+								<h6>Already on Madison? <span><a href="/users/sign_in">Sign in</a></span></h6>
+							</div>
+						</div>
+					</div>
+</form>

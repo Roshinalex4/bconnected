@@ -1,0 +1,231 @@
+/**
+* Stylish Select 0.4.5 - $ plugin to replace a select drop down box with a stylable unordered list
+* http://scottdarby.com/
+* 
+* Copyright (c) 2009 Scott Darby
+* 
+* Requires: jQuery 1.3 or newer
+* 
+* Dual licensed under the MIT and GPL licenses.
+*/
+
+/**
+* Hide lists on page load
+---------------------------------------------------------*/
+
+.stylish-select .SSContainerDivWrapper {
+	left:-9999px;
+}
+
+/*
+* Red example
+---------------------------------------------------------*/
+.stylish-select .SSContainerDivWrapper {
+	margin:0;
+	padding:0;
+	min-width:371px;
+	position:absolute;
+	top:26px;
+	left:0;
+	z-index:10001;
+}
+
+.stylish-select .SSContainerDivWrapper1 {
+	margin:0;
+	padding:0;
+	min-width:68px;
+	position:absolute;
+	top:22px;
+	left:0;
+	z-index:10001;
+	}
+
+.stylish-select .SSContainerDivWrapper2 {
+	margin:0;
+	padding:0;
+	min-width:68px;
+	position:absolute;
+	top:22px;
+	left:0;
+	z-index:10001;
+	}	
+.stylish-select .SSContainerDivWrapper3 {
+	margin:0;
+	padding:0;
+	min-width:200px;
+	position:absolute;
+	top:22px;
+	left:0;
+	z-index:10001;
+}	
+
+.stylish-select ul.newList {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#000;
+	background:#fff;
+	border:1px solid #ccc;
+	overflow:auto;
+}
+
+.stylish-select ul.newList * {
+	margin:0;
+	padding:0;
+}
+
+
+.stylish-select ul.newList a {
+	color: #000;
+	text-decoration:none;
+	display:block;
+	padding:7px 9px;
+}
+
+.stylish-select ul.newList2 {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#000;
+	background:#fff;
+	border:1px solid #ccc;
+	overflow:auto;
+}
+
+.stylish-select ul.newList2 * {
+	margin:0;
+	padding:0;
+}
+
+
+.stylish-select ul.newList2 a {
+	color: #000;
+	text-decoration:none;
+	display:block;
+	padding:3px 8px;
+}
+
+.stylish-select ul.newList3 {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#000;
+	background:#fff;
+	border:1px solid #ccc;
+	overflow:auto;
+}
+
+.stylish-select ul.newList3 * {
+	margin:0;
+	padding:0;
+}
+
+
+.stylish-select ul.newList3 a {
+	color: #000;
+	text-decoration:none;
+	display:block;
+	padding:3px 8px;
+}
+
+
+
+.stylish-select .newListSelected {
+	/*width:200px;*/
+	color:#000;
+	height:23px;
+	padding:2px 0 0 6px;
+	float:right;
+	background:url(select_bg.png) no-repeat right center;
+	/*border:1px solid red;*/
+}
+
+.stylish-select .newListSelected1 {
+	width:64px;
+	color:#000;
+	height:22px;
+	padding:3px 0 0 3px;
+	float:left;
+	/*border:1px solid red;*/
+	background:url(selyear.png) no-repeat;
+}
+
+.stylish-select .newListSelected2 {
+	width:64px;
+	color:#000;
+	height:22px;
+	padding:3px 0 0 3px;
+	float:left;
+	/*border:1px solid red;*/
+	background:url(selfage.png) no-repeat;
+}
+
+.stylish-select .newListSelected3 {
+	width:200px;
+	color:#000;
+	height:25px;
+	padding:3px 0 0 6px;
+	float:left;
+	background:url(select-bgsearch.png) no-repeat;
+}
+
+.stylish-select ul.newList li a:focus {
+	-moz-outline-style: none;
+}
+
+.stylish-select .selectedTxt {
+	width:341px;
+	overflow:hidden;
+	height:20px;
+	/*border:1px solid #000;*/
+	padding:3px 23px 0 0;
+	font-weight:bold;
+}
+
+.stylish-select .selectedTxt1 {
+	width:48px;
+	overflow:hidden;
+	height:20px;
+	padding:0 12px 0 0;
+	/*border:1px solid #000;*/
+	}
+
+.stylish-select .hiLite {
+	background:#0073B2!important;
+	color:#fff!important;
+}
+.newList2 .hiLite {
+	background:#FAAA44 !important;
+	color:#fff!important;
+}
+
+.newList3 .hiLite {
+	background:#FAAA44 !important;
+	color:#fff!important;
+}
+
+.stylish-select .newListHover {
+	background:#999!important;
+	color:#fff!important;
+	cursor:default;
+}
+
+
+.stylish-select .newListSelHover,
+.stylish-select .newListSelFocus {
+	/*background-position:0 -22px;*/
+	cursor:default;
+}
+
+.stylish-select .newListOptionTitle {
+	font-weight:bold;
+}
+
+.stylish-select .newListOptionTitle ul {
+	margin:3px 0 0;
+}
+
+.stylish-select .newListOptionTitle li {
+	font-weight:normal;
+	border-left:1px solid #ccc;
+}

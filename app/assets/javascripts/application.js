@@ -11,6 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.min
 //= require jquery_ujs
+//= require jquery.stylish-select
+//= require jquery.easing
+//= require jquery.slidorion.min
 //= require_tree .
-//= require autocomplete-rails
