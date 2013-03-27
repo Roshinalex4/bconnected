@@ -20,7 +20,7 @@
 								<a href="#Dashboard" >Settings</a>
 							</li>
 							<li>
-								<a href="#settings">Sign out</a>
+								<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 							</li>
 						</ul>
 					</div>
