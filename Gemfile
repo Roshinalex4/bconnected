@@ -4,7 +4,9 @@ gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
- gem 'mysql2'
+# gem 'mysql2'
+gem 'activerecord-postgresql-adapter'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -48,3 +50,5 @@ gem 'hpricot'
 gem 'rails3-jquery-autocomplete'
 gem 'thin'
 gem 'foreman'
+gem 'rb-readline'
+gem 'gdata_19', '1.1.5' gem 'contacts', :git => 'git@github.com:eofferma/contacts.git'
