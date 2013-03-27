@@ -228,7 +228,8 @@
 			<!--group_tbl_wrapper-->
 			<div id="group_tbl_wrapper">
 				<table border="0" class="tbl_group">
-					
+						<% if current_user %>
+						<% if !current_user.groups.empty? %>
 						<% current_user.groups.sample(3).each do |group, i| %>		
 						<% if i == 0 or i == 3 %><tr><% end %>				
 						<td>
@@ -242,7 +243,8 @@
 						</td>
 							<% if i == 0 or i == 3 %></tr><% end %>
 						<% end %>
-					
+						<% end %>
+						<% end %>
 					
 				</table>
 			</div>
