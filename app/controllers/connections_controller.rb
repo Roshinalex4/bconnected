@@ -1,6 +1,5 @@
 class ConnectionsController < ApplicationController
-  
-  
+  layout "contacts"
   def create 
 		contacts_array = Array.new
 		if params[:commit] == "Add Connection"      

@@ -1,47 +1,631 @@
-<style>
-#alphabet_drop_down {
-	width: 212px;
-	overflow: auto;
-	background: #7F7F7F;
-	background: rgba(0, 0, 0, 0.5);
-	list-style: none;
-}
-#alphabet_drop_down li {
-	border-bottom: 1px solid white;
-	cursor: default;
-	float: left;
-	font-weight: bold;
-	font-size: 12px;
-	padding: 8px 0 0 0;
-	text-align: center;
-	opacity: 1;
-	height: 20px;
-	width: 28px;
-	margin: 1px;
-	color: #CCC;
-	background: white;
-	background: -moz-linear-gradient(top, #FEFEFE 0%, #DEDEDE 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FEFEFE), color-stop(100%, #DEDEDE));
-}
-
-</style>
-<h2>Contacts List</h2>
-<% @contacts.each do |contact|%>
-    <%= link_to contact.user_profile.display_name, connection_path(contact.id) %><br />
-<% end %><br />
---------------------------------------------------------------------
-<h2>Fiter Contacts</h2>
-<%= form_tag "/user_profiles/filter" do %>
-<div id="searchdiv_col">
-	<div class="searchcol2">
-		<%= text_field :user, :first_name, :class => "searchcol2_textfield" %>
+<div id="main_content_wrapper">
+	<!--main_content_wrapper_menu-->
+	<div id="main_content_wrapper_menu">
+		<div id="connection">
+			<a href="#">Connections</a>
+		</div>
+		<div id="importedcontacts">
+			<a href="#">Imported Contacts</a>
+		</div>
+		<div id="removeconnection">
+			<a href="#">Remove Connections</a>
+		</div>
+		<div id="adconnection">
+			<a href="#">Add Connections</a>
+		</div>
 	</div>
-	<%= submit_tag "", :class => "searchdiv_col_btn" %>
+	<!--main_content_wrapper_menu ends-->
+	<!--/*connection wrapper*/-->
+	<div id="connection_wrapper">
+		<table border="0">
+			<tr>
+				<td id="filter_connection">
+				<form action="" name="frmSearch" id="frmSearch" method="post">
+					<input type="text" name="txtKeyword" id="txtKeyword" value="Filter Connections" onfocus="if(this.value=='Filter Connections'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Filter Connections';this.style.color='#999';}"/>
+				</form></td>
+				<td id="allconnection"><a href="#">All Connection</a><span>(27)</span></td>
+				<td id="select">Select:<span><a href="#">All</a></span>,<span><a href="#">none</a></span></td>
+				<td id="abc">
+				<div class="alphabetsub" style="display: none;">
+					<div class="alphabetsub_first"></div>
+					<div class="alphabetsub_Content">
+						<ul>
+							<li>
+								<a href="#">A</a>
+							</li>
+							<li>
+								<a href="#">B</a>
+							</li>
+							<li>
+								<a href="#">C</a>
+							</li>
+							<li>
+								<a href="#">D</a>
+							</li>
+							<li>
+								<a href="#">E</a>
+							</li>
+							<li>
+								<a href="#">F</a>
+							</li>
+							<li>
+								<a href="#">G</a>
+							</li>
+							<li>
+								<a href="#">H</a>
+							</li>
+							<li>
+								<a href="#">I</a>
+							</li>
+							<li>
+								<a href="#">J</a>
+							</li>
+							<li>
+								<a href="#">K</a>
+							</li>
+							<li>
+								<a href="#">L</a>
+							</li>
+							<li>
+								<a href="#">M</a>
+							</li>
+						</ul>
+						<div class="alphabetsub_Content_sub">
+							#
+						</div>
+						<ul>
+							<li>
+								<a href="#">N</a>
+							</li>
+							<li>
+								<a href="#">O</a>
+							</li>
+							<li>
+								<a href="#">P</a>
+							</li>
+							<li>
+								<a href="#">Q</a>
+							</li>
+							<li>
+								<a href="#">R</a>
+							</li>
+							<li>
+								<a href="#">S</a>
+							</li>
+							<li>
+								<a href="#">T</a>
+							</li>
+							<li>
+								<a href="#">U</a>
+							</li>
+							<li>
+								<a href="#">V</a>
+							</li>
+							<li>
+								<a href="#">W</a>
+							</li>
+							<li>
+								<a href="#">X</a>
+							</li>
+							<li>
+								<a href="#">Y</a>
+							</li>
+							<li>
+								<a href="#">Z</a>
+							</li>
+						</ul>
+					</div>
+					<div class="alphabetsub_last"></div>
+				</div></td>
+			</tr>
+		</table>
+	</div>
+	<!--/*connection wrapper End*/-->
+	<!-- main_content_wrapper_left-->
+	<div id="main_content_wrapper_left">
+		<ul class="leftmenu">
+			<li class="parent">
+				<a>Tags</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Companies</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Locations</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Industries</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Recent Activity</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<ul>
+	</div>
+	<!-- main_content_wrapper_left Ends-->
+	<!-- main_content_wrapper_center-->
+	<div id="main_content_wrapper_center">
+		<div class="scroll-pane">
+			<div id="allconnection_alphabet">
+				<span>D</span>
+			</div>
+			<ul>
+				<li class="active">
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check"/>
+							</td>
+							<td id="photo"><img src="/assets/photo3.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								Decky Quick
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td>
+							<div class="count">
+								100+
+							</div></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check" />
+							</td>
+							<td id="photo"><img src="/assets/photo2.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								David Ferns
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td>
+							<div class="count">
+								90
+							</div></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<div id="allconnection_alphabetend"></div>
+			<div id="allconnection_alphabet">
+				<span>E</span>
+			</div>
+			<ul>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check" />
+							</td>
+							<td id="photo"><img src="/assets/photo1.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								Eric Ries
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td >
+							<div class="count">
+								90
+							</div></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<div id="allconnection_alphabetend"></div>
+			<div id="allconnection_alphabet">
+				<span>G</span>
+			</div>
+			<ul>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check" />
+							</td>
+							<td id="photo"><img src="/assets/photo4.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								George Anders
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td>
+							<div class="count">
+								100+
+							</div></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check" />
+							</td>
+							<td id="photo"><img src="/assets/photo5.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								Geni Whitehouse
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td>
+							<div class="count">
+								90
+							</div></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<div id="allconnection_alphabetend"></div>
+			<div id="allconnection_alphabet">
+				<span>H</span>
+			</div>
+			<ul>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check" />
+							</td>
+							<td id="photo"><img src="/assets/photo6.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								Herb Greenberg
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td>
+							<div class="count">
+								90
+							</div></td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check" />
+							</td>
+							<td id="photo"><img src="/assets/photo6.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								Herb Greenberg
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td>
+							<div class="count">
+								100+
+							</div></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<div id="allconnection_alphabetend"></div>
+			<div id="allconnection_alphabet">
+				<span>J</span>
+			</div>
+			<ul>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+							<input type="checkbox" class="check" />
+							</td>
+							<td id="photo"><img src="/assets/photo7.jpg" /></td>
+							<td id="details">
+							<div id="connection_name">
+								Jeff Jordan
+							</div>
+							<div id="designation">
+								Regional Sales Manager -
+							</div>
+							<div id="division">
+								Enterprise Division -
+							</div>
+							<div id="company">
+								Routesms Solutions Limited  -
+							</div></td>
+							<td>
+							<div class="count">
+								100+
+							</div></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<div id="allconnection_alphabetend"></div>
+		</div>
+	</div>
+	<!-- main_content_wrapper_center Ends-->
+	<!-- main_content_wrapper_right-->
+	<div id="main_content_wrapper_right">
+		<div id="load" style="display:none">
+			<!--profile-->
+			<div id="profile">
+				<div id="profile_top"></div>
+				<!--profile_content-->
+				<div id="profile_content">
+					<!--profile_content_wrapper-->
+					<div id="profile_content_wrapper"></div>
+					<!--profile_content_wrapper End-->
+				</div>
+				<!--profile_content End-->
+			</div>
+			<!--profile End-->
+		</div>
+		<div id="profileload" >
+			<!--profile-->
+			<div id="profile">
+				<div id="profile_top"></div>
+				<!--profile_content-->
+				<div id="profile_content">
+					<!--profile_content_wrapper-->
+					<div id="profile_content_wrapper">
+						<div id="profile_content_wrapper_photo"><img src="/assets/photo_wrapper.png" />
+						</div>
+						<!--profile_content_wrapper_detail-->
+						<div id="profile_content_wrapper_detail">
+							<div id="profile_name">
+								David Ferns
+							</div>
+							<div id="profile_designation">
+								Regional Sales Manager -
+							</div>
+							<div id="profile_division">
+								Enterprise Division -
+							</div>
+							<div id="profile_company">
+								Routesms Solutions Limited  -
+							</div>
+						</div>
+						<!--profile_content_wrapper_detail End-->
+						<div class="clear"></div>
+						<div id="connections">
+							500<a href="">connections</a><span>(2 are new)</span>
+						</div>
+						<div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Send message</a>
+						</div>
+						<div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Edit Details</a>
+						</div>
+						<div id="subdetails">
+							Tags:
+						</div>
+						<div id="subdetails_sub">
+							<a href="">Edit tags</a>
+						</div>
+						<div id="subdetails">
+							Email:
+						</div>
+						<div id="subdetails_sub">
+							<a href="">ericries@gmail.com</a>Primary
+						</div>
+						<div id="subdetails">
+							Phone:
+						</div>
+						<div id="subdetails_sub">
+							+968 92451315 mobile
+						</div>
+						<div id="subdetails">
+							Title:
+						</div>
+						<div id="subdetails_sub">
+							Regional Sales Manager - Enterprise Division
+						</div>
+						<div id="subdetails">
+							Company:
+						</div>
+						<div id="subdetails_sub">
+							Mars International LLC
+						</div>
+						<div id="subdetails">
+							IM:
+						</div>
+						<div id="subdetails_sub">
+							ericries Google Talk
+						</div>
+						<div id="subdetails">
+							Birthday:
+						</div>
+						<div id="subdetails_sub">
+							May 16, 1985
+						</div>
+					</div>
+					<!--profile_content_wrapper End-->
+				</div>
+				<!--profile_content End-->
+			</div>
+			<!--profile End-->
+		</div>
+	</div>
+	<!-- main_content_wrapper_right Ends-->
+	<div id="status">
+		357 outstanding <span><a href="#">sent invitations</a></span> | <span><a href="#">Export connections</a></span>
+	</div>
 </div>
-<% end %><br clear="all"/>
---------------------------------------------------------------------
-<ul id="alphabet_drop_down">
-  <% "A".upto("Z") do |l| -%>	    
-     <li><%= link_to l, filter_user_profiles_path("user"=>{"first_name"=>l}), :method => :post %></li>	
-  <% end %>
-</ul>

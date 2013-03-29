@@ -25,6 +25,7 @@ Bconnected::Application.routes.draw do
   resources :user_profiles do
     collection do
       get 'home', :action => "home"
+      get 'following', :action => 'following'
       get 'email_add_form/:user_id', :action => 'email_add_form'
       get 'connect_with_form/:user_id', :action => 'connect_with_form'
 			get 'invite_contacts_form/:user_id', :action => 'invite_contacts_form'

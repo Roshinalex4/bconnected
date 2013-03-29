@@ -9,9 +9,15 @@
 		<link rel="stylesheet" type="text/css" href="/assets/stylish-select.css"/>
 		<script src="/assets/jquery.min.js"></script>
 		<script type="text/javascript" src="/assets/jquery.stylish-select.js"></script>
+		<script src="/assets/scrollpagination.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="/assets/slidorion.css" />
 		<script src="/assets/jquery.easing.js"></script>
 		<script src="/assets/jquery.slidorion.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="/assets/jScrollPane.css"/>
+		<script type="text/javascript" src="/assets/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="/assets/jScrollPane.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/tooltip.css" />
+		<script type="text/javascript" src="/assets/tooltip.js"></script>
 		<%= csrf_meta_tags %>
 		<script type="text/javascript">
 			$(document).ready(function() {
@@ -139,7 +145,6 @@
 		}
 		</style>
 		<![endif]-->
-		
 		<script type="text/javascript">
 			$(function() {
 				$('#selShare').sSelect();
@@ -167,7 +172,6 @@
 			});
 
 		</script>
-		
 		<script>
 			$(function() {
 				$('#slidorion').slidorion({
@@ -179,8 +183,215 @@
 		</script>
 	</head>
 	<body>
-		<%= yield %>
-		<!--footer_wrapper-->
+		<div id="top_wrapper">
+			<!--top_wrapper_top-->
+			<div id="top_wrapper_top">
+				<!--top_wrapper_top_inner-->
+				<div id="top_wrapper_top_inner">
+					<div id="logo_wrapper">
+						<a href="index.html">Home</a>
+					</div>
+					<!--right_dropdown_wrapper-->
+					<div id="right_dropdown_wrapper">
+						<div id="addconnection">
+							<a href="#" class="addconnection">Add connection</a>
+						</div>
+						<div id="dropdown">
+							<a class="account"><span>Scott</span></a>
+							<div class="submenudropdown" style="display: none;">
+								<ul class="root">
+									<li>
+										<a href="#Dashboard" >Settings</a>
+									</li>
+									<li >
+										<a href="#settings">Sign out</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--right_dropdown_wrapper ends-->
+					<!--message_icon_wrapper-->
+					<div id="message_icon_wrapper">
+						<div class="message_icon">
+							<a href="#" class="count_msg">100</a>
+							<div class="message_dropdown"></div>
+						</div>
+						<div class="notification_icon">
+							<div class="notification_dropdown"></div>
+						</div>
+					</div>
+					<!--message_icon_wrapper ends-->
+				</div>
+				<!--top_wrapper_top_inner ends-->
+			</div>
+			<!--top_wrapper_top ends-->
+			<!--top_wrapper_bottom-->
+			<div id="top_wrapper_bottom">
+				<!--topmenu_wrapper-->
+				<div id="topmenu_wrapper">
+					<!--topmenu_wrapper_inner-->
+					<div id="topmenu_wrapper_inner">
+						<!--top_menu-->
+						<ul id="top_menu">
+							<li>
+								<a href="index.html" class="selected">Home</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Go global Home</a>
+									</li>
+									<li>
+										<a href="#">Advertise on Go global</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" >Profile</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Edit Profile</a>
+									</li>
+									<li>
+										<a href="#">View profile</a>
+									</li>
+									<li>
+										<a href="#">Recommendations</a>
+									</li>
+									<li>
+										<a href="#">Profile Organizer</a>
+									</li>
+									<li>
+										<a href="#">Following</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Contacts</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Connections</a>
+									</li>
+									<li>
+										<a href="#">Add Connections</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Groups</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Your Groups</a>
+									</li>
+									<li>
+										<a href="#">Groups You May Like</a>
+									</li>
+									<li>
+										<a href="#">Groups Directory</a>
+									</li>
+									<li>
+										<a href="#">Create a Group</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Jobs</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Find Jobs</a>
+									</li>
+									<li>
+										<a href="#">Post a Job</a>
+									</li>
+									<li>
+										<a href="#">Manage Your Jobs</a>
+									</li>
+									<li>
+										<a href="#">Find Talent</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Companies</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Find Companies</a>
+									</li>
+									<li>
+										<a href="#">Companies You Follow</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">News</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Go global Today</a>
+									</li>
+									<li>
+										<a href="#">Original Content</a>
+									</li>
+									<li>
+										<a href="#">Saved Articles</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">More</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Inbox</a>
+									</li>
+									<li>
+										<a href="#">Invitations</a>
+									</li>
+									<li>
+										<a href="#">Help Center</a>
+									</li>
+									<li>
+										<a href="#">Answers</a>
+									</li>
+									<li>
+										<a href="#">Skills & Expertise</a>
+									</li>
+									<li>
+										<a href="#">Profile Views</a>
+									</li>
+								</ul>
+							</li>
+							<li id="last"></li>
+						</ul>
+						<!--top_menu ends-->
+						<!--menu_inner_right-->
+						<div id="menu_inner_right">
+							<!--search_wrapper-->
+							<div id="search_wrapper">
+								<form action="" name="frmSearch" id="frmSearch" method="post">
+									<input type="text" name="txtKeyword" id="txtKeyword" value="Search....." onfocus="if(this.value=='Search.....'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Search.....';this.style.color='#999';}"/>
+								</form>
+							</div>
+							<!--search_wrapper ends-->
+							<!--searchbttn-->
+							<div id="searchbttn">
+								<select name="fancySelect" class="makeMeFancy">
+									<!-- Notice the HTML5 data attributes -->
+									<option value="0" selected="selected" data-skip="1" data-icon="/assets/Friends.png">Choose</option>
+									<option value="1" data-icon="/assets/Friends.png" data-html-text="iPhone 4&lt;i&gt;in stock&lt;/i&gt;" title="sss" ></option>
+									<option value="2" data-icon="/assets/jobs.png" data-html-text="iPod &lt;i&gt;in stock&lt;/i&gt;"></option>
+									<option value="3" data-icon="/assets/updates.png" data-html-text="MacBook Air&lt;i&gt;out of stock&lt;/i&gt;"></option>
+									<option value="3" data-icon="/assets/people.png" data-html-text="MacBook Air&lt;i&gt;out of stock&lt;/i&gt;"></option>
+								</select>
+							</div>
+							<!--searchbttn ends-->
+						</div>
+						<!--menu_inner_right ends-->
+					</div>
+					<!--topmenu_wrapper_inner ends-->
+				</div>
+				<!--topmenu_wrapper ends-->
+			</div>
+			<!--top_wrapper_bottom ends-->
+		</div>
+		<%= yield %> <!--footer_wrapper-->
 		<div id="footer">
 			<div id="footer_inner">
 				<ul id="footer_menu">

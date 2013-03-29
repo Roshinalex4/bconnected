@@ -5,6 +5,10 @@ class UserProfilesController < ApplicationController
 	def home
 	  @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id').limit(3)
 	end
+	
+	def following
+	  
+	end
   def save_skills
     params[:user_profile][:skill_ids] ||= []
     @user_profile = UserProfile.find_by_user_id(current_user.id)
