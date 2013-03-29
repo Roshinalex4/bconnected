@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Go global | Connection</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link href="/assets/css/main_style.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/styleselect.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/assets/jScrollPane.css" />
+<script src="/assets/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/jScrollPane.js" type="text/javascript"></script>	
+<script src="/assets/jquery.mousewheel.js" type="text/javascript"></script>	
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $('.scroll-pane').jScrollPane({scrollbarWidth: 6});  
+})
+</script>	
+	
+	<script>
+  $().ready(function(e) {
+	   $('.leftmenu li a').click(function(e) {
+		 if($(this).next('ul.leftmenu_sub').is(":hidden")){   
+		   
+        $('.leftmenu_sub').each(function() {
+            $(this).slideUp();
+        });
+		$('.leftmenu li.parent').each(function(){
+			$(this).removeClass('selected');
+			});
+		$(this).parent().addClass('selected');	
+		$(this).next('ul.leftmenu_sub').slideDown(100);
+		
+		}
+	    else
+		 {
+			  
+			 $('.leftmenu li.parent').each(function(){
+				
+			$(this).removeClass('selected');
+			});
+			 $(this).next('ul.leftmenu_sub').hide();
+			 
+		 }
+    });
+	   
+	  
+});
+</script>		
+ <script type="text/javascript">
+ $(document).ready(function(e) {
+    $('#main_content_wrapper_center ul li').click(function(e) {
+		
+        $('#load').hide();
+		$('#profileload').show();
+    });
+	 $('.check').change(function(e) {
+   $('#load').show();
+		$('#profileload').hide();  
+});
+});
+ </script>
+<script type="text/javascript">
+ $(document).ready(function(e) {
+  
+});
+ </script>
+
+ <script type="text/javascript">
+	   $(document).ready(function(){
+		   	$(".account").click(function(){
+		           var X=$(this).attr('id');
+				   $("#abc").attr('class', '');
+		        	if(X==1)	{
+		                        $(".submenudropdown").hide();
+		                        $(this).attr('id', '0');	
+		                         }
+		           else{
+					    $(".bttnsubmenu").hide();
+						 $(".alphabetsub").hide();
+		        		$(".submenudropdown").show();
+		                $(this).attr('id', '1');
+		                 }
+		   });
+		   
+		//Mouseup textarea false
+		$(".submenudropdown").mouseup(function(){
+		     return false
+		  });
+		$(".account").mouseup(function(){
+		    return false
+		});
+		
+		 	
+	
+		//Textarea without editing.
+		$(document).mouseup(function()
+		{   
+		   $(".submenudropdown").hide();
+		   $(".account").attr('id', '');
+		});
+			
+	});
+ </script>
+ <script type="text/javascript">
+	   $(document).ready(function(){
+		   	$("#abc").click(function(){
+		           var X=$(this).attr('class');
+		        	if(X==1)	{
+		                        $(".alphabetsub").hide();
+		                        $(this).attr('class', '0');	
+		                         }
+		           else{
+					   $(".account").attr('id', '');
+					    $(".bttnsubmenu").hide();
+						 $(".submenudropdown").hide()
+		        		$(".alphabetsub").show();
+		                $(this).attr('class', '1');
+		                 }
+		   });
+		   
+		//Mouseup textarea false
+		$(".alphabetsub").mouseup(function(){
+		     return false
+		  });
+		$("#abc").mouseup(function(){
+		    return false
+		});
+		
+		 	
+	
+		//Textarea without editing.
+		$(document).mouseup(function()
+		{   
+		
+		   $(".alphabetsub").hide();
+		   $("#abc").attr('class', '');
+		   
+		});
+			
+	});
+ </script>
+  <script type="text/javascript">
+	   $(document).ready(function(){
+		   	$(".bttnaccount").click(function(){
+		           var X=$(this).attr('id');
+		        	if(X==1)	{
+		                        $(".bttnsubmenu").hide();
+		                        $(this).attr('id', '0');	
+		                         }
+		           else{
+					   $(".submenudropdown").hide();
+		        		$(".bttnsubmenu").show();
+		                $(this).attr('id', '1');
+		                 }
+		   });
+		
+		//Mouseup textarea false
+		$(".bttnsubmenu").mouseup(function(){
+		     return false
+		  });
+		$(".bttnaccount").mouseup(function(){
+		    return false
+		});
+			
+		//Textarea without editing.
+		$(document).mouseup(function()
+		{
+		   $(".bttnsubmenu").hide();
+		   $(".bttnaccount").attr('id', '');
+		});
+			
+	});
+ </script>
+<!--[if lte IE 7]>
+<style>
+ul#footer_menu{
+width:610px;
+}
+#right_dropdown_wrapper{
+min-width:170px;
+max-width:187px;
+}
+ul#top_menu li ul.submenu{
+width:170px;
+}
+ul#top_menu li ul.submenu li{
+width:100% !important;
+}
+ul#top_menu li ul.submenu li a{
+width:100% !important;
+}
+#count
+{
+	width:32px;
+	background:url(../images/count.png)20px no-repeat;
+	color:#a38bdf;
+	vertical-align:top;
+	padding-top:20px;
+	padding-left:40px;
+	font-size:11px;
+	font-weight:bold;0
+}
+#connection_name
+{   
+    color:#457698;
+	font-size:11px;
+	font-weight:bold;
+	margin-top:-2px;
+}
+</style>
+<![endif]-->
+
+
+<script type="text/javascript">
+		 $().ready(function(e) {
+			$("ul#top_menu li").hover(function()
+				{
+					$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown(400);
+				}
+				,function()
+				{
+					$(this).find('ul:first').css({visibility: "hidden"});
+				});
+		});
+  </script>
+  
+ 
+</head>
+
+<body>
+
+   <!--top_wrapper-->
+    <div id="top_wrapper">
+    
+     <!--top_wrapper_top-->
+      <div id="top_wrapper_top">
+          <!--top_wrapper_top_inner-->
+         <div id="top_wrapper_top_inner">
+         
+            <div id="logo_wrapper">
+             <a href="index.html">Home</a>
+            </div>
+            
+          
+            
+            
+            <!--right_dropdown_wrapper-->
+              <div id="right_dropdown_wrapper">
+              
+                
+                 <div id="addconnection">
+                 <a href="#" class="addconnection">Add connection</a>
+                 </div>
+                 
+                 <div id="dropdown">
+                   <a class="account"><span>Scott</span></a>
+                   <div class="submenudropdown" style="display: none;">
+                      <ul class="root">
+                        <li><a href="#Dashboard" >Settings</a></li>
+                        <li><a href="#settings">Sign out</a></li>
+                     </ul>
+	               </div>
+                 </div>
+                 
+              </div>
+            <!--right_dropdown_wrapper ends-->
+            
+             <!--message_icon_wrapper-->
+              <div id="message_icon_wrapper">
+              
+               <div class="message_icon">
+                 <a href="#" class="count_msg">100</a>
+                 <div class="message_dropdown">
+                 </div>
+               </div>
+               
+               <div class="notification_icon">
+                 <div class="notification_dropdown">
+                 </div>
+               </div>
+               
+              </div>
+             <!--message_icon_wrapper ends-->
+            
+         
+         </div>
+         <!--top_wrapper_top_inner ends-->
+      </div>
+       <!--top_wrapper_top ends-->
+       
+        <!--top_wrapper_bottom-->
+       <div id="top_wrapper_bottom">
+         <!--topmenu_wrapper-->
+         <div id="topmenu_wrapper">
+           <!--topmenu_wrapper_inner-->
+           <div id="topmenu_wrapper_inner">
+             <!--top_menu-->
+             <ul id="top_menu">
+              <li><a href="index.html" class="selected">Home</a>
+                <ul class="submenu">
+                      <li><a href="#">Go global Home</a></li>
+                      <li><a href="#">Advertise on Go global</a></li>
+                </ul>	
+              </li>
+              
+              <li><a href="#" >Profile</a>
+                   <ul class="submenu">
+                      <li><a href="#">Edit Profile</a></li>
+                      <li><a href="#">View profile</a></li>
+                      <li><a href="#">Recommendations</a></li>
+                      <li><a href="#">Profile Organizer</a></li>
+                      <li><a href="#">Following</a></li>
+                </ul>	
+              </li>
+              
+              <li><a href="#">Contacts</a>
+                <ul class="submenu">
+                      <li><a href="#">Connections</a></li>
+                      <li><a href="#">Add Connections</a></li>
+                </ul>	
+              </li>
+              
+              <li><a href="#">Groups</a>
+                <ul class="submenu">
+                      <li><a href="#">Your Groups</a></li>
+                      <li><a href="#">Groups You May Like</a></li>
+                      <li><a href="#">Groups Directory</a></li>
+                      <li><a href="#">Create a Group</a></li>
+                 </ul>	
+              </li>
+              
+              <li><a href="#">Jobs</a>
+                 <ul class="submenu">
+                      <li><a href="#">Find Jobs</a></li>
+                      <li><a href="#">Post a Job</a></li>
+                      <li><a href="#">Manage Your Jobs</a></li>
+                      <li><a href="#">Find Talent</a></li>
+                 </ul>	
+              </li>
+              
+              <li><a href="#">Companies</a>
+                <ul class="submenu">
+                      <li><a href="#">Find Companies</a></li>
+                      <li><a href="#">Companies You Follow</a></li>
+                </ul>	
+              </li>
+              
+              
+              <li><a href="#">News</a>
+                 <ul class="submenu">
+                      <li><a href="#">Go global Today</a></li>
+                      <li><a href="#">Original Content</a></li>
+                      <li><a href="#">Saved Articles</a></li>
+                 </ul>	
+              </li>
+              
+              <li><a href="#">More</a>
+                 <ul class="submenu">
+				      <li><a href="#">Inbox</a></li>
+					  <li><a href="#">Invitations</a></li>
+                      <li><a href="#">Help Center</a></li>
+					  <li><a href="#">Answers</a></li>
+                      <li><a href="#">Skills & Expertise</a></li>
+                      <li><a href="#">Profile Views</a></li>
+                </ul>	
+              </li>
+              
+              <li id="last"></li>
+             </ul>
+              <!--top_menu ends-->
+             
+             <!--menu_inner_right--> 
+              <div id="menu_inner_right">
+              
+                  <!--search_wrapper-->
+                  <div id="search_wrapper">
+                     <form action="" name="frmSearch" id="frmSearch" method="post">
+                       <input type="text" name="txtKeyword" id="txtKeyword" value="Search....." onfocus="if(this.value=='Search.....'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Search.....';this.style.color='#999';}"/>
+                     </form>
+                  </div>
+                   <!--search_wrapper ends-->
+                        
+                        <!--searchbttn-->
+                        <div id="searchbttn">
+                          <select name="fancySelect" class="makeMeFancy">
+        
+        	<!-- Notice the HTML5 data attributes -->
+            <option value="0" selected="selected" data-skip="1" data-icon="/assets/Friends.png">Choose</option>
+        	<option value="1" data-icon="/assets/Friends.png" data-html-text="iPhone 4&lt;i&gt;in stock&lt;/i&gt;" title="sss" ></option>
+        	<option value="2" data-icon="/assets/jobs.png" data-html-text="iPod &lt;i&gt;in stock&lt;/i&gt;"></option>
+            <option value="3" data-icon="/assets/updates.png" data-html-text="MacBook Air&lt;i&gt;out of stock&lt;/i&gt;"></option>
+             <option value="3" data-icon="/assets/people.png" data-html-text="MacBook Air&lt;i&gt;out of stock&lt;/i&gt;"></option>
+        </select>
+        
+                     </div>
+                      <!--searchbttn ends-->
+                      
+               </div>
+                <!--menu_inner_right ends--> 
+               
+           </div>
+           <!--topmenu_wrapper_inner ends-->
+         </div>
+          <!--topmenu_wrapper ends-->
+       </div>
+        <!--top_wrapper_bottom ends-->
+        
+    </div>   
+   <!--top_wrapper-->
+   
+   <!--main_content_wrapper-->
+   <div id="main_content_wrapper">
+   
+         <!--main_content_wrapper_menu-->
+       <div id="main_content_wrapper_menu">
+         <div id="connection"><a href="#">Connections</a></div>
+         <div id="importedcontacts"><a href="#">Imported Contacts</a></div>
+         <div id="removeconnection"><a href="#">Remove Connections</a></div>
+         <div id="adconnection"><a href="#">Add Connections</a></div>
+       </div> 
+       <!--main_content_wrapper_menu ends-->
+       <!--/*connection wrapper*/-->
+      <div id="connection_wrapper">
+       <table border="0">
+         <tr>
+         <td id="filter_connection">
+        <form action="" name="frmSearch" id="frmSearch" method="post">
+                       <input type="text" name="txtKeyword" id="txtKeyword" value="Filter Connections" onfocus="if(this.value=='Filter Connections'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Filter Connections';this.style.color='#999';}"/>
+                     </form>
+         
+         </td>
+         <td id="allconnection"><a href="#">All Connection</a><span>(27)</span></td>
+         <td id="select">Select:<span><a href="#">All</a></span>,<span><a href="#">none</a></span></td>
+         <td id="abc">
+          <div class="alphabetsub" style="display: none;">
+                      <div class="alphabetsub_first"></div>
+                      <div class="alphabetsub_Content">
+                      <ul>
+                      <li><a href="#">A</a></li>
+                      <li><a href="#">B</a></li>
+                      <li><a href="#">C</a></li>
+                      <li><a href="#">D</a></li>
+                      <li><a href="#">E</a></li>
+                      <li><a href="#">F</a></li>
+                      <li><a href="#">G</a></li>
+                      <li><a href="#">H</a></li>
+                      <li><a href="#">I</a></li>
+                      <li><a href="#">J</a></li>
+                      <li><a href="#">K</a></li>
+                      <li><a href="#">L</a></li>
+                      <li><a href="#">M</a></li>
+                      </ul>
+                      <div class="alphabetsub_Content_sub">#</div>
+                       <ul>
+                      <li><a href="#">N</a></li>
+                      <li><a href="#">O</a></li>
+                      <li><a href="#">P</a></li>
+                      <li><a href="#">Q</a></li>
+                      <li><a href="#">R</a></li>
+                      <li><a href="#">S</a></li>
+                      <li><a href="#">T</a></li>
+                      <li><a href="#">U</a></li>
+                      <li><a href="#">V</a></li>
+                      <li><a href="#">W</a></li>
+                      <li><a href="#">X</a></li>
+                      <li><a href="#">Y</a></li>
+                      <li><a href="#">Z</a></li>
+                      </ul>
+                      </div>
+                      <div class="alphabetsub_last"></div>
+	               </div>
+         
+         
+         </td>
+         </tr>
+       </table>  
+      </div>
+      <!--/*connection wrapper End*/-->
+     <!-- main_content_wrapper_left-->
+      <div id="main_content_wrapper_left">
+      <ul class="leftmenu">
+        <li class="parent"><a>Tags</a>
+             <ul class="leftmenu_sub">
+                 <li>Friends<span> (1)</span></li>
+                 <li>Group members <span>(1)</span></li>
+                   <li>Partners <span>(1)</span></li>
+                  <li>Classmates</li>
+                  <li>Friends <span>(1)</span></li>
+                 <li>Colleagues<span>(17)</span></li>
+                   <li>Untagged<span>(17)</span></li>
+                  <li>Classmates<span>(17)</span></li>
+               </ul>
+        
+        </li>
+        <li class="parent"><a>Companies</a>
+           <ul class="leftmenu_sub">
+                 <li>Friends<span> (1)</span></li>
+                 <li>Group members <span>(1)</span></li>
+                   <li>Partners <span>(1)</span></li>
+                  <li>Classmates</li>
+                  <li>Friends <span>(1)</span></li>
+                 <li>Colleagues<span>(17)</span></li>
+                   <li>Untagged<span>(17)</span></li>
+                  <li>Classmates<span>(17)</span></li>
+               </ul>
+        
+        
+        </li>
+        <li class="parent"> <a>Locations</a>
+         <ul class="leftmenu_sub">
+                 <li>Friends<span> (1)</span></li>
+                 <li>Group members <span>(1)</span></li>
+                   <li>Partners <span>(1)</span></li>
+                  <li>Classmates</li>
+                  <li>Friends <span>(1)</span></li>
+                 <li>Colleagues<span>(17)</span></li>
+                   <li>Untagged<span>(17)</span></li>
+                  <li>Classmates<span>(17)</span></li>
+               </ul>
+          </li>
+        <li class="parent"> <a>Industries</a>
+       <ul class="leftmenu_sub">
+                 <li>Friends<span> (1)</span></li>
+                 <li>Group members <span>(1)</span></li>
+                   <li>Partners <span>(1)</span></li>
+                  <li>Classmates</li>
+                  <li>Friends <span>(1)</span></li>
+                 <li>Colleagues<span>(17)</span></li>
+                   <li>Untagged<span>(17)</span></li>
+                  <li>Classmates<span>(17)</span></li>
+               </ul>
+         </li>
+        <li class="parent"><a>Recent Activity</a> 
+       <ul class="leftmenu_sub">
+                 <li>Friends<span> (1)</span></li>
+                 <li>Group members <span>(1)</span></li>
+                   <li>Partners <span>(1)</span></li>
+                  <li>Classmates</li>
+                  <li>Friends <span>(1)</span></li>
+                 <li>Colleagues<span>(17)</span></li>
+                   <li>Untagged<span>(17)</span></li>
+                  <li>Classmates<span>(17)</span></li>
+               </ul>
+         </li>
+        <ul>
+      </div>
+      <!-- main_content_wrapper_left Ends-->
+      <!-- main_content_wrapper_center-->
+      
+      <div id="main_content_wrapper_center">
+     
+         <div class="scroll-pane">
+         <div id="allconnection_alphabet"><span>D</span></div>
+            <ul>
+               <li class="active">
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check"/></td>
+                        <td id="photo"><img src="/assets/photo3.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">Decky Quick</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td><div class="count">100+</div></td>
+                     </tr>
+                    </table>
+               </li>
+                <li>
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check" /></td>
+                        <td id="photo"><img src="/assets/photo2.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">David Ferns</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td><div class="count">90</div></td>
+                     </tr>
+                    </table>
+               </li>
+               
+            </ul>
+          <div id="allconnection_alphabetend"></div>
+          <div id="allconnection_alphabet"><span>E</span></div>
+            <ul>
+               <li>
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check" /></td>
+                        <td id="photo"><img src="/assets/photo1.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">Eric Ries</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td ><div class="count">90</div></td>
+                     </tr>
+                    </table>
+               </li>
+                
+               
+            </ul>
+          <div id="allconnection_alphabetend"></div>
+          <div id="allconnection_alphabet"><span>G</span></div>
+            <ul>
+               <li>
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check" /></td>
+                        <td id="photo"><img src="/assets/photo4.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">George Anders</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td><div class="count">100+</div></td>
+                     </tr>
+                    </table>
+               </li>
+                <li>
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check" /></td>
+                        <td id="photo"><img src="/assets/photo5.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">Geni Whitehouse</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td><div class="count">90</div></td>
+                     </tr>
+                    </table>
+               </li>
+               
+            </ul>
+          <div id="allconnection_alphabetend"></div>
+          
+          
+          <div id="allconnection_alphabet"><span>H</span></div>
+            <ul>
+               <li>
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check" /></td>
+                        <td id="photo"><img src="/assets/photo6.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">Herb Greenberg</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td><div class="count">90</div></td>
+                     </tr>
+                    </table>
+               </li>
+               <li>
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check" /></td>
+                        <td id="photo"><img src="/assets/photo6.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">Herb Greenberg</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td><div class="count">100+</div></td>
+                     </tr>
+                    </table>
+               </li>
+                
+            </ul>
+            <div id="allconnection_alphabetend"></div>
+            <div id="allconnection_alphabet"><span>J</span></div>
+            <ul>
+               <li>
+                    <table>
+                     <tr>
+                        <td id="checkbox"><input type="checkbox" class="check" /></td>
+                        <td id="photo"><img src="/assets/photo7.jpg" /></td>
+                        <td id="details">
+                            <div id="connection_name">Jeff Jordan</div>
+                            <div id="designation">Regional Sales Manager - </div>
+                            <div id="division">Enterprise Division - </div>
+                            <div id="company">Routesms Solutions Limited  - </div>
+                        </td>
+                        <td><div class="count">100+</div></td>
+                     </tr>
+                    </table>
+               </li>
+                
+            </ul>
+          <div id="allconnection_alphabetend"></div>
+            </div>
+      </div>
+       <!-- main_content_wrapper_center Ends-->
+       <!-- main_content_wrapper_right-->
+      <div id="main_content_wrapper_right">
+          
+          
+          <div id="load" style="display:none">
+          <!--profile-->         
+          <div id="profile">
+           <div id="profile_top"></div>
+           <!--profile_content-->
+           <div id="profile_content">
+               <!--profile_content_wrapper-->
+                <div id="profile_content_wrapper"></div>
+                 <!--profile_content_wrapper End-->
+           
+           </div>
+           <!--profile_content End-->
+          </div>
+          <!--profile End--> 
+          </div>
+          
+          <div id="profileload" >
+           <!--profile-->         
+          <div id="profile">
+           <div id="profile_top"></div>
+           <!--profile_content-->
+           <div id="profile_content">
+               <!--profile_content_wrapper-->
+                <div id="profile_content_wrapper">
+                      <div id="profile_content_wrapper_photo"><img src="/assets/photo_wrapper.png" /></div>
+                      <!--profile_content_wrapper_detail-->
+                       <div id="profile_content_wrapper_detail">
+                           <div id="profile_name">David Ferns</div>
+                           <div id="profile_designation">Regional Sales Manager - </div>
+                           <div id="profile_division">Enterprise Division - </div>
+                           <div id="profile_company">Routesms Solutions Limited  - </div>
+                
+                       </div>
+                        <!--profile_content_wrapper_detail End-->
+                        <div class="clear"></div>
+                       <div id="connections">500<a href="">connections</a><span>(2 are new)</span></div>
+                       <div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Send message</a></div>
+                       <div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Edit Details</a></div>
+                       <div id="subdetails">Tags:</div>
+                       <div id="subdetails_sub"><a href="">Edit tags</a></div>
+                       <div id="subdetails">Email:</div>
+                       <div id="subdetails_sub"><a href="">ericries@gmail.com</a>Primary</div>
+                       <div id="subdetails">Phone:</div>
+                       <div id="subdetails_sub">+968 92451315 mobile</div>
+                       <div id="subdetails">Title:</div>
+                       <div id="subdetails_sub">Regional Sales Manager - Enterprise Division 
+</div>
+                       <div id="subdetails">Company:</div>
+                       <div id="subdetails_sub">Mars International LLC</div>
+                       <div id="subdetails">IM:</div>
+                       <div id="subdetails_sub">ericries Google Talk</div>
+                       <div id="subdetails">Birthday:</div>
+                       <div id="subdetails_sub">May 16, 1985</div>
+                </div>
+                 <!--profile_content_wrapper End-->
+           
+           </div>
+           <!--profile_content End-->
+          </div>
+          <!--profile End--> 
+          
+          </div>
+   
+      </div>
+      <!-- main_content_wrapper_right Ends-->
+      <div id="status">357 outstanding <span><a href="#">sent invitations</a></span> | <span><a href="#">Export connections</a></span></div>       
+     
+          
+   </div>
+   <!--main_content_wrapper ends-->
+   
+     <!--footer_wrapper-->
+     <div id="footer">
+          <div id="footer_inner">
+            <ul id="footer_menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Contacts</a></li>
+              <li><a href="#">Jobs</a></li>
+              
+              <li><a href="#">Companies</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Help Center</a></li>
+               <li><a href="#">Contact Us</a></li>
+             </ul>
+             
+             <div id="copyright"><a href="#" target="_new">Go global &copy;2013</a></div>
+          </div>
+      </div>
+       <!--footer_wrapper ends-->
+      
+<script src="/assets/script.js"></script>
+
+   
+</body>
+</html>
