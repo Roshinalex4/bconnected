@@ -16,4 +16,6 @@
 //= require jquery.stylish-select
 //= require jquery.easing
 //= require jquery.slidorion.min
+//= require jScrollPane
+//= require jquery.mousewheel
 //= require_tree .
