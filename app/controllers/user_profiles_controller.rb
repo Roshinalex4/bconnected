@@ -4,6 +4,7 @@ class UserProfilesController < ApplicationController
 	
 	def home
 	  @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id').limit(3)
+	  @user_profile = UserProfile.where(:user_id => current_user.id).first
 	end
 	
 	def following
@@ -47,10 +48,12 @@ class UserProfilesController < ApplicationController
   
   #Show the form 'Connect with people you know on Bconnected'
   def connect_with_form
+    @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id').limit(3)
     @user_profile = UserProfile.where(:user_id => params[:user_id]).first
   end
 
   def enter_password_to_connect
+    @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id').limit(3)
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
   end
   
@@ -69,6 +72,7 @@ class UserProfilesController < ApplicationController
 	end
 
 	def invite_contacts_form
+	  @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id').limit(3)
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
 
@@ -83,6 +87,7 @@ class UserProfilesController < ApplicationController
 	end
 
 	def enter_password_to_invite
+	  @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id').limit(3)
 		@user_profile = UserProfile.where(:user_id => params[:user_id]).first
 	end
 	

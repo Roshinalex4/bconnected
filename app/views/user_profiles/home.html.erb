@@ -169,7 +169,7 @@
 			<!--right_top_wrapper_right-->
 			<div id="right_top_wrapper_right">
 				<div id="top_welcome">
-					Welcome, Scott! See Who Already Know on Go global
+					Welcome, <%= current_user.first_name %> <%= current_user.last_name %>! See Who Already Know on Go global
 				</div>
 				<div id="top_welcome_bottom">
 					Get Started by adding your email address.
@@ -177,19 +177,19 @@
 				<!--top_mail_wrapper-->
 				<div id="top_mail_wrapper">
 					<div id="mail_left">
-						<form action="" name="frmEmail" id="frmEmail" method="post">
+						<%= form_for @user_profile, :url => '/user_profiles/email_add/'+ @user_profile.user_id.to_s, :html => {:method => :put, :id => "frmEmail"} do |f| %>
 							<table border="0" class="tbl_email">
 								<tr>
 									<td><label> Your email :</label></td>
 									<td>
-									<input type="text" name="txtEmail" id="txtEmail" value="scott@gmail.com"/>
+									<%= f.email_field :email_assoc, :id => "txtEmail" %>
 									</td>
 									<td>
-									<input type="submit" name="bttnEmail" id="bttnEmail" value="Continue" />
+									<%= f.submit "Continue", :id => "bttnEmail" %>
 									</td>
 								</tr>
 							</table>
-						</form>
+						<% end %>
 					</div>
 					<div id="mail_right">
 						<div class="mail_images"><img src="/assets/yahoo.jpg" border="0" />

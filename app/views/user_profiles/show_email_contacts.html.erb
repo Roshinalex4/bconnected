@@ -1,8 +1,394 @@
-<%= form_for @connection do |f| %>
-	<%= check_box("send_invite_all", "select_all", {}, "select_all", "") %> Select All <br clear="all" />
-	<% @contacts.each_with_index do |contact, i| %>
-		<%= check_box_tag "email_contacts[]", contact[1] %> <%= contact[1]	 %> <br clear="all" />
-	<% end %>
-	<%= f.submit "Invite to Join" %>
-<% end %>
+<div id="main_content_wrapper">
+	<div id="main_content_wrapper_menu">
+		<div id="connection">
+			<a href="#">Connections</a>
+		</div>
+		<div id="importedcontacts">
+			<a href="#">Imported Contacts</a>
+		</div>
+		<div id="removeconnection">
+			<a href="#">Remove Connections</a>
+		</div>
+		<div id="adconnection">
+			<a href="#">Add Connections</a>
+		</div>
+	</div>
+	<!--main_content_wrapper_menu ends-->
+	<!--/*connection wrapper*/-->
+	<div id="connection_wrapper">
+		<table border="0">
+			<tr>
+				<td id="filter_connection">
+				<form action="" name="frmSearch" id="frmSearch" method="post">
+					<input type="text" name="txtKeyword" id="txtKeyword" value="Filter Connections" onfocus="if(this.value=='Filter Connections'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Filter Connections';this.style.color='#999';}"/>
+				</form></td>
+				<td id="allconnection"><a href="#">All Connection</a><span>(27)</span></td>
+				<td id="select">Select:<span><a href="#">All</a></span>,<span><a href="#">none</a></span></td>
+				<td id="abc">
+				<div class="alphabetsub" style="display: none;">
+					<div class="alphabetsub_first"></div>
+					<div class="alphabetsub_Content">
+						<ul>
+							<li>
+								<a href="#">A</a>
+							</li>
+							<li>
+								<a href="#">B</a>
+							</li>
+							<li>
+								<a href="#">C</a>
+							</li>
+							<li>
+								<a href="#">D</a>
+							</li>
+							<li>
+								<a href="#">E</a>
+							</li>
+							<li>
+								<a href="#">F</a>
+							</li>
+							<li>
+								<a href="#">G</a>
+							</li>
+							<li>
+								<a href="#">H</a>
+							</li>
+							<li>
+								<a href="#">I</a>
+							</li>
+							<li>
+								<a href="#">J</a>
+							</li>
+							<li>
+								<a href="#">K</a>
+							</li>
+							<li>
+								<a href="#">L</a>
+							</li>
+							<li>
+								<a href="#">M</a>
+							</li>
+						</ul>
+						<div class="alphabetsub_Content_sub">
+							#
+						</div>
+						<ul>
+							<li>
+								<a href="#">N</a>
+							</li>
+							<li>
+								<a href="#">O</a>
+							</li>
+							<li>
+								<a href="#">P</a>
+							</li>
+							<li>
+								<a href="#">Q</a>
+							</li>
+							<li>
+								<a href="#">R</a>
+							</li>
+							<li>
+								<a href="#">S</a>
+							</li>
+							<li>
+								<a href="#">T</a>
+							</li>
+							<li>
+								<a href="#">U</a>
+							</li>
+							<li>
+								<a href="#">V</a>
+							</li>
+							<li>
+								<a href="#">W</a>
+							</li>
+							<li>
+								<a href="#">X</a>
+							</li>
+							<li>
+								<a href="#">Y</a>
+							</li>
+							<li>
+								<a href="#">Z</a>
+							</li>
+						</ul>
+					</div>
+					<div class="alphabetsub_last"></div>
+				</div></td>
+			</tr>
+		</table>
+	</div>
+	<!--/*connection wrapper End*/-->
+	<!-- main_content_wrapper_left-->
+	<div id="main_content_wrapper_left">
+		<ul class="leftmenu">
+			<li class="parent">
+				<a>Tags</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Companies</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Locations</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Industries</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<li class="parent">
+				<a>Recent Activity</a>
+				<ul class="leftmenu_sub">
+					<li>
+						Friends<span> (1)</span>
+					</li>
+					<li>
+						Group members <span>(1)</span>
+					</li>
+					<li>
+						Partners <span>(1)</span>
+					</li>
+					<li>
+						Classmates
+					</li>
+					<li>
+						Friends <span>(1)</span>
+					</li>
+					<li>
+						Colleagues<span>(17)</span>
+					</li>
+					<li>
+						Untagged<span>(17)</span>
+					</li>
+					<li>
+						Classmates<span>(17)</span>
+					</li>
+				</ul>
+			</li>
+			<ul>
+	</div>
+	<!-- main_content_wrapper_left Ends-->
+	<!-- main_content_wrapper_center-->
+	<div id="main_content_wrapper_center">
+		
+		<%= form_for @connection do |f| %>
+			<%= check_box("send_invite_all", "select_all", {}, "select_all", "") %> Select All <br clear="all" />
+			<div style="max-height: 722px;overflow-y: scroll;">
+			<% @contacts.each_with_index do |contact, i| %>
+				<%= check_box_tag "email_contacts[]", contact[1] %> <%= contact[1]	 %> <br clear="all" />
+			<% end %>
+			</div>
+			<%= f.submit "Invite to Join" %>
+		<% end %>
+		
+	</div>
+	<!-- main_content_wrapper_center Ends-->
+	<!-- main_content_wrapper_right-->
+	<div id="main_content_wrapper_right">
+		<div id="load" style="display:none">
+			<!--profile-->
+			<div id="profile">
+				<div id="profile_top"></div>
+				<!--profile_content-->
+				<div id="profile_content">
+					<!--profile_content_wrapper-->
+					<div id="profile_content_wrapper"></div>
+					<!--profile_content_wrapper End-->
+				</div>
+				<!--profile_content End-->
+			</div>
+			<!--profile End-->
+		</div>
+		<div id="profileload" >
+			<!--profile-->
+			<div id="profile">
+				<div id="profile_top"></div>
+				<!--profile_content-->
+				<div id="profile_content">
+					<!--profile_content_wrapper-->
+					<div id="profile_content_wrapper">
+						<div id="profile_content_wrapper_photo"><img src="/assets/photo_wrapper.png" />
+						</div>
+						<!--profile_content_wrapper_detail-->
+						<div id="profile_content_wrapper_detail">
+							<div id="profile_name">
+								David Ferns
+							</div>
+							<div id="profile_designation">
+								Regional Sales Manager -
+							</div>
+							<div id="profile_division">
+								Enterprise Division -
+							</div>
+							<div id="profile_company">
+								Routesms Solutions Limited  -
+							</div>
+						</div>
+						<!--profile_content_wrapper_detail End-->
+						<div class="clear"></div>
+						<div id="connections">
+							500<a href="">connections</a><span>(2 are new)</span>
+						</div>
+						<div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Send message</a>
+						</div>
+						<div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Edit Details</a>
+						</div>
+						<div id="subdetails">
+							Tags:
+						</div>
+						<div id="subdetails_sub">
+							<a href="">Edit tags</a>
+						</div>
+						<div id="subdetails">
+							Email:
+						</div>
+						<div id="subdetails_sub">
+							<a href="">ericries@gmail.com</a>Primary
+						</div>
+						<div id="subdetails">
+							Phone:
+						</div>
+						<div id="subdetails_sub">
+							+968 92451315 mobile
+						</div>
+						<div id="subdetails">
+							Title:
+						</div>
+						<div id="subdetails_sub">
+							Regional Sales Manager - Enterprise Division
+						</div>
+						<div id="subdetails">
+							Company:
+						</div>
+						<div id="subdetails_sub">
+							Mars International LLC
+						</div>
+						<div id="subdetails">
+							IM:
+						</div>
+						<div id="subdetails_sub">
+							ericries Google Talk
+						</div>
+						<div id="subdetails">
+							Birthday:
+						</div>
+						<div id="subdetails_sub">
+							May 16, 1985
+						</div>
+					</div>
+					<!--profile_content_wrapper End-->
+				</div>
+				<!--profile_content End-->
+			</div>
+			<!--profile End-->
+		</div>
+	</div>
+	<!-- main_content_wrapper_right Ends-->
+	<div id="status">
+		357 outstanding <span><a href="#">sent invitations</a></span> | <span><a href="#">Export connections</a></span>
+	</div>
+</div>
 

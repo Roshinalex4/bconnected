@@ -22,7 +22,7 @@ class ConnectionsController < ApplicationController
 					send_invitation_email(contact)
 				end
 			end
-			@action = "/user_profiles/view_user_profile"
+			@action = "/user_profiles/home"
 		end                                         
     #Loop through all email ids                    
       #Send Invitation Email through bconnected    
