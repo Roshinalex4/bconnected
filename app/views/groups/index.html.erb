@@ -1,26 +1,57 @@
-<h1>Listing groups</h1>
-<span class="right"><%= link_to 'Create a Group', new_group_path %></span>
-<br clear="all" />
-<ul class="list">
-<% @groups.each do |group| %>
-	<br clear='all' />
-	<li class="list_item">
-		<div class="list_item_content">
-			<div class="group_logo">
-				<%= image_tag group.logo.url(:thumb) %>
-			</div>
-			<div class="group_summary">
-				<%= link_to group.group_name, group %><br />
-				<%= group.summary %><br />
-				Very Active: 111190 discussions this month. 76767 members.<br />
-				12 in your network<br />
-				<a href="#">Join to view all 89 people</a>
-			</div>
-			<div class="group_action">
-				<%= link_to 'View', group %>
-			</div>
-		</div>
-	</li>
-<% end %>
-</ul>
+<!--groups_main_wrapper-->
+      <div id="groups_main_wrapper">
+         <!--groups_content_wrapper-->
+         <div id="groups_content_wrapper">
+           <!--groups_content_top-->
+           <div id="groups_content_top">
+             <div id="group_title">Groups</div>
+             <div id="group_count"><%= @groups.count %></div>
+             <div id="group_search"><input type="text" id="txtsearch" name="txtsearch" value="Search....." onfocus="if(this.value=='Search.....'){this.value='';this.style.color='#999';}" onblur="if(this.value==''){this.value='Search.....';this.style.color='#999';}"/></div>
+             <div id="group_create"><%= link_to "Create group", new_group_path %></div>
+           </div>
+           <!--groups_content_top ends-->
+           <div id="group_reorder_heading">Reorder</div>
+           <!--ul group_content-->
+           <ul id="group_content">
+             <% @groups.each do |group| %>
+             <li>
+               <!--group_details_wrapper-->
+               <div id="group_details_wrapper">
+                 <div id="details_wrapper_top"><%= link_to group.group_name, group %></div>
+                 <div id="details_main_img"><%= image_tag group.logo.url(:medium), :width => "195px", :height => "133px" %></div>
+                 <div id="details_wrapper_bottom"> 
+                   
+                    <div id="wrapper_bottom_contacts">
+                        Nobody from your Contacts
+                    </div>
+                    
+                 </div>
+                 <div id="wrapper_bottom_bottom">
+                    
+                    <div id="group_icon_wrapper">
+                     <span class="hotspot" onmouseover="tooltip.show('<strong>Statistics of this group</strong>');"onmouseout="tooltip.hide();">  
+                    <a href="#">
+                       <div class="message_icon_stat"></div></a></span>
+                        <span class="hotspot" onmouseover="tooltip.show('<strong>20 new discussions</strong>');"onmouseout="tooltip.hide();">  
+                      <a href="#">
+                         <div class="group_message_icon">
+                         <a class="group_msgcount" href="#">20</a>
+                       </div></a></span>
+                        <span class="hotspot" onmouseover="tooltip.show('<strong>8 jobs and job discussions</strong>');"onmouseout="tooltip.hide();">  
+                       <div class="group_notification_icon">
+                         <a class="group_msgcount" href="#">20</a>
+                       </div></
+                    </div>
+                 </div>
+               </div>
+               <!--group_details_wrapper ends-->
+             </li>
+             <% end %>
+           </ul>
+           <!--ul group_content ends-->
+         </div>
+         <!--groups_content_wrapper ends-->
+      </div>
+   <!--groups_main_wrapper ends-->
+   
 

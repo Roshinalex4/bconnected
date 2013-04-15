@@ -1,114 +1,230 @@
-<%= form_for(@group) do |f| %>
-  <% if @group.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
-
-      <ul>
-      <% @group.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="label">
-  	<%= f.label :logo %>
-  </div>
-  <div class="field">
-  	Your logo will appear in the Groups Directory and on your group pages.<br />
-  	<%= f.file_field :logo %>
-  </div>
-  <div class="label">
-    <%= f.label :group_name %>
-  </div>
-  <div class="field">
-    <%= f.text_field :group_name %>
-  </div>
-  <div class="label">
-    <%= f.label :group_type %>
-  </div>
-  <div class="field">
-    <%= f.select :group_type, ["Alumni Group", "Corporate Group", "Conference Group", "Networking Group", "Non-profit Group", "Professional Group"] %>
-  </div>
-  <div class="label">
-    <%= f.label :summary %>
-  </div>
-  <div class="field">
-  	Enter a brief description about your group and its purpose. Your summary about this group will appear in the Groups Directory.<br clear="all" />
-    <%= f.text_area :summary %>
-  </div>
-  <div class="label">
-    <%= f.label :description %>
-  </div>
-  <div class="field">
-  	Your full description of this group will appear on your group pages. <br clear="all" />
-    <%= f.text_area :description %>
-  </div>
-  <div class="label">
-    <%= f.label :website %>
-  </div>
-  <div class="field">
-    <%= f.text_field :website %>
-  </div>
-  <div class="label">
-    <%= f.label :group_owner_email %>
-  </div>
-  <div class="field">
-    <%= f.text_field :group_owner_email %>
-  </div>
-  <div class="label">
-    <%= f.label :access %>
-  </div>
-  <div class="field">
-    <%= f.radio_button :access, 0 %>Auto-Join: Any LinkedIn member may join this group without requiring approval from a manager.<br>
-    <%= f.radio_button :access, 1 %>Request to Join: Users must request to join this group and be approved by a manager.
-  </div>
-  <div class="label">
-  	&nbsp;
-  </div>
-  <div class="field">
-    <%= f.check_box :display_in_directory %><%= f.label "Display this group in the Groups Directory" %><br />
-    <%= f.check_box :allow_display_logo %><%= f.label "Allow members to display the logo on their profiles. Also, send your connections a Network Update that you have created this group." %><br />
-  	<%= f.check_box :allo_invite_others %><%= f.label "Allow members to invite others to join this group." %>
-  </div>
-  <div class="label">
-    <%= f.label :language %>
-  </div>
-  <div class="field">
-    <%= f.select :language, ["English", "Dutch"] %>
-  </div>
-  <div class="label">
-  	Location
-  </div>
-  <div class="field">
-    <%= f.check_box :single_location %><%= f.label "This group is based in a single geographic location." %>
-  </div>
-  <div class="label">
-    &nbsp;
-  </div>
-  <div class="field">
-    <%= f.country_select :country_id %><br />
-    <%= f.text_field :postal_code %>
-  </div>
-  
-  <div class="label">
-    Agreement
-  </div>
-  <div class="field">
-    <%= f.check_box :check_agreement %><%= f.label "Check to confirm you have read and accept the Terms of Service." %>
-  </div>
-  <div class="label">
-  	&nbsp;
-  </div>
-  <div class="field">
-  	Discussions in LinkedIn groups can either be open to the world to see and share, or restricted to members only.
-  	<%= f.button "Learn about Open Groups" %>
-  </div>
-  <div class="label">
-  	&nbsp;
-  </div>
-  <div class="field">
-    <%= f.submit "Create an Open Group" %>
-    <%= f.submit "Create a Members-Only Group" %> or <%= link_to 'Cancel', groups_path %>
-  </div>
+<% if @group.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+	<ul>
+		<% @group.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
 <% end %>
+<table width="700px">
+	<tr></tr><tr></tr><tr></tr>
+	<%= form_for(@group) do |f| %>
+	<tr>
+		<td class="field_heading">Logo</td>
+		<td class="field_description">Your logo will appear in the Groups Directory and on your group pages.</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<div class="file_upload">
+			<%= f.file_field :logo, :id => "fleupld" %>
+		</div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="logo_alert">Note: PNG, JPEG, or GIF only; max size 100 KB</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="logo_wrapper"><img src="/assets/create_logo.png" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="agree_terms">
+		<input type="checkbox" id="chk_agree" name="chkname" />
+		I acknowledge and agree that the logo/image I am uploading does not infringe upon
+		any third party cop yrights, trademarks, or other proprietary rights or otherwise violate
+		the User Agreement. </td>
+	</tr>
+	<tr>
+		<td class="field_heading"><span>*</span>Group Name </td>
+		<td>
+		<div class="group_text">
+			<%= f.text_field :group_name, :id => "txtgroupname" %>
+		</div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<div class="logo_alert">
+			Note: "Go global" is not allowed to be used in your group name.
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			<span>*</span>Group Type
+		</div></td>
+		<td>
+		<div class="group_select">
+			<%= f.select :group_type, ["Alumni Group", "Corporate Group", "Conference Group", "Networking Group", "Non-profit Group", "Professional Group"], :id => "selGroup" %>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			<span>*</span>Summary
+		</div></td>
+		<td>
+		<div class="field_description">
+			Enter a brief description about your group and its purpose. Your summary about this group
+			will appear in the Groups Directory.
+		</div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<div class="group_textarea">
+			<%= f.text_area :summary, :id=>"txtsummary" %>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			<span>*</span>Description
+		</div></td>
+		<td> Your full description of this group will appear on your group pages. </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<div class="group_textarea">
+			<%= f.text_area :description, :id=>"txtdesc" %>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			Website
+		</div></td>
+		<td>
+		<div class="group_text">
+			<%= f.text_field :website, :id=>"txt_website"  %>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			<span>*</span>Group Owner Email
+		</div></td>
+		<td>
+		<div class="group_text">
+			<%= f.text_field :group_owner_email, :id=>"txtemail" %>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			<span>*</span>Access
+		</div></td>
+		<td>
+		<div class="field_access_radio">
+			<%= f.radio_button :access, 0, :id=>"rdb_without" %>
+			Auto-Join: Any Go global member may join this group without requiring approval from
+			a manager.
+		</div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<div class="field_access_without">
+			<%= f.radio_button :access, 1, :id=>"rdb_without"%>
+			Request to Join: Users must request to join this group and be approved by a manager.
+		</div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<div id="group_features_wrapper">
+			<div id="features_msg">
+				<%= f.check_box :display_in_directory, :id=>"chk_display" %>
+				Display this group in the Groups Directory.
+			</div>
+			<div id="features_msg">
+				<%= f.check_box :allow_display_logo, :id=>"chk_display" %>
+				Allow members to display the logo on their profiles. Also, send your connections
+				a Network Update that you have created this group.
+			</div>
+			<div id="features_msg">
+				<%= f.check_box :allo_invite_others, :id=>"chk_display" %>
+				Allow members to invite others to join this group.
+			</div>
+			<div id="featured_preapprove">
+				Pre-approve members with the following email domain(s):
+			</div>
+			<div id="featured_text">
+				<textarea id="txtfea_text" name="featxt"></textarea>
+</div>		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			Language
+		</div></td>
+		<td>
+		<div class="group_select">
+			<%= f.select :language, ["English", "Dutch"], :id=>"selLan" %>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			Location
+		</div></td>
+		<td>
+		<div id="location">
+			<%= f.check_box :single_location, :id => "chk_geog" %>
+			This group is based in a single geographic location.
+			<%= f.country_select :country_id %>
+			<%= f.text_field :postal_code %>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			Twitter Announcement
+		</div></td>
+		<td>
+		<div id="twitter_announcement">
+			<input type="checkbox" id="chktwitter" name="chk_twitter" />
+			<div id="twitter_img"></div>
+		</div></td>
+	</tr>
+	<tr>
+		<td>
+		<div class="field_heading">
+			<span>*</span>Agreement
+		</div></td>
+		<td>
+		<div id="location">
+			<%= f.check_box :check_agreement, :id=>"chk_geog" %>
+			Check to confirm you have read and accept the Terms of Service.
+		</div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><div id="bottom_arrow"></div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<form id="frmcreate" name="frm_create" method="post" action="">
+			<div id="creategroup_bttn">
+				<%= f.submit "Create group", :id => "bttncreate" %>
+			</div>
+		<% end %> </td>
+	</tr>
+	<tr></tr><tr></tr><tr></tr><tr></tr>
+</table>
 
+
+
+	
+	
+	
+	
+	
