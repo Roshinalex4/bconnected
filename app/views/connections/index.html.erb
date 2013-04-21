@@ -29,89 +29,39 @@
 					<div class="alphabetsub_first"></div>
 					<div class="alphabetsub_Content">
 						<ul>
+							<%= form_tag "", :id => "alpha", :method => "POST" do%>
+							<% "A".upto("M") do |l| -%>
 							<li>
-								<a href="#">A</a>
+								<%= link_to l, "#", :class => "alphabet", :id => l %>
 							</li>
-							<li>
-								<a href="#">B</a>
-							</li>
-							<li>
-								<a href="#">C</a>
-							</li>
-							<li>
-								<a href="#">D</a>
-							</li>
-							<li>
-								<a href="#">E</a>
-							</li>
-							<li>
-								<a href="#">F</a>
-							</li>
-							<li>
-								<a href="#">G</a>
-							</li>
-							<li>
-								<a href="#">H</a>
-							</li>
-							<li>
-								<a href="#">I</a>
-							</li>
-							<li>
-								<a href="#">J</a>
-							</li>
-							<li>
-								<a href="#">K</a>
-							</li>
-							<li>
-								<a href="#">L</a>
-							</li>
-							<li>
-								<a href="#">M</a>
-							</li>
+							<% end %>
+							<% end %>
+							<script>
+								$('.alphabet').click(function () {
+									var query = $(this).attr("id");
+									$('#alpha').attr('action', "user_profiles/filter?first_name="+query);
+									$('#alpha').submit();
+								});
+							</script>
 						</ul>
 						<div class="alphabetsub_Content_sub">
 							#
 						</div>
 						<ul>
+							<%= form_tag "", :id => "alpha2", :method => "POST" do%>
+							<% "N".upto("Z") do |l| -%>
 							<li>
-								<a href="#">N</a>
+								<%= link_to l, "#", :class => "alphabet1", :id => l %>
 							</li>
-							<li>
-								<a href="#">O</a>
-							</li>
-							<li>
-								<a href="#">P</a>
-							</li>
-							<li>
-								<a href="#">Q</a>
-							</li>
-							<li>
-								<a href="#">R</a>
-							</li>
-							<li>
-								<a href="#">S</a>
-							</li>
-							<li>
-								<a href="#">T</a>
-							</li>
-							<li>
-								<a href="#">U</a>
-							</li>
-							<li>
-								<a href="#">V</a>
-							</li>
-							<li>
-								<a href="#">W</a>
-							</li>
-							<li>
-								<a href="#">X</a>
-							</li>
-							<li>
-								<a href="#">Y</a>
-							</li>
-							<li>
-								<a href="#">Z</a>
-							</li>
+							<% end %>
+							<% end %>
+							<script>
+								$('.alphabet1').click(function () {
+									var query = $(this).attr("id");
+									$('#alpha2').attr('action', "user_profiles/filter?first_name="+query);
+									$('#alpha2').submit();
+								});
+							</script>
 						</ul>
 					</div>
 					<div class="alphabetsub_last"></div>
@@ -274,8 +224,9 @@
 	<!-- main_content_wrapper_center-->
 	<div id="main_content_wrapper_center">
 		<div class="scroll-pane">
+			<% @contacts.each do |contact|%>
 			<div id="allconnection_alphabet">
-				<span>D</span>
+<!-- 				<span>D</span> -->
 			</div>
 			<ul>
 				<li class="active">
@@ -287,229 +238,16 @@
 							<td id="photo"><img src="/assets/photo3.jpg" /></td>
 							<td id="details">
 							<div id="connection_name">
-								Decky Quick
+								<%= link_to contact.user_profile.display_name, connection_path(contact.id) %>
 							</div>
 							<div id="designation">
-								Regional Sales Manager -
+								<%= contact.user_profile.professional_headline %> -
 							</div>
 							<div id="division">
-								Enterprise Division -
+								<%= contact.user_profile.industry %> -
 							</div>
 							<div id="company">
-								Routesms Solutions Limited  -
-							</div></td>
-							<td>
-							<div class="count">
-								100+
-							</div></td>
-						</tr>
-					</table>
-				</li>
-				<li>
-					<table>
-						<tr>
-							<td id="checkbox">
-							<input type="checkbox" class="check" />
-							</td>
-							<td id="photo"><img src="/assets/photo2.jpg" /></td>
-							<td id="details">
-							<div id="connection_name">
-								David Ferns
-							</div>
-							<div id="designation">
-								Regional Sales Manager -
-							</div>
-							<div id="division">
-								Enterprise Division -
-							</div>
-							<div id="company">
-								Routesms Solutions Limited  -
-							</div></td>
-							<td>
-							<div class="count">
-								90
-							</div></td>
-						</tr>
-					</table>
-				</li>
-			</ul>
-			<div id="allconnection_alphabetend"></div>
-			<div id="allconnection_alphabet">
-				<span>E</span>
-			</div>
-			<ul>
-				<li>
-					<table>
-						<tr>
-							<td id="checkbox">
-							<input type="checkbox" class="check" />
-							</td>
-							<td id="photo"><img src="/assets/photo1.jpg" /></td>
-							<td id="details">
-							<div id="connection_name">
-								Eric Ries
-							</div>
-							<div id="designation">
-								Regional Sales Manager -
-							</div>
-							<div id="division">
-								Enterprise Division -
-							</div>
-							<div id="company">
-								Routesms Solutions Limited  -
-							</div></td>
-							<td >
-							<div class="count">
-								90
-							</div></td>
-						</tr>
-					</table>
-				</li>
-			</ul>
-			<div id="allconnection_alphabetend"></div>
-			<div id="allconnection_alphabet">
-				<span>G</span>
-			</div>
-			<ul>
-				<li>
-					<table>
-						<tr>
-							<td id="checkbox">
-							<input type="checkbox" class="check" />
-							</td>
-							<td id="photo"><img src="/assets/photo4.jpg" /></td>
-							<td id="details">
-							<div id="connection_name">
-								George Anders
-							</div>
-							<div id="designation">
-								Regional Sales Manager -
-							</div>
-							<div id="division">
-								Enterprise Division -
-							</div>
-							<div id="company">
-								Routesms Solutions Limited  -
-							</div></td>
-							<td>
-							<div class="count">
-								100+
-							</div></td>
-						</tr>
-					</table>
-				</li>
-				<li>
-					<table>
-						<tr>
-							<td id="checkbox">
-							<input type="checkbox" class="check" />
-							</td>
-							<td id="photo"><img src="/assets/photo5.jpg" /></td>
-							<td id="details">
-							<div id="connection_name">
-								Geni Whitehouse
-							</div>
-							<div id="designation">
-								Regional Sales Manager -
-							</div>
-							<div id="division">
-								Enterprise Division -
-							</div>
-							<div id="company">
-								Routesms Solutions Limited  -
-							</div></td>
-							<td>
-							<div class="count">
-								90
-							</div></td>
-						</tr>
-					</table>
-				</li>
-			</ul>
-			<div id="allconnection_alphabetend"></div>
-			<div id="allconnection_alphabet">
-				<span>H</span>
-			</div>
-			<ul>
-				<li>
-					<table>
-						<tr>
-							<td id="checkbox">
-							<input type="checkbox" class="check" />
-							</td>
-							<td id="photo"><img src="/assets/photo6.jpg" /></td>
-							<td id="details">
-							<div id="connection_name">
-								Herb Greenberg
-							</div>
-							<div id="designation">
-								Regional Sales Manager -
-							</div>
-							<div id="division">
-								Enterprise Division -
-							</div>
-							<div id="company">
-								Routesms Solutions Limited  -
-							</div></td>
-							<td>
-							<div class="count">
-								90
-							</div></td>
-						</tr>
-					</table>
-				</li>
-				<li>
-					<table>
-						<tr>
-							<td id="checkbox">
-							<input type="checkbox" class="check" />
-							</td>
-							<td id="photo"><img src="/assets/photo6.jpg" /></td>
-							<td id="details">
-							<div id="connection_name">
-								Herb Greenberg
-							</div>
-							<div id="designation">
-								Regional Sales Manager -
-							</div>
-							<div id="division">
-								Enterprise Division -
-							</div>
-							<div id="company">
-								Routesms Solutions Limited  -
-							</div></td>
-							<td>
-							<div class="count">
-								100+
-							</div></td>
-						</tr>
-					</table>
-				</li>
-			</ul>
-			<div id="allconnection_alphabetend"></div>
-			<div id="allconnection_alphabet">
-				<span>J</span>
-			</div>
-			<ul>
-				<li>
-					<table>
-						<tr>
-							<td id="checkbox">
-							<input type="checkbox" class="check" />
-							</td>
-							<td id="photo"><img src="/assets/photo7.jpg" /></td>
-							<td id="details">
-							<div id="connection_name">
-								Jeff Jordan
-							</div>
-							<div id="designation">
-								Regional Sales Manager -
-							</div>
-							<div id="division">
-								Enterprise Division -
-							</div>
-							<div id="company">
-								Routesms Solutions Limited  -
+								<%= contact.user_profile.company %>  -
 							</div></td>
 							<td>
 							<div class="count">
@@ -521,6 +259,7 @@
 			</ul>
 			<div id="allconnection_alphabetend"></div>
 			<br clear="all" />
+			<% end %>
 		</div>
 	</div>
 	<!-- main_content_wrapper_center Ends-->

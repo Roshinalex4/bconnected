@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  layout 'contacts'
+  layout 'groups'
 	before_filter :authenticate_user!
   # GET /groups
   # GET /groups.json

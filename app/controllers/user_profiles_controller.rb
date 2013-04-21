@@ -190,7 +190,7 @@ class UserProfilesController < ApplicationController
   end
 
 	def filter
-		@contacts = User.where("(first_name like ? or last_name like ?) and id <> ?", "%#{params[:user][:first_name]}%", "%#{params[:user][:first_name]}%", current_user.id)
+		@contacts = User.where("(first_name like ? or last_name like ?) and id <> ?", "%#{params[:first_name]}%", "%#{params[:first_name]}%", current_user.id)
 		render 'connections/index'
 	end
 
