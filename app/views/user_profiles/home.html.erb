@@ -15,6 +15,20 @@
 					<input type="text" name="txtGroup" id="txtGroup"  value="Search Groups" onfocus="if(this.value=='Search Groups'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Search Groups';this.style.color='#999';}"/>
 					<input type="submit" name="bttnGroup" id="bttnGroup"  value=""/>
 				</form>
+				<script>
+				   	$("#txtGroup").keyup( function( event )
+					{
+					    if(event.keyCode == 13)
+					    {
+					        location.href = "/groups/search?query="+this.value;
+					    }
+					});
+					$("#bttnGroup").click(function () {
+						var query = $("#txtGroup").val();
+						location.href = "/groups/search?query="+"query";
+						return false;
+					});
+			   </script>
 			</div>
 			<!--group_search_wrapper ends-->
 			<!--group_tbl_wrapper-->

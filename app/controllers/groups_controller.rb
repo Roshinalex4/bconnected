@@ -11,6 +11,11 @@ class GroupsController < ApplicationController
       format.json { render json: @groups }
     end
   end
+  
+  def search
+    @groups = Group.where("group_name like ?", "%"+params[:query]+"%")
+    render 'index'
+  end
 
   # GET /groups/1
   # GET /groups/1.json

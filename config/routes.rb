@@ -16,6 +16,9 @@ Bconnected::Application.routes.draw do
 			get 'approve', :action => 'approve'
 			get 'reject', :action => 'reject'
     end
+    collection do
+      get 'search', :action => 'search'
+    end
   end
 
   devise_for :users, :controllers => { :registrations => "registrations" }
