@@ -71,13 +71,13 @@
 				<div id="menu">
 					<ul>
 						<li>
-							<a href="#">Home</a>
+							<%= link_to "Home", root_path %>
 						</li>
 						<li>
 							<a href="#">What is Go global?</a>
 						</li>
 						<li>
-							<a href="#" >Join Today</a>
+							<a href="/users/sign_up" >Join Today</a>
 						</li>
 						<div id="rightli">
 							<%= image_tag "li.png" %>
@@ -106,19 +106,19 @@
 			<div id="footer_inner">
 				<ul id="footer_menu">
 					<li>
-						<a href="#">Home</a>
+						<%= link_to "Home", root_path %>
 					</li>
 					<li>
-						<a href="#">Profile</a>
+						<%= link_to "Profile", home_user_profiles_path %>
 					</li>
 					<li>
-						<a href="#">Contacts</a>
+						<%= link_to "Contacts", connections_path %>
 					</li>
 					<li>
 						<a href="#">Jobs</a>
 					</li>
 					<li>
-						<a href="#">Companies</a>
+						<%= link_to "Companies", companies_path %>
 					</li>
 					<li>
 						<a href="#">News</a>

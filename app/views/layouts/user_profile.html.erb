@@ -189,22 +189,22 @@
 				<!--top_wrapper_top_inner-->
 				<div id="top_wrapper_top_inner">
 					<div id="logo_wrapper">
-						<a href="index.html">Home</a>
+						<%= link_to "Home", root_path %>
 					</div>
 					<!--right_dropdown_wrapper-->
 					<div id="right_dropdown_wrapper">
 						<div id="addconnection">
-							<a href="#" class="addconnection">Add connection</a>
+							<%= link_to "Add conenction", "/user_profiles/connect_with_form/"+current_user.id.to_s, :class => "addconnection" %>
 						</div>
 						<div id="dropdown">
-							<a class="account"><span>Scott</span></a>
+							<a class="account"><span><%= current_user.user_profile.display_name %></span></a>
 							<div class="submenudropdown" style="display: none;">
 								<ul class="root">
 									<li>
 										<a href="#Dashboard" >Settings</a>
 									</li>
-									<li >
-										<a href="#settings">Sign out</a>
+									<li>
+										<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 									</li>
 								</ul>
 							</div>
@@ -235,10 +235,10 @@
 						<!--top_menu-->
 						<ul id="top_menu">
 							<li>
-								<a href="index.html" class="selected">Home</a>
+								<%= link_to "Home", root_path %>
 								<ul class="submenu">
 									<li>
-										<a href="#">Go global Home</a>
+										<%= link_to "Go global Home", root_path %>
 									</li>
 									<li>
 										<a href="#">Advertise on Go global</a>
@@ -246,13 +246,13 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#" >Profile</a>
+								<a href="/user_profiles/home" >Profile</a>
 								<ul class="submenu">
 									<li>
 										<a href="#">Edit Profile</a>
 									</li>
 									<li>
-										<a href="#">View profile</a>
+										<%= link_to "View profile", home_user_profiles_path %>
 									</li>
 									<li>
 										<a href="#">Recommendations</a>
@@ -266,18 +266,18 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#">Contacts</a>
+								<%= link_to "Contacts", connections_path %>
 								<ul class="submenu">
 									<li>
 										<a href="/connections">Connections</a>
 									</li>
 									<li>
-										<a href="#">Add Connections</a>
+										<a href="/user_profiles/connect_with_form/<%= current_user.id %>">Add Connections</a>
 									</li>
 								</ul>
 							</li>
 							<li>
-								<a href="#">Groups</a>
+								<a href="/groups">Groups</a>
 								<ul class="submenu">
 									<li>
 										<a href="#">Your Groups</a>
@@ -289,7 +289,7 @@
 										<a href="/groups">Groups Directory</a>
 									</li>
 									<li>
-										<a href="#">Create a Group</a>
+										<a href="/groups/new">Create a Group</a>
 									</li>
 								</ul>
 							</li>
@@ -311,10 +311,10 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#">Companies</a>
+								<a href="/companies">Companies</a>
 								<ul class="submenu">
 									<li>
-										<a href="#">Find Companies</a>
+										<a href="/companies">Find Companies</a>
 									</li>
 									<li>
 										<a href="#">Companies You Follow</a>
@@ -396,19 +396,19 @@
 			<div id="footer_inner">
 				<ul id="footer_menu">
 					<li>
-						<a href="#">Home</a>
+						<%= link_to "Home", root_path %>
 					</li>
 					<li>
-						<a href="#">Profile</a>
+						<a href="/user_profiles/home">Profile</a>
 					</li>
 					<li>
-						<a href="#">Contacts</a>
+						<a href="/connections">Contacts</a>
 					</li>
 					<li>
 						<a href="#">Jobs</a>
 					</li>
 					<li>
-						<a href="#">Companies</a>
+						<a href="/companies">Companies</a>
 					</li>
 					<li>
 						<a href="#">News</a>
