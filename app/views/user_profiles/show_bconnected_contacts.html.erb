@@ -1,5 +1,3 @@
-
-
 <div id="main_content_wrapper">
 	<div id="main_content_wrapper_menu">
 		<div id="connection">
@@ -275,116 +273,30 @@
 	<!-- main_content_wrapper_left Ends-->
 	<!-- main_content_wrapper_center-->
 	<div id="main_content_wrapper_center">
-		<%= form_for @connection do |f| %>
-			<%= check_box("send_invite_all", "select_all", {}, "select_all", "") %> Select All <br clear="all" />
-			<% @bconnected_contacts.each_with_index do |contact, i| %>
-				<%= check_box("send_invite", "email_contact["+i.to_s+"]", {}, contact.user_id, "") %> <%= contact.email	 %> <br clear="all" />
+		<div class="scroll-pane">
+			<ul>
+			<%= form_for @connection do |f| %>
+				<% @bconnected_contacts.each_with_index do |contact, i| %>
+				<li>
+					<table>
+						<tr>
+							<td id="checkbox">
+								<%= check_box("send_invite", "email_contact["+i.to_s+"]", {}, contact.user_id, "") %>
+							</td>
+							<td id="details"><%= contact.email	 %> </td>
+						</tr>
+					</table>
+				</li>
+				<% end %>
+				<%= f.submit "Add Connection" %>
 			<% end %>
-			<%= f.submit "Add Connection" %>
-		<% end %>
-		<a href="/user_profiles/invite_contacts_form/<%= current_user.id %>">Invite contacts</a>
+			</ul>
+			<a href="/user_profiles/invite_contacts_form/<%= current_user.id %>">Invite contacts</a>
+		</div>
 	</div>
 	<!-- main_content_wrapper_center Ends-->
 	<!-- main_content_wrapper_right-->
-	<div id="main_content_wrapper_right">
-		<div id="load" style="display:none">
-			<!--profile-->
-			<div id="profile">
-				<div id="profile_top"></div>
-				<!--profile_content-->
-				<div id="profile_content">
-					<!--profile_content_wrapper-->
-					<div id="profile_content_wrapper"></div>
-					<!--profile_content_wrapper End-->
-				</div>
-				<!--profile_content End-->
-			</div>
-			<!--profile End-->
-		</div>
-		<div id="profileload" >
-			<!--profile-->
-			<div id="profile">
-				<div id="profile_top"></div>
-				<!--profile_content-->
-				<div id="profile_content">
-					<!--profile_content_wrapper-->
-					<div id="profile_content_wrapper">
-						<div id="profile_content_wrapper_photo"><img src="/assets/photo_wrapper.png" />
-						</div>
-						<!--profile_content_wrapper_detail-->
-						<div id="profile_content_wrapper_detail">
-							<div id="profile_name">
-								David Ferns
-							</div>
-							<div id="profile_designation">
-								Regional Sales Manager -
-							</div>
-							<div id="profile_division">
-								Enterprise Division -
-							</div>
-							<div id="profile_company">
-								Routesms Solutions Limited  -
-							</div>
-						</div>
-						<!--profile_content_wrapper_detail End-->
-						<div class="clear"></div>
-						<div id="connections">
-							500<a href="">connections</a><span>(2 are new)</span>
-						</div>
-						<div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Send message</a>
-						</div>
-						<div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Edit Details</a>
-						</div>
-						<div id="subdetails">
-							Tags:
-						</div>
-						<div id="subdetails_sub">
-							<a href="">Edit tags</a>
-						</div>
-						<div id="subdetails">
-							Email:
-						</div>
-						<div id="subdetails_sub">
-							<a href="">ericries@gmail.com</a>Primary
-						</div>
-						<div id="subdetails">
-							Phone:
-						</div>
-						<div id="subdetails_sub">
-							+968 92451315 mobile
-						</div>
-						<div id="subdetails">
-							Title:
-						</div>
-						<div id="subdetails_sub">
-							Regional Sales Manager - Enterprise Division
-						</div>
-						<div id="subdetails">
-							Company:
-						</div>
-						<div id="subdetails_sub">
-							Mars International LLC
-						</div>
-						<div id="subdetails">
-							IM:
-						</div>
-						<div id="subdetails_sub">
-							ericries Google Talk
-						</div>
-						<div id="subdetails">
-							Birthday:
-						</div>
-						<div id="subdetails_sub">
-							May 16, 1985
-						</div>
-					</div>
-					<!--profile_content_wrapper End-->
-				</div>
-				<!--profile_content End-->
-			</div>
-			<!--profile End-->
-		</div>
-	</div>
+	
 	<!-- main_content_wrapper_right Ends-->
 	<div id="status">
 		357 outstanding <span><a href="#">sent invitations</a></span> | <span><a href="#">Export connections</a></span>
