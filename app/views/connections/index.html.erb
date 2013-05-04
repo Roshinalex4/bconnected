@@ -235,7 +235,13 @@
 							<td id="checkbox">
 							<input type="checkbox" class="check"/>
 							</td>
-							<td id="photo"><img src="/assets/photo3.jpg" /></td>
+							<td id="photo">
+								<% if contact.user_profile.picture.present? %>
+									<%= image_tag contact.user_profile.picture.url(:thumb), :width => "52px", :height => "50px" %> 
+								<% else %>
+									<img src="assets/no_image.jpg" width="52px" height="50px">
+								<% end %>
+							</td>
 							<td id="details">
 							<div id="connection_name">
 								<%= link_to contact.user_profile.display_name, connection_path(contact.id) %>

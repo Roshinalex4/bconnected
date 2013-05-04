@@ -55,7 +55,7 @@ Bconnected::Application.routes.draw do
       get 'view_user_profile', :action => 'view_user_profile'
       post 'search', :action => 'search'
 			get 'connect', :action => 'connect'
-			post 'filter', :action => 'filter'
+			get 'filter', :action => 'filter'
 			get 'settings', :action => 'settings'
     end
     

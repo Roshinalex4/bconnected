@@ -71,9 +71,23 @@
 			<!--contacts_search_wrapper-->
 			<div id="contacts_search_wrapper">
 				<form action="" method="post" name="frmContacts" id="frmContacts">
-					<input type="text" name="txtGroup" id="txtGroup"  value="Search Contacts" onfocus="if(this.value=='Search Contacts'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Search Contacts';this.style.color='#999';}"/>
+					<input type="text" name="txtGroup" id="txtContact"  value="Search Contacts" onfocus="if(this.value=='Search Contacts'){this.value='';this.style.color='#000000';}" onblur="if(this.value==''){this.value='Search Contacts';this.style.color='#999';}"/>
 					<input type="submit" name="bttnContact" id="bttnContact"  value=""/>
 				</form>
+				<script>
+				   	$("#txtContact").keyup( function( event )
+					{
+					    if(event.keyCode == 13)
+					    {
+					        location.href = "/user_profiles/filter?name="+this.value;
+					    }
+					});
+					$("#bttnContact").click(function () {
+						var query = $("#txtContact").val();
+						location.href = "/user_profiles/filter?name="+query;
+						return false;
+					});
+			   </script>
 			</div>
 			<!--contacts_search_wrapper ends-->
 			<!--contacts_tbl_wrapper-->
@@ -85,7 +99,7 @@
 							<div class="contact_box_img">
 								<a href="#"><%= image_tag contact.user_profile.picture.url(:thumb)%></a>
 							</div>
-							<a href="#" class="contact_link"><%= contact.user_profile.display_name %></a>
+							<%= link_to contact.user_profile.display_name, connection_path(contact.id), :class => "contact_link" %>
 						</div></td>
 						<% end %>
 					</tr>
