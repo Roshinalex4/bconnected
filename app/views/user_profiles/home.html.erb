@@ -25,7 +25,7 @@
 					});
 					$("#bttnGroup").click(function () {
 						var query = $("#txtGroup").val();
-						location.href = "/groups/search?query="+"query";
+						location.href = "/groups/search?query="+query;
 						return false;
 					});
 			   </script>
@@ -42,10 +42,12 @@
 						<% end %> <td>
 						<div class="group_box">
 							<div class="group_box_img">
-								<a href="#"> <%= image_tag group.logo.url(:thumb) %> </a>
+								<a href="/groups/<%= group.id %>"> <%= image_tag group.logo.url(:thumb) %> </a>
 							</div>
-							<a href="#" class="group_link1"><%= group.group_name %></a>
-							<a href="#" class="group_link2">Subscribe</a>
+							<%= link_to group.group_name, group, :class => "group_link1" %>
+							<% if !group.users.include? current_user %>
+								<%= link_to "Subscribe", "/groups/"+@group.id.to_s+"/join", :class => "group_link2" %>
+							<% end %>
 						</div></td>
 						<% if i == 0 or i == 3 %>
 					</tr>
