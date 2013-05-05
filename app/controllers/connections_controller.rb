@@ -34,6 +34,8 @@ class ConnectionsController < ApplicationController
   
   def index
     @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id')
+    @user_profile = @contacts[0].user_profile
+    @new_conn_count = @contacts[0].connections.where('created_at >= ?', 1.week.ago).count
   end  
 
 	def send_invitation_email(contact)
@@ -42,7 +44,10 @@ class ConnectionsController < ApplicationController
 	
 	def show
 	  enter_profile_log(params[:id])
+	  @contacts = User.joins('INNER JOIN connections ON connections.friend_id = users.id')
 	  @user_profile = UserProfile.find_by_user_id(params[:id])
+	  @new_conn_count =  @user_profile.user.connections.where('created_at >= ?', 1.week.ago).count
+	  render 'index'
 	end   
 	
 	def enter_profile_log(user_id)

@@ -293,27 +293,28 @@
 				<div id="profile_content">
 					<!--profile_content_wrapper-->
 					<div id="profile_content_wrapper">
-						<div id="profile_content_wrapper_photo"><img src="/assets/photo_wrapper.png" />
+						<div id="profile_content_wrapper_photo">
+							<%= image_tag @user_profile.picture.url(:thumb), :width => "102px", :height => "102px" %>
 						</div>
 						<!--profile_content_wrapper_detail-->
 						<div id="profile_content_wrapper_detail">
 							<div id="profile_name">
-								David Ferns
+								<%= @user_profile.display_name %>
 							</div>
 							<div id="profile_designation">
-								Regional Sales Manager -
+								<%= @user_profile.professional_headline %> -
 							</div>
 							<div id="profile_division">
-								Enterprise Division -
+								<%= @user_profile.industry %> -
 							</div>
 							<div id="profile_company">
-								Routesms Solutions Limited  -
+								<%= @user_profile.company %>  -
 							</div>
 						</div>
 						<!--profile_content_wrapper_detail End-->
 						<div class="clear"></div>
 						<div id="connections">
-							500<a href="">connections</a><span>(2 are new)</span>
+							<%= @user_profile.user.connections.count %><a href="">connections</a><span>(<%= @new_conn_count %> are new)</span>
 						</div>
 						<div id="sendmessage"><img src="/assets/arrow.jpg" /><a href="">Send message</a>
 						</div>
@@ -329,37 +330,37 @@
 							Email:
 						</div>
 						<div id="subdetails_sub">
-							<a href="">ericries@gmail.com</a>Primary
+							<a href=""><%= @user_profile.user.email %></a>Primary
 						</div>
 						<div id="subdetails">
 							Phone:
 						</div>
 						<div id="subdetails_sub">
-							+968 92451315 mobile
+							<%= @user_profile.phone_number %> mobile
 						</div>
 						<div id="subdetails">
 							Title:
 						</div>
 						<div id="subdetails_sub">
-							Regional Sales Manager - Enterprise Division
+							<%= @user_profile.professional_headline %> - <%= @user_profile.industry %>
 						</div>
 						<div id="subdetails">
 							Company:
 						</div>
 						<div id="subdetails_sub">
-							Mars International LLC
+							<%= @user_profile.company %>
 						</div>
 						<div id="subdetails">
 							IM:
 						</div>
 						<div id="subdetails_sub">
-							ericries Google Talk
+							<%= @user_profile.im %>
 						</div>
 						<div id="subdetails">
 							Birthday:
 						</div>
 						<div id="subdetails_sub">
-							May 16, 1985
+							<%= @user_profile.birth_day.strftime("%M %d, %Y") if @user_profile.birth_day %>
 						</div>
 					</div>
 					<!--profile_content_wrapper End-->
